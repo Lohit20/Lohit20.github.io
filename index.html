@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lohit Ashwa Vaswani — Portfolio</title>
+  <meta name="description" content="Portfolio of Lohit Ashwa Vaswani — Data Scientist & ML Engineer (NLP, CV, GenAI, Recommenders, MLOps).">
+  <link rel="icon" type="image/svg+xml" href="assets/img/avatar.svg">
+  <script defer src="https://unpkg.com/lucide@latest"></script>
+  <script defer src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+  <script defer src="assets/js/main.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="assets/css/style.css" rel="stylesheet">
+  <meta property="og:title" content="Lohit Ashwa Vaswani — Portfolio">
+  <meta property="og:description" content="Data Scientist & ML Engineer — NLP • CV • GenAI • Recommenders • MLOps">
+  <meta property="og:image" content="assets/img/avatar.svg">
+  <meta name="theme-color" content="#0ea5e9">
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Person",
+    "name":"Lohit Ashwa Vaswani",
+    "email":"mailto:ashwalohit@gmail.com",
+    "url":"",
+    "sameAs":[
+      "https://www.linkedin.com/in/lohit-ashwa-44422a245/",
+      "https://github.com/Lohit20"
+    ],
+    "jobTitle":"Data Scientist",
+    "knowsAbout":["NLP","Computer Vision","Generative AI","Recommendation Systems","MLOps"]
+  }
+  </script>
+  <style>
+    /* Tailwind config on the fly */
+    :root { color-scheme: light dark; }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800 dark:bg-slate-950 dark:text-slate-100">
+  <!-- Nav -->
+  <header class="sticky top-0 z-40 bg-white/70 dark:bg-slate-900/60 border-b border-slate-200/40 dark:border-slate-800/40 nav-blur">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-3 font-semibold">
+        <img src="assets/img/avatar.svg" class="w-8 h-8" alt="Avatar">
+        <span>Lohit</span>
+      </a>
+      <nav class="hidden md:flex items-center gap-6 text-sm">
+        <a href="#about" class="hover:opacity-80">About</a>
+        <a href="#skills" class="hover:opacity-80">Skills</a>
+        <a href="#experience" class="hover:opacity-80">Experience</a>
+        <a href="#projects" class="hover:opacity-80">Projects</a>
+        <a href="#education" class="hover:opacity-80">Education</a>
+        <a href="#contact" class="hover:opacity-80">Contact</a>
+      </nav>
+      <div class="md:hidden">
+        <button id="menuBtn" class="p-2 rounded-lg border border-slate-200 dark:border-slate-800" aria-label="Toggle menu">
+          <i data-lucide="menu"></i>
+        </button>
+      </div>
+    </div>
+    <div id="mobileNav" class="md:hidden hidden border-t border-slate-200 dark:border-slate-800">
+      <div class="px-4 py-3 flex flex-col gap-3 text-sm">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="section">
+    <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-[1.2fr,1fr] gap-10 items-center">
+      <div>
+        <h1 class="text-4xl sm:text-5xl font-extrabold leading-tight">
+          Lohit Ashwa Vaswani<br>
+          <span class="text-sky-500"> <span id="typed"></span></span>
+        </h1>
+        <p class="mt-4 text-lg text-slate-600 dark:text-slate-300">
+          I build end‑to‑end AI systems across NLP, Computer Vision, and Recommenders — from data pipelines to model optimization and deployment.
+        </p>
+        <div class="mt-6 flex flex-wrap gap-3">
+          <a class="px-4 py-2 rounded-xl bg-slate-900 text-white dark:bg-white dark:text-slate-900" href="#projects">View Projects</a>
+          <a class="px-4 py-2 rounded-xl border border-slate-300 dark:border-slate-700" href="assets/Lohit-Ashwa-Vaswani-Resume.pdf" target="_blank" rel="noopener">Download Resume</a>
+        </div>
+        <div class="mt-6 flex items-center gap-5 text-sm">
+          <a class="link-underline" href="mailto:ashwalohit@gmail.com">ashwalohit@gmail.com</a>
+          <a class="link-underline" href="https://www.linkedin.com/in/lohit-ashwa-44422a245/" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="link-underline" href="https://github.com/Lohit20" target="_blank" rel="noopener">GitHub</a>
+        </div>
+      </div>
+      <div class="md:justify-self-end">
+        <img src="assets/img/avatar.svg" alt="Portrait" class="w-56 h-56 rounded-2xl shadow-lg mx-auto md:mx-0">
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="section bg-white dark:bg-slate-900">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-2xl font-bold mb-6">Skills</h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div class="card">
+          <h3 class="font-semibold mb-2">Languages</h3>
+          <p class="text-sm">Python, SQL, JavaScript, C/C++</p>
+        </div>
+        <div class="card">
+          <h3 class="font-semibold mb-2">Frameworks</h3>
+          <p class="text-sm">scikit-learn, PyTorch, OpenCV, TensorFlow, Keras, LangChain, LlamaIndex</p>
+        </div>
+        <div class="card">
+          <h3 class="font-semibold mb-2">Databases</h3>
+          <p class="text-sm">Oracle, MySQL, MongoDB, FAISS, Pinecone, ChromaDB</p>
+        </div>
+        <div class="card">
+          <h3 class="font-semibold mb-2">Tools</h3>
+          <p class="text-sm">Docker, Git, Tableau, Power BI, AWS (SageMaker, Lambda, ELB)</p>
+        </div>
+        <div class="card">
+          <h3 class="font-semibold mb-2">AI Domains</h3>
+          <p class="text-sm">NLP, Computer Vision, Generative AI, Recommendation Systems, MLOps</p>
+        </div>
+        <div class="card">
+          <h3 class="font-semibold mb-2">Soft Skills</h3>
+          <p class="text-sm">Communication, Critical thinking, Team collaboration, Continuous learning, Time management</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience -->
+  <section id="experience" class="section">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-2xl font-bold mb-6">Experience</h2>
+      <div class="space-y-4">
+        <article class="card">
+          <div class="flex items-center justify-between gap-4">
+            <h3 class="font-semibold">Research Engineer — Retrocausal</h3>
+            <span class="text-xs opacity-70">Feb 2024 – Jan 2025 · Remote (Redmond, US)</span>
+          </div>
+          <ul class="list-disc pl-6 mt-2 text-sm space-y-1">
+            <li>Automated ergonomics Excel reporting (REBA, RULA, NIOSH, SNOOK, Hand Strain) via Django APIs; later modularized as a FastAPI microservice (Dockerized).</li>
+            <li>Converted YOLOv5 to INT8 OpenVINO for edge deployment — ~2× faster inference, ~36% lower compute cost.</li>
+            <li>Fine‑tuned Timesformer+GPT‑2 and ViT+GPT‑2 for video captioning; reduced assembly errors ~25%, rework cost ~30%.</li>
+          </ul>
+        </article>
+        <article class="card">
+          <div class="flex items-center justify-between gap-4">
+            <h3 class="font-semibold">Product Development & ML Engineer — TPS Worldwide (Intern)</h3>
+            <span class="text-xs opacity-70">Jul 2023 – Aug 2023 · Karachi, Pakistan</span>
+          </div>
+          <ul class="list-disc pl-6 mt-2 text-sm space-y-1">
+            <li>Advanced SQL for Oracle analytics workflows.</li>
+            <li>ATM withdrawal recommender with SVM/XGBoost/NN; deployed with 250+ positive user reviews.</li>
+          </ul>
+        </article>
+        <article class="card">
+          <div class="flex items-center justify-between gap-4">
+            <h3 class="font-semibold">Teaching & Academic Support — FAST</h3>
+            <span class="text-xs opacity-70">Aug 2022 – May 2024 · On‑site</span>
+          </div>
+          <ul class="list-disc pl-6 mt-2 text-sm space-y-1">
+            <li>Lab Assistant (OOP): mentoring & debugging.</li>
+            <li>TA (AI Programming): search, game theory, KR&R.</li>
+            <li>TA (Recommender Systems): CF & neural recommenders; tuning & ethics.</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="section bg-white dark:bg-slate-900">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-2xl font-bold mb-6">Projects</h2>
+      <div class="grid md:grid-cols-2 gap-4">
+        <article class="card">
+          <h3 class="font-semibold">Automating JEE Report Quality with LLMs (PoC — UKHSA)</h3>
+          <p class="text-sm mt-2">Rubric‑based, evidence‑grounded evaluation using OCR + LLMs. Benchmarked Gemini 2.5 Flash, Qwen‑3 4B, Magistral‑Medium with QWK & BERTScore.</p>
+          <div class="mt-3 flex flex-wrap gap-2 text-xs">
+            <span class="tag">Python</span><span class="tag">Mistral OCR</span><span class="tag">Transformers</span>
+          </div>
+        </article>
+        <article class="card">
+          <h3 class="font-semibold">E‑Commerce Microservices System</h3>
+          <p class="text-sm mt-2">FastAPI + MongoDB microservices with JWT auth and semantic search (all‑MiniLM‑L6‑v2). Docker Compose deployment; React frontend.</p>
+          <div class="mt-3 flex flex-wrap gap-2 text-xs">
+            <span class="tag">FastAPI</span><span class="tag">MongoDB</span><span class="tag">Docker</span><span class="tag">React</span>
+          </div>
+        </article>
+        <article class="card">
+          <h3 class="font-semibold">Llama‑2 Trading Insights (RAG)</h3>
+          <p class="text-sm mt-2">ETL from SQL → text, Pinecone + LlamaIndex retrieval, CoT prompting; boosted engagement and interpretation speed for traders.</p>
+          <div class="mt-3 flex flex-wrap gap-2 text-xs">
+            <span class="tag">PyTorch</span><span class="tag">RAG</span><span class="tag">Pinecone</span>
+          </div>
+        </article>
+        <article class="card">
+          <h3 class="font-semibold">LLAMA‑2 Mental Health Support</h3>
+          <p class="text-sm mt-2">QLoRA + PEFT fine‑tuning, Gradio UI; deployed to Hugging Face.</p>
+          <div class="mt-3 flex flex-wrap gap-2 text-xs">
+            <span class="tag">QLoRA</span><span class="tag">PEFT</span><span class="tag">Gradio</span>
+          </div>
+        </article>
+        <article class="card">
+          <h3 class="font-semibold">Visual Search with CLIP + ViT</h3>
+          <p class="text-sm mt-2">Multimodal similarity for e‑commerce; Pinecone vector DB; Streamlit app.</p>
+          <div class="mt-3 flex flex-wrap gap-2 text-xs">
+            <span class="tag">CLIP</span><span class="tag">ViT</span><span class="tag">Pinecone</span>
+          </div>
+        </article>
+        <article class="card">
+          <h3 class="font-semibold">Movie Recommender (Bandits + CBF)</h3>
+          <p class="text-sm mt-2">Hybrid exploration with collaborative multi‑armed bandits and content signals.</p>
+          <div class="mt-3 flex flex-wrap gap-2 text-xs">
+            <span class="tag">Python</span><span class="tag">scikit‑learn</span>
+          </div>
+        </article>
+      </div>
+      <div class="mt-4 text-sm">
+        <a class="link-underline" href="https://github.com/Lohit20" target="_blank" rel="noopener">See more on GitHub →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Education -->
+  <section id="education" class="section">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-2xl font-bold mb-6">Education</h2>
+      <div class="grid gap-4">
+        <article class="card">
+          <div class="flex items-center justify-between">
+            <h3 class="font-semibold">University of Surrey — MSc Data Science</h3>
+            <span class="text-xs opacity-70">Feb 2025 – Present · Guildford, UK</span>
+          </div>
+          <p class="text-sm mt-2">Machine Learning & Data Mining, Data Science Principles & Practice, NLP, Cloud Computing.</p>
+        </article>
+        <article class="card">
+          <div class="flex items-center justify-between">
+            <h3 class="font-semibold">FAST — BS Artificial Intelligence (CGPA 3.33)</h3>
+            <span class="text-xs opacity-70">Aug 2020 – Jun 2024 · Karachi, Pakistan</span>
+          </div>
+          <p class="text-sm mt-2">Data Structures, Algorithms, GenAI, Computer Vision, Machine Learning, NLP, Databases, OOP.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="section bg-white dark:bg-slate-900">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-2xl font-bold mb-6">Contact</h2>
+      <div class="grid md:grid-cols-2 gap-6 text-sm">
+        <div class="card">
+          <p>Email: <a class="link-underline" href="mailto:ashwalohit@gmail.com">ashwalohit@gmail.com</a></p>
+          <p>LinkedIn: <a class="link-underline" target="_blank" rel="noopener" href="https://www.linkedin.com/in/lohit-ashwa-44422a245/">lohit-ashwa</a></p>
+          <p>GitHub: <a class="link-underline" target="_blank" rel="noopener" href="https://github.com/Lohit20">@Lohit20</a></p>
+        </div>
+        <form class="card" name="contact" method="POST" data-netlify="true">
+          <input type="hidden" name="form-name" value="contact">
+          <label class="block text-sm mb-2">Your email<input name="email" required class="mt-1 w-full border rounded-lg px-3 py-2 bg-transparent"/></label>
+          <label class="block text-sm mb-2">Message<textarea name="message" required class="mt-1 w-full border rounded-lg px-3 py-2 bg-transparent" rows="4"></textarea></label>
+          <button class="mt-2 px-4 py-2 rounded-xl bg-sky-600 text-white">Send</button>
+          <p class="text-xs opacity-70 mt-2">This form can be wired to Netlify or other static form handlers.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer class="py-10 border-t border-slate-200 dark:border-slate-800">
+    <div class="max-w-6xl mx-auto px-4 text-sm opacity-80 flex items-center justify-between">
+      <span>© <span id="year"></span> Lohit Ashwa Vaswani</span>
+      <span>Built with HTML + Tailwind + Typed.js</span>
+    </div>
+  </footer>
+
+  <script> if (window.lucide) lucide.createIcons(); </script>
+</body>
+</html>

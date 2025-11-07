@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Typed headline
   if (window.Typed) {
     new Typed('#typed', {
-      strings: ['Data Scientist', 'ML Engineer', 'Generative AI Enthusiast'],
+      strings: ['Data Scientist', 'Data Engineer', 'Machine Learning Engineer', 'Generative AI Enthusiast'],
       typeSpeed: 45,
       backSpeed: 30,
       backDelay: 1400,

@@ -307,30 +307,87 @@
     </div>
   </section>
 
-  <!-- Contact -->
-  <section id="contact" class="section">
-    <div class="max-w-6xl mx-auto px-4">
-      <h2 class="text-2xl font-bold mb-6"><span class="gradient-text">Contact</span></h2>
-      <div class="grid md:grid-cols-2 gap-6 text-sm">
-        <div class="neon-card p-6">
-          <p>Email: <a class="link-underline" href="mailto:ashwalohit@gmail.com">ashwalohit@gmail.com</a></p>
-          <p>LinkedIn: <a class="link-underline" target="_blank" rel="noopener" href="https://www.linkedin.com/in/lohit-ashwa-44422a245/">lohit-ashwa</a></p>
-          <p>GitHub: <a class="link-underline" target="_blank" rel="noopener" href="https://github.com/Lohit20">@Lohit20</a></p>
+<!-- Contact -->
+<section id="contact" class="section">
+  <div class="max-w-6xl mx-auto px-4">
+    <h2 class="text-2xl font-bold mb-6"><span class="gradient-text">Contact</span></h2>
+
+    <!-- 2 x 2 grid -->
+    <div class="grid md:grid-cols-2 gap-6">
+
+      <!-- Address -->
+      <article class="neon-card p-6 flex items-start gap-4">
+        <div class="icon-chip shrink-0">
+          <i data-lucide="map-pin" class="h-6 w-6"></i>
         </div>
-        <form class="neon-card p-6" name="contact" method="POST" data-netlify="true">
-          <input type="hidden" name="form-name" value="contact" />
-          <label class="block text-sm mb-2">Your email
-            <input name="email" required class="mt-1 w-full border border-slate-700 rounded-lg px-3 py-2 bg-transparent"/>
-          </label>
-          <label class="block text-sm mb-2">Message
-            <textarea name="message" required class="mt-1 w-full border border-slate-700 rounded-lg px-3 py-2 bg-transparent" rows="4"></textarea>
-          </label>
-          <button class="mt-2 btn-gradient">Send</button>
-          <p class="text-xs opacity-70 mt-2">This form can be wired to Netlify or other static form handlers.</p>
-        </form>
-      </div>
+        <div>
+          <h3 class="text-2xl font-semibold mb-2">My Address</h3>
+          <p class="text-slate-300 leading-relaxed">
+            Reception 1<br>
+            Alexander Fleming Road<br>
+            Guildford, Surrey, United Kingdom<br>
+            GU2 7YW
+          </p>
+        </div>
+      </article>
+
+      <!-- Social Profiles -->
+      <article class="neon-card p-6 flex items-start gap-4">
+        <div class="icon-chip shrink-0">
+          <i data-lucide="share-2" class="h-6 w-6"></i>
+        </div>
+        <div>
+          <h3 class="text-2xl font-semibold mb-3">Social Profiles</h3>
+          <div class="flex items-center gap-4">
+            <a href="https://www.linkedin.com/in/lohit-ashwa-44422a245/" target="_blank" rel="noopener"
+               class="rounded-full p-3 bg-slate-800/70 border border-slate-700 hover:border-slate-500 transition">
+              <i data-lucide="linkedin" class="h-5 w-5"></i>
+            </a>
+            <a href="https://github.com/Lohit20" target="_blank" rel="noopener"
+               class="rounded-full p-3 bg-slate-800/70 border border-slate-700 hover:border-slate-500 transition">
+              <i data-lucide="github" class="h-5 w-5"></i>
+            </a>
+            <a href="mailto:ashwalohit@gmail.com"
+               class="rounded-full p-3 bg-slate-800/70 border border-slate-700 hover:border-slate-500 transition">
+              <i data-lucide="mail" class="h-5 w-5"></i>
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Email -->
+      <article class="neon-card p-6 flex items-start gap-4">
+        <div class="icon-chip shrink-0">
+          <i data-lucide="mail" class="h-6 w-6"></i>
+        </div>
+        <div>
+          <h3 class="text-2xl font-semibold mb-2">Email</h3>
+          <p class="text-slate-300">
+            <a class="link-underline" href="mailto:ashwalohit@gmail.com">ashwalohit@gmail.com</a><br>
+            <span class="opacity-80">lohit-ashwa@surrey.ac.uk</span>
+          </p>
+        </div>
+      </article>
+
+      <!-- Contact (Phone) -->
+      <article class="neon-card p-6 flex items-start gap-4">
+        <div class="icon-chip shrink-0">
+          <i data-lucide="phone" class="h-6 w-6"></i>
+        </div>
+        <div>
+          <h3 class="text-2xl font-semibold mb-2">Contact</h3>
+          <p class="text-slate-300">
+            <span class="whitespace-nowrap">+44 7414 503 756</span>
+          </p>
+          <!-- If you don't want to show your number publicly, replace with:
+               <p class="text-slate-400">Available upon request</p> -->
+        </div>
+      </article>
+
     </div>
-  </section>
+  </div>
+</section>
+
 
   <!-- Footer -->
   <footer class="py-10 border-t border-slate-800">

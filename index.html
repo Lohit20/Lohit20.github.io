@@ -310,87 +310,135 @@
 <!-- Contact -->
 <section id="contact" class="section">
   <div class="max-w-6xl mx-auto px-4">
-    <h2 class="text-2xl font-bold mb-6"><span class="gradient-text">Contact</span></h2>
+    <h2 class="text-3xl font-extrabold mb-8">
+      <span class="gradient-text">Contact</span>
+    </h2>
 
-    <!-- 2 x 2 grid -->
     <div class="grid md:grid-cols-2 gap-6">
 
       <!-- Address -->
-      <article class="neon-card p-6 flex items-start gap-4">
-        <div class="icon-chip shrink-0">
-          <i data-lucide="map-pin" class="h-6 w-6"></i>
-        </div>
-        <div>
-          <h3 class="text-2xl font-semibold mb-2">My Address</h3>
-          <p class="text-slate-300 leading-relaxed">
-            Somersby Garden<br>
-            Ilford<br>
-            London, United Kingdom<br>
-            GU2 7YW
-          </p>
-        </div>
-      </article>
+      <article
+        class="group relative overflow-hidden rounded-3xl bg-slate-900/60 ring-1 ring-slate-800 p-6 shadow-xl">
+        <div class="pointer-events-none absolute -z-10 inset-0 opacity-0 group-hover:opacity-100 transition
+                    bg-gradient-to-r from-purple-600/10 via-fuchsia-400/10 to-orange-300/10"></div>
 
-      <!-- Social Profiles -->
-      <article class="neon-card p-6 flex items-start gap-4">
-        <div class="icon-chip shrink-0">
-          <i data-lucide="share-2" class="h-6 w-6"></i>
-        </div>
-        <div>
-          <h3 class="text-2xl font-semibold mb-3">Social Profiles</h3>
-          <div class="flex items-center gap-4">
-            <a href="https://www.linkedin.com/in/lohit-ashwa-44422a245/" target="_blank" rel="noopener"
-               class="rounded-full p-3 bg-slate-800/70 border border-slate-700 hover:border-slate-500 transition">
-              <i data-lucide="linkedin" class="h-5 w-5"></i>
-            </a>
-            <a href="https://github.com/Lohit20" target="_blank" rel="noopener"
-               class="rounded-full p-3 bg-slate-800/70 border border-slate-700 hover:border-slate-500 transition">
-              <i data-lucide="github" class="h-5 w-5"></i>
-            </a>
-            <a href="mailto:ashwalohit@gmail.com"
-               class="rounded-full p-3 bg-slate-800/70 border border-slate-700 hover:border-slate-500 transition">
-              <i data-lucide="mail" class="h-5 w-5"></i>
+        <div class="flex items-start gap-4">
+          <div class="icon-chip shrink-0"><i data-lucide="map-pin" class="h-6 w-6"></i></div>
+          <div>
+            <h3 class="text-2xl font-semibold mb-2">My Address</h3>
+            <p class="text-slate-300 leading-relaxed">
+              Somersby Garden<br>Ilford<br>London, United Kingdom<br>
+            </p>
+            <a
+              href="https://maps.google.com/?q=Somersby+Garden,+Ilford,+London,+United+Kingdom+GU2+7YW"
+              target="_blank" rel="noopener"
+              class="mt-3 inline-flex items-center gap-2 rounded-full border border-slate-700 px-3 py-1.5 text-sm hover:border-slate-500">
+              <i data-lucide="navigation"></i> Open in Maps
             </a>
           </div>
         </div>
       </article>
 
-      <!-- Email -->
-      <article class="neon-card p-6 flex items-start gap-4">
-        <div class="icon-chip shrink-0">
-          <i data-lucide="mail" class="h-6 w-6"></i>
-        </div>
-        <div>
-          <h3 class="text-2xl font-semibold mb-2">Email</h3>
-          <p class="text-slate-300">
-            <a class="link-underline" href="mailto:ashwalohit@gmail.com">ashwalohit@gmail.com</a><br>
-          </p>
+      <!-- Social Profiles -->
+      <article
+        class="group relative overflow-hidden rounded-3xl bg-slate-900/60 ring-1 ring-slate-800 p-6 shadow-xl">
+        <div class="pointer-events-none absolute -z-10 inset-0 opacity-0 group-hover:opacity-100 transition
+                    bg-gradient-to-r from-purple-600/10 via-fuchsia-400/10 to-orange-300/10"></div>
+
+        <div class="flex items-start gap-4">
+          <div class="icon-chip shrink-0"><i data-lucide="share-2" class="h-6 w-6"></i></div>
+          <div class="w-full">
+            <h3 class="text-2xl font-semibold mb-3">Social Profiles</h3>
+            <div class="flex items-center gap-4">
+              <a href="https://www.linkedin.com/in/lohit-ashwa-44422a245/" target="_blank" rel="noopener"
+                 class="rounded-full p-3 bg-slate-800/60 ring-1 ring-slate-700 hover:ring-slate-500 transition hover:-translate-y-0.5">
+                <i data-lucide="linkedin" class="h-5 w-5"></i>
+              </a>
+              <a href="https://github.com/Lohit20" target="_blank" rel="noopener"
+                 class="rounded-full p-3 bg-slate-800/60 ring-1 ring-slate-700 hover:ring-slate-500 transition hover:-translate-y-0.5">
+                <i data-lucide="github" class="h-5 w-5"></i>
+              </a>
+              <a href="mailto:ashwalohit@gmail.com"
+                 class="rounded-full p-3 bg-slate-800/60 ring-1 ring-slate-700 hover:ring-slate-500 transition hover:-translate-y-0.5">
+                <i data-lucide="mail" class="h-5 w-5"></i>
+              </a>
+            </div>
+          </div>
         </div>
       </article>
 
-      <!-- Contact (Phone) -->
-      <article class="neon-card p-6 flex items-start gap-4">
-        <div class="icon-chip shrink-0">
-          <i data-lucide="phone" class="h-6 w-6"></i>
-        </div>
-        <div>
-          <h3 class="text-2xl font-semibold mb-2">Contact</h3>
-          <p class="text-slate-300">
-            <a href="tel:+447414503756"
-              class="link-underline whitespace-nowrap"
-              aria-label="Call +44 7414 503 756">
-              +44 7414 503 756
-            </a>
-          </p>
+      <!-- Email -->
+      <article
+        class="group relative overflow-hidden rounded-3xl bg-slate-900/60 ring-1 ring-slate-800 p-6 shadow-xl">
+        <div class="pointer-events-none absolute -z-10 inset-0 opacity-0 group-hover:opacity-100 transition
+                    bg-gradient-to-r from-purple-600/10 via-fuchsia-400/10 to-orange-300/10"></div>
 
-          <!-- If you don't want to show your number publicly, replace with:
-               <p class="text-slate-400">Available upon request</p> -->
+        <div class="flex items-start gap-4">
+          <div class="icon-chip shrink-0"><i data-lucide="mail" class="h-6 w-6"></i></div>
+          <div>
+            <h3 class="text-2xl font-semibold mb-2">Email</h3>
+            <div class="flex items-center gap-3">
+              <a class="link-underline" href="mailto:ashwalohit@gmail.com" id="email-text">ashwalohit@gmail.com</a>
+              <button
+                type="button"
+                class="rounded-full px-2 py-1 text-xs border border-slate-700 hover:border-slate-500"
+                id="copy-email">Copy</button>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Phone -->
+      <article
+        class="group relative overflow-hidden rounded-3xl bg-slate-900/60 ring-1 ring-slate-800 p-6 shadow-xl">
+        <div class="pointer-events-none absolute -z-10 inset-0 opacity-0 group-hover:opacity-100 transition
+                    bg-gradient-to-r from-purple-600/10 via-fuchsia-400/10 to-orange-300/10"></div>
+
+        <div class="flex items-start gap-4">
+          <div class="icon-chip shrink-0"><i data-lucide="phone" class="h-6 w-6"></i></div>
+          <div>
+            <h3 class="text-2xl font-semibold mb-2">Contact</h3>
+            <p class="text-slate-300">
+              <a href="tel:+447414503756" class="link-underline whitespace-nowrap"
+                 aria-label="Call +44 7414 503 756">+44 7414 503 756</a>
+            </p>
+            <div class="mt-2 flex items-center gap-3 text-sm">
+              <a href="https://wa.me/447414503756" target="_blank" rel="noopener"
+                 class="rounded-full px-3 py-1.5 border border-slate-700 hover:border-slate-500">WhatsApp</a>
+              <a href="sms:+447414503756"
+                 class="rounded-full px-3 py-1.5 border border-slate-700 hover:border-slate-500">Text</a>
+            </div>
+          </div>
         </div>
       </article>
 
     </div>
   </div>
 </section>
+
+<script>
+  // Copy email to clipboard
+  const copyBtn = document.getElementById('copy-email');
+  if (copyBtn) {
+    copyBtn.addEventListener('click', async () => {
+      const email = document.getElementById('email-text').textContent.trim();
+      try {
+        await navigator.clipboard.writeText(email);
+        copyBtn.textContent = 'Copied!';
+        setTimeout(() => (copyBtn.textContent = 'Copy'), 1400);
+      } catch (_) {
+        // fallback
+        const ta = document.createElement('textarea');
+        ta.value = email; document.body.appendChild(ta); ta.select();
+        document.execCommand('copy'); document.body.removeChild(ta);
+        copyBtn.textContent = 'Copied!';
+        setTimeout(() => (copyBtn.textContent = 'Copy'), 1400);
+      }
+    });
+  }
+  // Ensure icons render
+  if (window.lucide) lucide.createIcons();
+</script>
 
 
   <!-- Footer -->

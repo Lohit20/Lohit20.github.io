@@ -130,45 +130,84 @@
   </section>
 
   <!-- Experience -->
-  <section id="experience" class="section">
-    <div class="max-w-6xl mx-auto px-4">
-      <h2 class="text-2xl font-bold mb-6">Experience</h2>
-      <div class="space-y-4">
-        <article class="card">
-          <div class="flex items-center justify-between gap-4">
-            <h3 class="font-semibold">Research Engineer — Retrocausal</h3>
-            <span class="text-xs opacity-70">Feb 2024 – Jan 2025 · Remote (Redmond, US)</span>
+<section id="experience" class="section">
+  <div class="max-w-6xl mx-auto px-4">
+    <h2 class="text-3xl sm:text-4xl font-extrabold mb-10 text-center">
+      <span class="bg-gradient-to-r from-purple-400 via-fuchsia-400 to-orange-300 bg-clip-text text-transparent">
+        My work experience
+      </span>
+    </h2>
+
+    <div class="space-y-6"><!-- ONE COLUMN STACK -->
+
+      <!-- Card 1 -->
+      <article class="relative rounded-3xl border border-slate-800/70 bg-slate-900/60 p-6 md:p-8 shadow-xl">
+        <!-- soft glow -->
+        <div class="pointer-events-none absolute -top-8 -left-8 h-40 w-40 rounded-full bg-gradient-to-tr from-purple-500/30 via-fuchsia-400/25 to-orange-300/25 blur-2xl"></div>
+
+        <div class="flex items-start gap-6">
+          <div class="shrink-0 rounded-2xl p-3 bg-gradient-to-tr from-purple-600 to-fuchsia-500">
+            <img src="assets/img/exp/ai-hoodie.svg" alt="AI Solutions icon" class="h-12 w-12">
           </div>
-          <ul class="list-disc pl-6 mt-2 text-sm space-y-1">
-            <li>Automated ergonomics Excel reporting (REBA, RULA, NIOSH, SNOOK, Hand Strain) via Django APIs; later modularized as a FastAPI microservice (Dockerized).</li>
-            <li>Converted YOLOv5 to INT8 OpenVINO for edge deployment — ~2× faster inference, ~36% lower compute cost.</li>
-            <li>Fine‑tuned Timesformer+GPT‑2 and ViT+GPT‑2 for video captioning; reduced assembly errors ~25%, rework cost ~30%.</li>
-          </ul>
-        </article>
-        <article class="card">
-          <div class="flex items-center justify-between gap-4">
-            <h3 class="font-semibold">Product Development & ML Engineer — TPS Worldwide (Intern)</h3>
-            <span class="text-xs opacity-70">Jul 2023 – Aug 2023 · Karachi, Pakistan</span>
+
+          <div>
+            <h3 class="text-2xl font-semibold leading-snug text-slate-50">
+              Research Engineer — Retrocausal
+            </h3>
+            <p class="text-slate-300/90 mt-3">
+              Automated ergonomics Excel reporting via Django→FastAPI microservices; INT8 OpenVINO
+              edge deploy for YOLOv5 (~2× faster, ~36% lower compute); fine-tuned video captioning
+              models (Timesformer/ViT + GPT-2) reducing assembly errors ~25%.
+            </p>
           </div>
-          <ul class="list-disc pl-6 mt-2 text-sm space-y-1">
-            <li>Advanced SQL for Oracle analytics workflows.</li>
-            <li>ATM withdrawal recommender with SVM/XGBoost/NN; deployed with 250+ positive user reviews.</li>
-          </ul>
-        </article>
-        <article class="card">
-          <div class="flex items-center justify-between gap-4">
-            <h3 class="font-semibold">Teaching & Academic Support — FAST</h3>
-            <span class="text-xs opacity-70">Aug 2022 – May 2024 · On‑site</span>
+        </div>
+      </article>
+
+      <!-- Card 2 -->
+      <article class="relative rounded-3xl border border-slate-800/70 bg-slate-900/60 p-6 md:p-8 shadow-xl">
+        <div class="pointer-events-none absolute -top-8 -left-8 h-40 w-40 rounded-full bg-gradient-to-tr from-purple-500/30 via-fuchsia-400/25 to-orange-300/25 blur-2xl"></div>
+
+        <div class="flex items-start gap-6">
+          <div class="shrink-0 rounded-2xl p-3 bg-gradient-to-tr from-purple-600 to-fuchsia-500">
+            <img src="assets/img/exp/chart-up.svg" alt="Analytics icon" class="h-12 w-12">
           </div>
-          <ul class="list-disc pl-6 mt-2 text-sm space-y-1">
-            <li>Lab Assistant (OOP): mentoring & debugging.</li>
-            <li>TA (AI Programming): search, game theory, KR&R.</li>
-            <li>TA (Recommender Systems): CF & neural recommenders; tuning & ethics.</li>
-          </ul>
-        </article>
-      </div>
+
+          <div>
+            <h3 class="text-2xl font-semibold leading-snug text-slate-50">
+              Product Development & ML Engineer — TPS Worldwide (Intern)
+            </h3>
+            <p class="text-slate-300/90 mt-3">
+              Built ATM withdrawal recommender (SVM/XGBoost/NN) with 250+ positive reviews; advanced
+              Oracle SQL for analytics workflows.
+            </p>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 3 -->
+      <article class="relative rounded-3xl border border-slate-800/70 bg-slate-900/60 p-6 md:p-8 shadow-xl">
+        <div class="pointer-events-none absolute -top-8 -left-8 h-40 w-40 rounded-full bg-gradient-to-tr from-purple-500/30 via-fuchsia-400/25 to-orange-300/25 blur-2xl"></div>
+
+        <div class="flex items-start gap-6">
+          <div class="shrink-0 rounded-2xl p-3 bg-gradient-to-tr from-purple-600 to-fuchsia-500">
+            <img src="assets/img/exp/teaching.svg" alt="Teaching icon" class="h-12 w-12">
+          </div>
+
+          <div>
+            <h3 class="text-2xl font-semibold leading-snug text-slate-50">
+              Teaching & Academic Support — FAST
+            </h3>
+            <p class="text-slate-300/90 mt-3">
+              Lab Assistant (OOP) and TA (AI Programming, Recommender Systems): mentoring, search/game
+              theory, KR&R, CF & neural recommenders.
+            </p>
+          </div>
+        </div>
+      </article>
+
     </div>
-  </section>
+  </div>
+</section>
 
   <!-- Projects -->
   <section id="projects" class="section">

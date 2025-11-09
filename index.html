@@ -1,46 +1,88 @@
 <!doctype html>
 <html lang="en" class="dark">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Lohit Ashwa Vaswani — Portfolio</title>
-  <meta name="description" content="Portfolio of Lohit Ashwa Vaswani — Data Scientist & ML Engineer (NLP, CV, GenAI, Recommenders, MLOps).">
-  <link rel="icon" type="image/svg+xml" href="assets/img/avatar.svg">
+  <meta name="description" content="Portfolio of Lohit Ashwa Vaswani — Data Scientist & ML Engineer (NLP, CV, GenAI, Recommenders, MLOps)." />
+  <meta name="theme-color" content="#0b1020" />
+  <link rel="icon" type="image/svg+xml" href="assets/img/avatar.svg" />
+
+  <!-- Tailwind (CDN) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Icons + Typed.js -->
   <script defer src="https://unpkg.com/lucide@latest"></script>
   <script defer src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-  <script defer src="assets/js/main.js"></script>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link href="assets/css/style.css" rel="stylesheet">
-  <meta property="og:title" content="Lohit Ashwa Vaswani — Portfolio">
-  <meta property="og:description" content="Data Scientist & ML Engineer — NLP • CV • GenAI • Recommenders • MLOps">
-  <meta property="og:image" content="assets/img/avatar.svg">
-  <meta name="theme-color" content="#0ea5e9">
+
+  <!-- Inline neon theme utilities so this file works standalone -->
+  <style>
+    html { scroll-behavior: smooth; }
+    :root{
+      --bg:#050816;--fg:#e5e7eb;
+      --grad-from:#8b5cf6;--grad-mid:#f0abfc;--grad-to:#fb923c;
+    }
+    body{background:var(--bg);color:var(--fg)}
+    .nav-blur{backdrop-filter:blur(10px)}
+    .section{padding-top:5rem;padding-bottom:5rem}
+    .gradient-text{
+      background:linear-gradient(90deg,var(--grad-from),var(--grad-mid),var(--grad-to));
+      -webkit-background-clip:text;background-clip:text;color:transparent
+    }
+    .btn-gradient{display:inline-block;padding:.65rem 1rem;border-radius:1rem;font-weight:600;
+      background:linear-gradient(135deg,var(--grad-from),var(--grad-mid),var(--grad-to));color:#0b1020;
+      box-shadow:0 10px 25px -10px rgba(251,146,60,.45);transition:transform .15s,box-shadow .15s}
+    .btn-gradient:hover{transform:translateY(-1px);box-shadow:0 16px 32px -12px rgba(251,146,60,.55)}
+    .btn-outline{display:inline-block;padding:.65rem 1rem;border-radius:1rem;font-weight:600;
+      border:1px solid rgba(148,163,184,.35);color:var(--fg);transition:background .2s,border-color .2s,transform .15s}
+    .btn-outline:hover{background:rgba(148,163,184,.06);border-color:rgba(148,163,184,.5);transform:translateY(-1px)}
+    .neon-card{border-radius:1.5rem;padding:1rem;background:rgba(2,6,23,.6);border:1px solid rgba(30,41,59,.7);
+      box-shadow:0 1px 0 0 rgba(255,255,255,.03) inset,0 10px 30px -10px rgba(139,92,246,.25),0 10px 40px -18px rgba(251,146,60,.2);
+      transition:transform .15s,box-shadow .2s,border-color .2s}
+    .neon-card:hover{transform:translateY(-2px);border-color:rgba(99,102,241,.6);
+      box-shadow:0 1px 0 0 rgba(255,255,255,.05) inset,0 16px 36px -12px rgba(139,92,246,.35),0 18px 60px -18px rgba(251,146,60,.28)}
+    .tag{display:inline-block;padding:.25rem .55rem;border-radius:9999px;font-size:.7rem;letter-spacing:.02em;
+      border:1px solid rgba(148,163,184,.35);color:#c7d2fe;background:rgba(99,102,241,.12)}
+    a.link-underline{position:relative}
+    a.link-underline::after{content:"";position:absolute;left:0;bottom:-2px;width:100%;height:2px;
+      background:linear-gradient(90deg,var(--grad-from),var(--grad-mid),var(--grad-to));
+      transform:scaleX(0);transform-origin:left;transition:transform .25s}
+    a.link-underline:hover::after{transform:scaleX(1)}
+    ::selection{background:rgba(139,92,246,.35);color:#fff}
+    .icon-chip{border-radius:1rem;padding:.6rem;background:linear-gradient(135deg,rgba(139,92,246,.22),rgba(240,171,252,.18));
+      border:1px solid rgba(99,102,241,.3)}
+  </style>
+
+  <!-- SEO / social -->
+  <meta property="og:title" content="Lohit Ashwa Vaswani — Portfolio" />
+  <meta property="og:description" content="Data Scientist & ML Engineer — NLP • CV • GenAI • Recommenders • MLOps" />
+  <meta property="og:image" content="assets/img/avatar.svg" />
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
     "@type":"Person",
     "name":"Lohit Ashwa Vaswani",
     "email":"mailto:ashwalohit@gmail.com",
-    "url":"",
-    "sameAs":[
-      "https://www.linkedin.com/in/lohit-ashwa-44422a245/",
-      "https://github.com/Lohit20"
-    ],
+    "url":"https://lohit20.github.io",
+    "sameAs":["https://www.linkedin.com/in/lohit-ashwa-44422a245/","https://github.com/Lohit20"],
     "jobTitle":"Data Scientist",
     "knowsAbout":["NLP","Computer Vision","Generative AI","Recommendation Systems","MLOps"]
   }
   </script>
-  <style>
-    /* Tailwind config on the fly */
-    :root { color-scheme: light dark; }
-  </style>
 </head>
-<body class="bg-slate-50 text-slate-800 dark:bg-slate-950 dark:text-slate-100">
-  <!-- Nav -->
-  <header class="sticky top-0 z-40 bg-white/70 dark:bg-slate-900/60 border-b border-slate-200/40 dark:border-slate-800/40 nav-blur">
+<body class="text-slate-100">
+
+  <!-- soft page glow -->
+  <div aria-hidden="true" class="pointer-events-none fixed -z-10 inset-0">
+    <div class="absolute -top-20 left-1/2 -translate-x-1/2 h-72 w-[40rem] rounded-full blur-3xl
+                bg-gradient-to-r from-purple-600/25 via-fuchsia-400/20 to-orange-300/20"></div>
+  </div>
+
+  <!-- Navbar -->
+  <header class="sticky top-0 z-40 border-b border-slate-800/60 bg-slate-950/70 nav-blur">
+    <div class="absolute inset-0 -z-10 bg-gradient-to-r from-purple-900/20 via-fuchsia-800/15 to-orange-700/20"></div>
     <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
       <a href="#" class="flex items-center gap-3 font-semibold">
-        <img src="assets/img/avatar.svg" class="w-8 h-8" alt="Avatar">
+        <img src="assets/img/avatar.svg" alt="Avatar" class="w-8 h-8">
         <span>Lohit</span>
       </a>
       <nav class="hidden md:flex items-center gap-6 text-sm">
@@ -51,38 +93,32 @@
         <a href="#education" class="hover:opacity-80">Education</a>
         <a href="#contact" class="hover:opacity-80">Contact</a>
       </nav>
-      <div class="md:hidden">
-        <button id="menuBtn" class="p-2 rounded-lg border border-slate-200 dark:border-slate-800" aria-label="Toggle menu">
-          <i data-lucide="menu"></i>
-        </button>
-      </div>
+      <button id="menuBtn" class="md:hidden p-2 rounded-lg border border-slate-700" aria-label="Toggle menu">
+        <i data-lucide="menu"></i>
+      </button>
     </div>
-    <div id="mobileNav" class="md:hidden hidden border-t border-slate-200 dark:border-slate-800">
+    <div id="mobileNav" class="md:hidden hidden border-t border-slate-800">
       <div class="px-4 py-3 flex flex-col gap-3 text-sm">
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#experience">Experience</a>
-        <a href="#projects">Projects</a>
-        <a href="#education">Education</a>
-        <a href="#contact">Contact</a>
+        <a href="#about">About</a><a href="#skills">Skills</a><a href="#experience">Experience</a>
+        <a href="#projects">Projects</a><a href="#education">Education</a><a href="#contact">Contact</a>
       </div>
     </div>
   </header>
 
   <!-- Hero -->
-  <section class="section">
+  <section id="about" class="section">
     <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-[1.2fr,1fr] gap-10 items-center">
       <div>
         <h1 class="text-4xl sm:text-5xl font-extrabold leading-tight">
-          Lohit Ashwa Vaswani<br>
-          <span class="text-sky-500"> <span id="typed"></span></span>
+          Lohit Ashwa Vaswani<br />
+          <span class="gradient-text"><span id="typed"></span></span>
         </h1>
-        <p class="mt-4 text-lg text-slate-600 dark:text-slate-300">
-          I build end‑to‑end AI systems across NLP, Computer Vision, and Recommenders — from data pipelines to model optimization and deployment.
+        <p class="mt-4 text-lg text-slate-300">
+          I build end-to-end AI systems across NLP, Computer Vision, and Recommenders — from data pipelines to model optimization and deployment.
         </p>
         <div class="mt-6 flex flex-wrap gap-3">
-          <a class="px-4 py-2 rounded-xl bg-slate-900 text-white dark:bg-white dark:text-slate-900" href="#projects">View Projects</a>
-          <a class="px-4 py-2 rounded-xl border border-slate-300 dark:border-slate-700" href="assets/Lohit-Ashwa-Vaswani-Resume.pdf" target="_blank" rel="noopener">Download Resume</a>
+          <a class="btn-gradient" href="#projects">View Projects</a>
+          <a class="btn-outline" href="assets/Lohit-Ashwa-Vaswani-Resume.pdf" target="_blank" rel="noopener">Download Resume</a>
         </div>
         <div class="mt-6 flex items-center gap-5 text-sm">
           <a class="link-underline" href="mailto:ashwalohit@gmail.com">ashwalohit@gmail.com</a>
@@ -91,7 +127,7 @@
         </div>
       </div>
       <div class="md:justify-self-end">
-        <img src="assets/img/avatar.svg" alt="Portrait" class="w-56 h-56 rounded-2xl shadow-lg mx-auto md:mx-0">
+        <img src="assets/img/avatar.svg" alt="Portrait" class="w-56 h-56 rounded-2xl shadow-lg mx-auto md:mx-0" />
       </div>
     </div>
   </section>
@@ -99,161 +135,109 @@
   <!-- Skills -->
   <section id="skills" class="section">
     <div class="max-w-6xl mx-auto px-4">
-      <h2 class="text-2xl font-bold mb-6">Skills</h2>
+      <h2 class="text-2xl font-bold mb-6"><span class="gradient-text">Skills</span></h2>
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-        <div class="card">
-          <h3 class="font-semibold mb-2">Languages</h3>
-          <p class="text-sm">Python, SQL, JavaScript, C/C++</p>
-        </div>
-        <div class="card">
-          <h3 class="font-semibold mb-2">Frameworks</h3>
-          <p class="text-sm">scikit-learn, PyTorch, OpenCV, TensorFlow, Keras, LangChain, LlamaIndex</p>
-        </div>
-        <div class="card">
-          <h3 class="font-semibold mb-2">Databases</h3>
-          <p class="text-sm">Oracle, MySQL, MongoDB, FAISS, Pinecone, ChromaDB</p>
-        </div>
-        <div class="card">
-          <h3 class="font-semibold mb-2">Tools</h3>
-          <p class="text-sm">Docker, Git, Tableau, Power BI, AWS (SageMaker, Lambda, ELB)</p>
-        </div>
-        <div class="card">
-          <h3 class="font-semibold mb-2">AI Domains</h3>
-          <p class="text-sm">NLP, Computer Vision, Generative AI, Recommendation Systems, MLOps</p>
-        </div>
-        <div class="card">
-          <h3 class="font-semibold mb-2">Soft Skills</h3>
-          <p class="text-sm">Communication, Critical thinking, Team collaboration, Continuous learning, Time management</p>
-        </div>
+        <div class="neon-card"><h3 class="font-semibold mb-2">Languages</h3><p class="text-sm">Python, SQL, JavaScript, C/C++</p></div>
+        <div class="neon-card"><h3 class="font-semibold mb-2">Frameworks</h3><p class="text-sm">scikit-learn, PyTorch, OpenCV, TensorFlow, Keras, LangChain, LlamaIndex</p></div>
+        <div class="neon-card"><h3 class="font-semibold mb-2">Databases</h3><p class="text-sm">Oracle, MySQL, MongoDB, FAISS, Pinecone, ChromaDB</p></div>
+        <div class="neon-card"><h3 class="font-semibold mb-2">Tools</h3><p class="text-sm">Docker, Git, Tableau, Power BI, AWS (SageMaker, Lambda, ELB)</p></div>
+        <div class="neon-card"><h3 class="font-semibold mb-2">AI Domains</h3><p class="text-sm">NLP, Computer Vision, Generative AI, Recommendation Systems, MLOps</p></div>
+        <div class="neon-card"><h3 class="font-semibold mb-2">Soft Skills</h3><p class="text-sm">Communication, Critical thinking, Team collaboration, Continuous learning, Time management</p></div>
       </div>
     </div>
   </section>
 
-  <!-- Experience -->
-<section id="experience" class="section">
-  <div class="max-w-6xl mx-auto px-4">
-    <h2 class="text-3xl sm:text-4xl font-extrabold mb-10 text-center">
-      <span class="bg-gradient-to-r from-purple-400 via-fuchsia-400 to-orange-300 bg-clip-text text-transparent">
-        My work experience
-      </span>
-    </h2>
+  <!-- Experience (1 column, neon cards) -->
+  <section id="experience" class="section">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-3xl sm:text-4xl font-extrabold mb-10 text-center">
+        <span class="gradient-text">My work experience</span>
+      </h2>
 
-    <div class="space-y-6"><!-- ONE COLUMN STACK -->
-
-      <!-- Card 1 -->
-      <article class="relative rounded-3xl border border-slate-800/70 bg-slate-900/60 p-6 md:p-8 shadow-xl">
-        <!-- soft glow -->
-        <div class="pointer-events-none absolute -top-8 -left-8 h-40 w-40 rounded-full bg-gradient-to-tr from-purple-500/30 via-fuchsia-400/25 to-orange-300/25 blur-2xl"></div>
-
-        <div class="flex items-start gap-6">
-          <div class="shrink-0 rounded-2xl p-3 bg-gradient-to-tr from-purple-600 to-fuchsia-500">
-            <img src="assets/img/exp/ai-hoodie.svg" alt="AI Solutions icon" class="h-12 w-12">
+      <div class="space-y-6">
+        <!-- Retrocausal -->
+        <article class="neon-card p-6 md:p-8 relative">
+          <div class="pointer-events-none absolute -top-8 -left-8 h-40 w-40 rounded-full bg-gradient-to-tr from-purple-500/30 via-fuchsia-400/25 to-orange-300/25 blur-2xl"></div>
+          <div class="flex items-start gap-6">
+            <div class="icon-chip shrink-0">
+              <img src="assets/img/exp/ai-hoodie.svg" class="h-10 w-10" alt="AI icon" />
+            </div>
+            <div>
+              <h3 class="text-2xl font-semibold leading-snug">Research Engineer — Retrocausal</h3>
+              <p class="text-xs text-slate-400 mt-1">Feb 2024 – Jan 2025 · Remote (Redmond, US)</p>
+              <ul class="list-disc pl-6 mt-3 space-y-1 text-slate-300">
+                <li>Automated ergonomics Excel reporting (REBA, RULA, NIOSH, SNOOK, Hand Strain) via Django APIs; modularized to FastAPI microservice (Dockerized).</li>
+                <li>Converted YOLOv5 to INT8 OpenVINO for edge deployment — ~2× faster inference, ~36% lower compute cost.</li>
+                <li>Fine-tuned Timesformer/ViT + GPT-2 for video captioning; reduced assembly errors ~25%.</li>
+              </ul>
+            </div>
           </div>
+        </article>
 
-          <div>
-            <h3 class="text-2xl font-semibold leading-snug text-slate-50">
-              Research Engineer — Retrocausal
-            </h3>
-            <p class="text-slate-300/90 mt-3">
-              Automated ergonomics Excel reporting via Django→FastAPI microservices; INT8 OpenVINO
-              edge deploy for YOLOv5 (~2× faster, ~36% lower compute); fine-tuned video captioning
-              models (Timesformer/ViT + GPT-2) reducing assembly errors ~25%.
-            </p>
+        <!-- TPS -->
+        <article class="neon-card p-6 md:p-8 relative">
+          <div class="pointer-events-none absolute -top-8 -left-8 h-40 w-40 rounded-full bg-gradient-to-tr from-purple-500/30 via-fuchsia-400/25 to-orange-300/25 blur-2xl"></div>
+          <div class="flex items-start gap-6">
+            <div class="icon-chip shrink-0">
+              <img src="assets/img/exp/chart-up.svg" class="h-10 w-10" alt="Analytics icon" />
+            </div>
+            <div>
+              <h3 class="text-2xl font-semibold leading-snug">Product Development & ML Engineer — TPS Worldwide (Intern)</h3>
+              <p class="text-xs text-slate-400 mt-1">Jul 2023 – Aug 2023 · Karachi, Pakistan</p>
+              <p class="text-slate-300 mt-3">ATM withdrawal recommender (SVM/XGBoost/NN) with 250+ positive user reviews; advanced Oracle SQL for analytics workflows.</p>
+            </div>
           </div>
-        </div>
-      </article>
+        </article>
 
-      <!-- Card 2 -->
-      <article class="relative rounded-3xl border border-slate-800/70 bg-slate-900/60 p-6 md:p-8 shadow-xl">
-        <div class="pointer-events-none absolute -top-8 -left-8 h-40 w-40 rounded-full bg-gradient-to-tr from-purple-500/30 via-fuchsia-400/25 to-orange-300/25 blur-2xl"></div>
-
-        <div class="flex items-start gap-6">
-          <div class="shrink-0 rounded-2xl p-3 bg-gradient-to-tr from-purple-600 to-fuchsia-500">
-            <img src="assets/img/exp/chart-up.svg" alt="Analytics icon" class="h-12 w-12">
+        <!-- Teaching -->
+        <article class="neon-card p-6 md:p-8 relative">
+          <div class="pointer-events-none absolute -top-8 -left-8 h-40 w-40 rounded-full bg-gradient-to-tr from-purple-500/30 via-fuchsia-400/25 to-orange-300/25 blur-2xl"></div>
+          <div class="flex items-start gap-6">
+            <div class="icon-chip shrink-0">
+              <img src="assets/img/exp/teaching.svg" class="h-10 w-10" alt="Teaching icon" />
+            </div>
+            <div>
+              <h3 class="text-2xl font-semibold leading-snug">Teaching & Academic Support — FAST</h3>
+              <p class="text-xs text-slate-400 mt-1">Aug 2022 – May 2024 · On-site</p>
+              <p class="text-slate-300 mt-3">Lab Assistant (OOP); TA (AI Programming, Recommender Systems): search, game theory, KR&R, CF & neural recommenders.</p>
+            </div>
           </div>
-
-          <div>
-            <h3 class="text-2xl font-semibold leading-snug text-slate-50">
-              Product Development & ML Engineer — TPS Worldwide (Intern)
-            </h3>
-            <p class="text-slate-300/90 mt-3">
-              Built ATM withdrawal recommender (SVM/XGBoost/NN) with 250+ positive reviews; advanced
-              Oracle SQL for analytics workflows.
-            </p>
-          </div>
-        </div>
-      </article>
-
-      <!-- Card 3 -->
-      <article class="relative rounded-3xl border border-slate-800/70 bg-slate-900/60 p-6 md:p-8 shadow-xl">
-        <div class="pointer-events-none absolute -top-8 -left-8 h-40 w-40 rounded-full bg-gradient-to-tr from-purple-500/30 via-fuchsia-400/25 to-orange-300/25 blur-2xl"></div>
-
-        <div class="flex items-start gap-6">
-          <div class="shrink-0 rounded-2xl p-3 bg-gradient-to-tr from-purple-600 to-fuchsia-500">
-            <img src="assets/img/exp/teaching.svg" alt="Teaching icon" class="h-12 w-12">
-          </div>
-
-          <div>
-            <h3 class="text-2xl font-semibold leading-snug text-slate-50">
-              Teaching & Academic Support — FAST
-            </h3>
-            <p class="text-slate-300/90 mt-3">
-              Lab Assistant (OOP) and TA (AI Programming, Recommender Systems): mentoring, search/game
-              theory, KR&R, CF & neural recommenders.
-            </p>
-          </div>
-        </div>
-      </article>
-
+        </article>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
   <!-- Projects -->
   <section id="projects" class="section">
     <div class="max-w-6xl mx-auto px-4">
-      <h2 class="text-2xl font-bold mb-6">Projects</h2>
+      <h2 class="text-2xl font-bold mb-6"><span class="gradient-text">Projects</span></h2>
       <div class="grid md:grid-cols-2 gap-4">
-        <article class="card">
+        <article class="neon-card p-6">
           <h3 class="font-semibold">Automating JEE Report Quality with LLMs (PoC — UKHSA)</h3>
-          <p class="text-sm mt-2">Rubric‑based, evidence‑grounded evaluation using OCR + LLMs. Benchmarked Gemini 2.5 Flash, Qwen‑3 4B, Magistral‑Medium with QWK & BERTScore.</p>
+          <p class="text-sm mt-2 text-slate-300">Rubric-based, evidence-grounded evaluation using OCR + LLMs. Benchmarked Gemini 2.5 Flash, Qwen-3 4B, Magistral-Medium with QWK & BERTScore.</p>
           <div class="mt-3 flex flex-wrap gap-2 text-xs">
-            <span class="tag">Python</span><span class="tag">Mistral OCR</span><span class="tag">Transformers</span>
+            <span class="tag">Python</span><span class="tag">OCR</span><span class="tag">Transformers</span>
           </div>
         </article>
-        <article class="card">
-          <h3 class="font-semibold">E‑Commerce Microservices System</h3>
-          <p class="text-sm mt-2">FastAPI + MongoDB microservices with JWT auth and semantic search (all‑MiniLM‑L6‑v2). Docker Compose deployment; React frontend.</p>
+        <article class="neon-card p-6">
+          <h3 class="font-semibold">E-Commerce Microservices System</h3>
+          <p class="text-sm mt-2 text-slate-300">FastAPI + MongoDB microservices with JWT auth and semantic search (all-MiniLM-L6-v2). Docker Compose deployment; React frontend.</p>
           <div class="mt-3 flex flex-wrap gap-2 text-xs">
             <span class="tag">FastAPI</span><span class="tag">MongoDB</span><span class="tag">Docker</span><span class="tag">React</span>
           </div>
         </article>
-        <article class="card">
-          <h3 class="font-semibold">Llama‑2 Trading Insights (RAG)</h3>
-          <p class="text-sm mt-2">ETL from SQL → text, Pinecone + LlamaIndex retrieval, CoT prompting; boosted engagement and interpretation speed for traders.</p>
+        <article class="neon-card p-6">
+          <h3 class="font-semibold">Llama-2 Trading Insights (RAG)</h3>
+          <p class="text-sm mt-2 text-slate-300">ETL from SQL → text, Pinecone + LlamaIndex retrieval, CoT prompting; boosted engagement and interpretation speed for traders.</p>
           <div class="mt-3 flex flex-wrap gap-2 text-xs">
             <span class="tag">PyTorch</span><span class="tag">RAG</span><span class="tag">Pinecone</span>
           </div>
         </article>
-        <article class="card">
-          <h3 class="font-semibold">LLAMA‑2 Mental Health Support</h3>
-          <p class="text-sm mt-2">QLoRA + PEFT fine‑tuning, Gradio UI; deployed to Hugging Face.</p>
+        <article class="neon-card p-6">
+          <h3 class="font-semibold">LLAMA-2 Mental Health Support</h3>
+          <p class="text-sm mt-2 text-slate-300">QLoRA + PEFT fine-tuning, Gradio UI; deployed to Hugging Face.</p>
           <div class="mt-3 flex flex-wrap gap-2 text-xs">
             <span class="tag">QLoRA</span><span class="tag">PEFT</span><span class="tag">Gradio</span>
-          </div>
-        </article>
-        <article class="card">
-          <h3 class="font-semibold">Visual Search with CLIP + ViT</h3>
-          <p class="text-sm mt-2">Multimodal similarity for e‑commerce; Pinecone vector DB; Streamlit app.</p>
-          <div class="mt-3 flex flex-wrap gap-2 text-xs">
-            <span class="tag">CLIP</span><span class="tag">ViT</span><span class="tag">Pinecone</span>
-          </div>
-        </article>
-        <article class="card">
-          <h3 class="font-semibold">Movie Recommender (Bandits + CBF)</h3>
-          <p class="text-sm mt-2">Hybrid exploration with collaborative multi‑armed bandits and content signals.</p>
-          <div class="mt-3 flex flex-wrap gap-2 text-xs">
-            <span class="tag">Python</span><span class="tag">scikit‑learn</span>
           </div>
         </article>
       </div>
@@ -263,95 +247,105 @@
     </div>
   </section>
 
- <!-- Education -->
-<section id="education" class="section">
-  <div class="max-w-6xl mx-auto px-4">
-    <h2 class="text-2xl font-bold mb-6">Education</h2>
+  <!-- Education -->
+  <section id="education" class="section">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-2xl font-bold mb-6"><span class="gradient-text">Education</span></h2>
 
-    <div class="grid md:grid-cols-2 gap-6">
-      <!-- University of Surrey -->
-      <article class="rounded-2xl overflow-hidden shadow-lg border border-slate-800 bg-slate-900">
-        <!-- Photo banner: fill/crop neatly -->
-        <div class="relative aspect-[16/9] bg-slate-800">
-          <img
-            src="assets/img/University-of-Surrey.jpg"
-            alt="University of Surrey"
-            class="absolute inset-0 h-full w-full object-cover">
-          <!-- optional soft overlay for contrast -->
-          <div class="absolute inset-0 bg-slate-900/20"></div>
-        </div>
+      <div class="grid md:grid-cols-2 gap-6">
+        <!-- University of Surrey -->
+        <article class="rounded-2xl overflow-hidden shadow-lg border border-slate-800 bg-slate-900">
+          <!-- photo banner cover -->
+          <div class="relative aspect-[16/9] bg-slate-800">
+            <img src="assets/img/edu/University-of-Surrey.jpg" alt="University of Surrey"
+                 class="absolute inset-0 h-full w-full object-cover" />
+            <div class="absolute inset-0 bg-slate-900/20"></div>
+          </div>
+          <div class="p-6">
+            <p class="italic text-slate-300">MSc Data Science</p>
+            <h3 class="text-2xl font-semibold mt-1">Feb 2025 – Jan 2026</h3>
+            <p class="mt-4 font-semibold">Relevant Coursework</p>
+            <ul class="list-disc pl-6 mt-2 space-y-1">
+              <li>Machine Learning & Data Mining</li>
+              <li>Data Science Principles & Practice</li>
+              <li>Natural Language Processing</li>
+              <li>Cloud Computing</li>
+            </ul>
+          </div>
+        </article>
 
-        <div class="p-6">
-          <p class="italic text-slate-300">MSc Data Science</p>
-          <h3 class="text-2xl font-semibold mt-1">Feb 2025 – Jan 2026</h3>
-
-          <p class="mt-4 font-semibold">Relevant Coursework</p>
-          <ul class="list-disc pl-6 mt-2 space-y-1">
-            <li>Machine Learning & Data Mining</li>
-            <li>Data Science Principles & Practice</li>
-            <li>Natural Language Processing</li>
-            <li>Cloud Computing</li>
-          </ul>
-        </div>
-      </article>
-
-      <!-- FAST (NUCES) -->
-      <article class="rounded-2xl overflow-hidden shadow-lg border border-slate-800 bg-slate-900">
-        <!-- Logo banner: fit without cropping -->
-        <div class="h-40 bg-slate-800 flex items-center justify-center">
-          <img
-            src="assets/img/FAST-NU-logo.png"
-            alt="FAST–NUCES"
-            class="max-h-32 w-auto object-contain p-4">
-        </div>
-
-        <div class="p-6">
-          <p class="italic text-slate-300">BS Artificial Intelligence (CGPA 3.33)</p>
-          <h3 class="text-2xl font-semibold mt-1">Aug 2020 – Jun 2024</h3>
-
-          <p class="mt-4 font-semibold">Relevant Coursework</p>
-          <ul class="list-disc pl-6 mt-2 space-y-1">
-            <li>Data Structures & Algorithms</li>
-            <li>Machine Learning & NLP</li>
-            <li>Computer Vision</li>
-            <li>Databases & OOP</li>
-          </ul>
-        </div>
-      </article>
+        <!-- FAST (NUCES) -->
+        <article class="rounded-2xl overflow-hidden shadow-lg border border-slate-800 bg-slate-900">
+          <!-- logo band contain -->
+          <div class="h-40 bg-slate-800 flex items-center justify-center">
+            <img src="assets/img/edu/FAST-NU-logo.png" alt="FAST–NUCES" class="max-h-32 w-auto object-contain p-4" />
+          </div>
+          <div class="p-6">
+            <p class="italic text-slate-300">BS Artificial Intelligence (CGPA 3.33)</p>
+            <h3 class="text-2xl font-semibold mt-1">Aug 2020 – Jun 2024</h3>
+            <p class="mt-4 font-semibold">Relevant Coursework</p>
+            <ul class="list-disc pl-6 mt-2 space-y-1">
+              <li>Data Structures & Algorithms</li>
+              <li>Machine Learning & NLP</li>
+              <li>Computer Vision</li>
+              <li>Databases & OOP</li>
+            </ul>
+          </div>
+        </article>
+      </div>
     </div>
-  </div>
-</section>
-
-
+  </section>
 
   <!-- Contact -->
   <section id="contact" class="section">
     <div class="max-w-6xl mx-auto px-4">
-      <h2 class="text-2xl font-bold mb-6">Contact</h2>
+      <h2 class="text-2xl font-bold mb-6"><span class="gradient-text">Contact</span></h2>
       <div class="grid md:grid-cols-2 gap-6 text-sm">
-        <div class="card">
+        <div class="neon-card p-6">
           <p>Email: <a class="link-underline" href="mailto:ashwalohit@gmail.com">ashwalohit@gmail.com</a></p>
           <p>LinkedIn: <a class="link-underline" target="_blank" rel="noopener" href="https://www.linkedin.com/in/lohit-ashwa-44422a245/">lohit-ashwa</a></p>
           <p>GitHub: <a class="link-underline" target="_blank" rel="noopener" href="https://github.com/Lohit20">@Lohit20</a></p>
         </div>
-        <form class="card" name="contact" method="POST" data-netlify="true">
-          <input type="hidden" name="form-name" value="contact">
-          <label class="block text-sm mb-2">Your email<input name="email" required class="mt-1 w-full border rounded-lg px-3 py-2 bg-transparent"/></label>
-          <label class="block text-sm mb-2">Message<textarea name="message" required class="mt-1 w-full border rounded-lg px-3 py-2 bg-transparent" rows="4"></textarea></label>
-          <button class="mt-2 px-4 py-2 rounded-xl bg-sky-600 text-white">Send</button>
+        <form class="neon-card p-6" name="contact" method="POST" data-netlify="true">
+          <input type="hidden" name="form-name" value="contact" />
+          <label class="block text-sm mb-2">Your email
+            <input name="email" required class="mt-1 w-full border border-slate-700 rounded-lg px-3 py-2 bg-transparent"/>
+          </label>
+          <label class="block text-sm mb-2">Message
+            <textarea name="message" required class="mt-1 w-full border border-slate-700 rounded-lg px-3 py-2 bg-transparent" rows="4"></textarea>
+          </label>
+          <button class="mt-2 btn-gradient">Send</button>
           <p class="text-xs opacity-70 mt-2">This form can be wired to Netlify or other static form handlers.</p>
         </form>
       </div>
     </div>
   </section>
 
-  <footer class="py-10 border-t border-slate-200 dark:border-slate-800">
+  <!-- Footer -->
+  <footer class="py-10 border-t border-slate-800">
     <div class="max-w-6xl mx-auto px-4 text-sm opacity-80 flex items-center justify-between">
       <span>© <span id="year"></span> Lohit Ashwa Vaswani</span>
       <span>Built with HTML + Tailwind + Typed.js</span>
     </div>
   </footer>
 
-  <script> if (window.lucide) lucide.createIcons(); </script>
+  <!-- Small JS: mobile nav, typed headline, year -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const btn = document.getElementById('menuBtn');
+      const nav = document.getElementById('mobileNav');
+      if (btn && nav) btn.addEventListener('click', () => nav.classList.toggle('hidden'));
+
+      if (window.Typed) {
+        new Typed('#typed', {
+          strings: ['Data Scientist', 'ML Engineer', 'Generative AI Enthusiast'],
+          typeSpeed: 45, backSpeed: 30, backDelay: 1400, smartBackspace: true, loop: true
+        });
+      }
+      const y = document.getElementById('year'); if (y) y.textContent = new Date().getFullYear();
+
+      if (window.lucide) lucide.createIcons();
+    });
+  </script>
 </body>
 </html>

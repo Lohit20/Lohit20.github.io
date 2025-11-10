@@ -404,54 +404,82 @@
     </div>
   </section>
 
-  <!-- Education -->
-  <section id="education" class="section">
-    <div class="max-w-6xl mx-auto px-4">
-      <h2 class="text-2xl font-bold mb-6"><span class="gradient-text">Education</span></h2>
+  <!-- Education — Vertical Timeline -->
+<section id="education" class="section">
+  <div class="max-w-6xl mx-auto px-4 relative">
+    <!-- center line (starts below the heading) -->
+    <div class="pointer-events-none absolute left-1/2 top-24 -translate-x-1/2 h-full w-[3px] bg-slate-800/80 rounded"></div>
 
-      <div class="grid md:grid-cols-2 gap-6">
-        <!-- University of Surrey -->
-        <article class="rounded-2xl overflow-hidden shadow-lg border border-slate-800 bg-slate-900">
-          <!-- photo banner cover -->
-          <div class="relative aspect-[16/9] bg-slate-800">
-            <img src="assets/img/University-of-Surrey.jpg" alt="University of Surrey"
-                 class="absolute inset-0 h-full w-full object-cover" />
-            <div class="absolute inset-0 bg-slate-900/20"></div>
+    <h2 class="text-3xl sm:text-4xl font-extrabold mb-12 text-left">
+      <span class="gradient-text">Education</span>
+    </h2>
+
+    <div class="space-y-12">
+
+      <!-- Row 1 (card on LEFT) — University of Surrey -->
+      <div class="grid md:grid-cols-[1fr,72px,1fr] gap-6 items-center">
+        <!-- card -->
+        <article class="neon-card p-6 md:p-7 md:justify-self-end">
+          <div class="flex items-start gap-3 mb-2">
+            <div class="icon-chip shrink-0"><i data-lucide="graduation-cap" class="h-5 w-5"></i></div>
+            <h3 class="text-2xl font-semibold leading-snug">MSc Data Science — University of Surrey</h3>
           </div>
-          <div class="p-6">
-            <p class="italic text-slate-300">MSc Data Science</p>
-            <h3 class="text-2xl font-semibold mt-1">Feb 2025 – Jan 2026</h3>
-            <p class="mt-4 font-semibold">Relevant Coursework</p>
-            <ul class="list-disc pl-6 mt-2 space-y-1">
-              <li>Machine Learning & Data Mining</li>
-              <li>Data Science Principles & Practice</li>
-              <li>Natural Language Processing</li>
-              <li>Cloud Computing</li>
-            </ul>
-          </div>
+          <p class="italic text-slate-300">Relevant Coursework</p>
+          <ul class="list-disc pl-6 mt-2 space-y-1 text-slate-300">
+            <li>Machine Learning &amp; Data Mining</li>
+            <li>Data Science Principles &amp; Practice</li>
+            <li>Natural Language Processing</li>
+            <li>Cloud Computing</li>
+          </ul>
         </article>
 
-        <!-- FAST (NUCES) -->
-        <article class="rounded-2xl overflow-hidden shadow-lg border border-slate-800 bg-slate-900">
-          <!-- logo band contain -->
-          <div class="h-40 bg-slate-800 flex items-center justify-center">
-            <img src="assets/img/FAST-NU-logo.png" alt="FAST–NUCES" class="max-h-32 w-auto object-contain p-4" />
+        <!-- timeline dot -->
+        <div class="relative flex items-center justify-center">
+          <div class="flex items-center justify-center h-16 w-16 rounded-full bg-slate-900 ring-4 ring-slate-800">
+            <i data-lucide="bookmark" class="h-6 w-6 text-slate-200"></i>
           </div>
-          <div class="p-6">
-            <p class="italic text-slate-300">BS Artificial Intelligence (CGPA 3.33)</p>
-            <h3 class="text-2xl font-semibold mt-1">Aug 2020 – Jun 2024</h3>
-            <p class="mt-4 font-semibold">Relevant Coursework</p>
-            <ul class="list-disc pl-6 mt-2 space-y-1">
-              <li>Data Structures & Algorithms</li>
-              <li>Machine Learning & NLP</li>
-              <li>Computer Vision</li>
-              <li>Databases & OOP</li>
-            </ul>
+        </div>
+
+        <!-- dates -->
+        <p class="text-slate-400 text-sm md:text-base md:text-left text-center">
+          Feb 2025 – Jan 2026
+        </p>
+      </div>
+
+      <!-- Row 2 (card on RIGHT) — FAST (NUCES) -->
+      <div class="grid md:grid-cols-[1fr,72px,1fr] gap-6 items-center">
+        <!-- dates -->
+        <p class="order-3 md:order-1 text-slate-400 text-sm md:text-base md:text-right text-center">
+          Aug 2020 – Jun 2024
+        </p>
+
+        <!-- timeline dot -->
+        <div class="order-2 relative flex items-center justify-center">
+          <div class="flex items-center justify-center h-16 w-16 rounded-full bg-slate-900 ring-4 ring-slate-800">
+            <i data-lucide="bookmark" class="h-6 w-6 text-slate-200"></i>
           </div>
+        </div>
+
+        <!-- card -->
+        <article class="order-1 md:order-3 neon-card p-6 md:p-7">
+          <div class="flex items-start gap-3 mb-2">
+            <div class="icon-chip shrink-0"><i data-lucide="graduation-cap" class="h-5 w-5"></i></div>
+            <h3 class="text-2xl font-semibold leading-snug">BS Artificial Intelligence (CGPA 3.33) — FAST (NUCES)</h3>
+          </div>
+          <p class="italic text-slate-300">Relevant Coursework</p>
+          <ul class="list-disc pl-6 mt-2 space-y-1 text-slate-300">
+            <li>Data Structures &amp; Algorithms</li>
+            <li>Machine Learning &amp; NLP</li>
+            <li>Computer Vision</li>
+            <li>Databases &amp; OOP</li>
+          </ul>
         </article>
       </div>
+
     </div>
-  </section>
+  </div>
+</section>
+
 
 <!-- Contact -->
 <section id="contact" class="section">

@@ -404,104 +404,108 @@
     </div>
   </section>
 
-  <!-- Education — Vertical Timeline -->
+<!-- Education — Vertical Timeline -->
 <section id="education" class="section">
-  <div class="max-w-6xl mx-auto px-4 relative">
-    <!-- center line (starts below the heading) -->
-    <div class="pointer-events-none absolute left-1/2 top-24 -translate-x-1/2 h-full w-[3px] bg-slate-800/80 rounded"></div>
-
+  <div class="max-w-6xl mx-auto px-4">
     <h2 class="text-3xl sm:text-4xl font-extrabold mb-12 text-left">
       <span class="gradient-text">Education</span>
     </h2>
 
-    <div class="space-y-12">
+    <!-- full-width wrapper so padding doesn't offset the center line -->
+    <div class="-mx-4 sm:mx-0 relative">
+      <!-- center line -->
+      <span
+        aria-hidden="true"
+        class="pointer-events-none absolute inset-y-0 left-1/2 -translate-x-1/2 w-px bg-slate-800/80 rounded">
+      </span>
 
-      <!-- Row 1 (card on LEFT) — University of Surrey -->
-      <div class="grid md:grid-cols-[1fr,72px,1fr] gap-6 items-center">
-        <!-- card -->
-        <article class="neon-card p-6 md:p-7 w-full md:max-w-[820px] md:justify-self-end">
-          <!-- header -->
-          <div class="flex items-start gap-3 mb-3">
-            <div class="icon-chip shrink-0">
-              <i data-lucide="graduation-cap" class="h-5 w-5"></i>
+      <!-- timeline rows -->
+      <div class="space-y-12 relative z-10 px-4 sm:px-0">
+
+        <!-- Row 1 (card on LEFT) — University of Surrey -->
+        <div class="grid md:grid-cols-[1fr,72px,1fr] gap-6 items-center">
+          <!-- card (wider) -->
+          <article class="neon-card p-6 md:p-7 w-full md:max-w-[880px] md:justify-self-end">
+            <!-- header -->
+            <div class="flex items-start gap-3 mb-3">
+              <div class="icon-chip shrink-0">
+                <i data-lucide="graduation-cap" class="h-5 w-5"></i>
+              </div>
+
+              <!-- title + school -->
+              <div>
+                <h3 class="text-2xl font-semibold leading-snug">University of Surrey</h3>
+                <p class="text-sm text-slate-400 mt-0.5">MSc — Data Science</p>
+              </div>
             </div>
 
-            <!-- stack title + school -->
-            <div>
-              <h3 class="text-2xl font-semibold leading-snug">University of Surrey</h3>
-              <p class="text-sm text-slate-400 mt-0.5">MSc-Data Science</p>
+            <p class="italic text-slate-300">Relevant Coursework</p>
+            <ul class="list-disc pl-6 mt-2 space-y-1 text-slate-300">
+              <li>Machine Learning &amp; Data Mining</li>
+              <li>Data Science Principles &amp; Practice</li>
+              <li>Natural Language Processing</li>
+              <li>Cloud Computing</li>
+            </ul>
+          </article>
+
+          <!-- timeline dot -->
+          <div class="relative flex items-center justify-center">
+            <div class="flex items-center justify-center h-16 w-16 rounded-full bg-slate-900 ring-4 ring-slate-800">
+              <i data-lucide="bookmark" class="h-6 w-6 text-slate-200"></i>
             </div>
           </div>
 
-          <p class="italic text-slate-300">Relevant Coursework</p>
-          <ul class="list-disc pl-6 mt-2 space-y-1 text-slate-300">
-            <li>Machine Learning &amp; Data Mining</li>
-            <li>Data Science Principles &amp; Practice</li>
-            <li>Natural Language Processing</li>
-            <li>Cloud Computing</li>
-          </ul>
-        </article>
-
-
-        <!-- timeline dot -->
-        <div class="relative flex items-center justify-center">
-          <div class="flex items-center justify-center h-16 w-16 rounded-full bg-slate-900 ring-4 ring-slate-800">
-            <i data-lucide="bookmark" class="h-6 w-6 text-slate-200"></i>
-          </div>
+          <!-- dates -->
+          <p class="text-slate-400 text-sm md:text-base md:text-left text-center">
+            Feb 2025 – Jan 2026
+          </p>
         </div>
 
-        <!-- dates -->
-        <p class="text-slate-400 text-sm md:text-base md:text-left text-center">
-          Feb 2025 – Jan 2026
-        </p>
-      </div>
+        <!-- Row 2 (card on RIGHT) — FAST (NUCES) -->
+        <div class="grid md:grid-cols-[1fr,72px,1fr] gap-6 items-center">
+          <!-- dates -->
+          <p class="order-3 md:order-1 text-slate-400 text-sm md:text-base md:text-right text-center">
+            Aug 2020 – Jun 2024
+          </p>
 
-      <!-- Row 2 (card on RIGHT) — FAST (NUCES) -->
-      <div class="grid md:grid-cols-[1fr,72px,1fr] gap-6 items-center">
-        <!-- dates -->
-        <p class="order-3 md:order-1 text-slate-400 text-sm md:text-base md:text-right text-center">
-          Aug 2020 – Jun 2024
-        </p>
-
-        <!-- timeline dot -->
-        <div class="order-2 relative flex items-center justify-center">
-          <div class="flex items-center justify-center h-16 w-16 rounded-full bg-slate-900 ring-4 ring-slate-800">
-            <i data-lucide="bookmark" class="h-6 w-6 text-slate-200"></i>
+          <!-- timeline dot -->
+          <div class="order-2 relative flex items-center justify-center">
+            <div class="flex items-center justify-center h-16 w-16 rounded-full bg-slate-900 ring-4 ring-slate-800">
+              <i data-lucide="bookmark" class="h-6 w-6 text-slate-200"></i>
+            </div>
           </div>
+
+          <!-- BS AI card (RIGHT) — wider -->
+          <article class="order-1 md:order-3 neon-card p-6 md:p-7 w-full md:max-w-[880px] md:justify-self-start relative">
+            <!-- arrow to center line (desktop only) -->
+            <span class="hidden md:block absolute top-10 -left-2 h-0 w-0
+                          border-y-[10px] border-y-transparent border-r-[10px] border-r-slate-700"></span>
+
+            <!-- header -->
+            <div class="flex items-start gap-3 mb-3">
+              <div class="icon-chip shrink-0">
+                <i data-lucide="graduation-cap" class="h-5 w-5"></i>
+              </div>
+              <div>
+                <h3 class="text-2xl font-semibold leading-snug">FAST (NUCES)</h3>
+                <p class="text-sm text-slate-400 mt-0.5">BSc — Artificial Intelligence (CGPA&nbsp;3.33)</p>
+              </div>
+            </div>
+
+            <p class="italic text-slate-300">Relevant Coursework</p>
+            <ul class="list-disc pl-6 mt-2 space-y-1 text-slate-300">
+              <li>Data Structures &amp; Algorithms</li>
+              <li>Machine Learning &amp; NLP</li>
+              <li>Computer Vision</li>
+              <li>Databases &amp; OOP</li>
+            </ul>
+          </article>
         </div>
 
-        <!-- card -->
-        <!-- BS AI card (RIGHT) -->
-        <article class="order-1 md:order-3 neon-card p-6 md:p-7 w-full md:max-w-[820px] md:justify-self-start relative">
-          <!-- arrow pointing to the center line -->
-          <span class="hidden md:block absolute top-10 -left-2 h-0 w-0
-                        border-y-[10px] border-y-transparent border-r-[10px] border-r-slate-700"></span>
-
-          <!-- header -->
-          <div class="flex items-start gap-3 mb-3">
-            <div class="icon-chip shrink-0">
-              <i data-lucide="graduation-cap" class="h-5 w-5"></i>
-            </div>
-            <div>
-              <h3 class="text-2xl font-semibold leading-snug">FAST (NUCES)</h3>
-              <p class="text-sm text-slate-400 mt-0.5">Bsc-Artificial Intelligence (CGPA 3.33)</p>
-            </div>
-          </div>
-
-          <p class="italic text-slate-300">Relevant Coursework</p>
-          <ul class="list-disc pl-6 mt-2 space-y-1 text-slate-300">
-            <li>Data Structures &amp; Algorithms</li>
-            <li>Machine Learning &amp; NLP</li>
-            <li>Computer Vision</li>
-            <li>Databases &amp; OOP</li>
-          </ul>
-        </article>
       </div>
-
     </div>
   </div>
 </section>
-
 
 <!-- Contact -->
 <section id="contact" class="section">

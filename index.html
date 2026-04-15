@@ -1,200 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
   <title>Lohit Vaswani | AI Engineer</title>
-  <meta
-    name="description"
-    content="AI Engineer portfolio of Lohit Vaswani — LLM systems, RAG, ML engineering, and production AI solutions."
-  />
-  <link rel="stylesheet" href="assets/css/style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
+
 <body>
-  <div class="noise"></div>
-  <div class="bg-ring ring-1"></div>
-  <div class="bg-ring ring-2"></div>
-  <div class="bg-ring ring-3"></div>
 
-  <header class="navbar">
-    <div class="container nav-inner">
-      <a href="#" class="logo">
-        <span class="logo-mark"></span>
-        <span>Lohit</span>
-      </a>
+<header class="navbar">
+  <div class="container nav">
+    <h2>Lohit</h2>
+    <nav>
+      <a href="#work">Work</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
 
-      <nav class="nav-links">
-        <a href="#work">Work</a>
-        <a href="#stack">Stack</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-      </nav>
+<section class="hero container">
+  <div class="left">
+    <h1>Lohit<br>Vaswani</h1>
+    <p>
+      AI Engineer building LLM systems, RAG architectures and production AI solutions.
+    </p>
 
-      <a class="resume-btn" href="Lohit-Ashwa-Vaswani-Resume.pdf" target="_blank">
-        Resume
-      </a>
+    <div class="buttons">
+      <a href="#work" class="btn dark">View Work</a>
+      <a href="mailto:ashwalohit@gmail.com" class="btn light">Contact</a>
     </div>
-  </header>
+  </div>
 
-  <main>
-    <section class="hero container">
-      <div class="hero-left">
-        <div class="hero-badge">
-          AI Engineer · Data Scientist · LLM Systems Builder
-        </div>
-
-        <h1 class="hero-title">
-          Lohit<br />
-          Vaswani
-        </h1>
-
-        <p class="hero-text">
-          AI Engineer building practical LLM systems, RAG architectures,
-          applied ML products, and production-grade backend services.
-          From research to deployment, I focus on systems that create
-          measurable business impact.
-        </p>
-
-        <div class="hero-actions">
-          <a href="#work" class="btn btn-dark">View Work</a>
-          <a href="mailto:ashwalohit@gmail.com" class="btn btn-light">ashwalohit@gmail.com</a>
-        </div>
-
-        <div class="hero-points">
-          <div class="point">
-            <h4>Based in London, UK</h4>
-            <p>Open to AI engineering and LLM roles</p>
-          </div>
-          <div class="point">
-            <h4>LLMs + ML Systems</h4>
-            <p>RAG, evaluation, fine-tuning, FastAPI</p>
-          </div>
-          <div class="point">
-            <h4>Production Focus</h4>
-            <p>Research translated into deployed systems</p>
-          </div>
-        </div>
+  <div class="right">
+    <div class="card" id="card">
+      <img src="assets/img/Profile Pic.jpeg" />
+      <div class="stats">
+        <div><h3>70%</h3><p>Adoption</p></div>
+        <div><h3>&lt;250ms</h3><p>Latency</p></div>
+        <div><h3>300K+</h3><p>Records</p></div>
       </div>
+    </div>
+  </div>
+</section>
 
-      <div class="hero-right">
-        <div class="profile-card" id="profileCard">
-          <div class="card-glow"></div>
+<!-- EXPERIENCE -->
+<section class="container section" id="experience">
+  <h2>Experience</h2>
 
-          <div class="profile-image-wrap">
-            <img src="assets/img/Profile Pic.jpeg" alt="Lohit Vaswani" class="profile-image" />
-          </div>
-
-          <div class="stats">
-            <div class="stat">
-              <h3>70%</h3>
-              <p>active adoption</p>
-              <span>financial RAG system</span>
-            </div>
-            <div class="stat">
-              <h3>&lt;250ms</h3>
-              <p>latency</p>
-              <span>Vertex AI deployment</span>
-            </div>
-            <div class="stat">
-              <h3>300K+</h3>
-              <p>records</p>
-              <span>fraud & ATM ML systems</span>
-            </div>
-          </div>
-        </div>
+  <div class="timeline">
+    <div class="item">
+      <div class="dot"></div>
+      <div class="content">
+        <h3>Data Scientist — CreatorOS</h3>
+        <p>Built ML system → +12% precision, deployed on GCP</p>
       </div>
-    </section>
-
-    <section class="section container" id="work">
-      <div class="section-head">
-        <p class="section-label">Selected Work</p>
-        <h2>Projects and systems I have built</h2>
-      </div>
-
-      <div class="cards-grid">
-        <article class="glass-card">
-          <span class="card-tag">LLM Evaluation</span>
-          <h3>WHO JEE Report Evaluation</h3>
-          <p>
-            Automated scoring pipeline for WHO Joint External Evaluation reports
-            using OCR, rubric-based scoring, and benchmarking across Gemini,
-            Qwen, and Magistral models.
-          </p>
-        </article>
-
-        <article class="glass-card">
-          <span class="card-tag">RAG + Finance</span>
-          <h3>LLM Trading Insights System</h3>
-          <p>
-            Built a grounded financial reasoning system using Llama-2,
-            retrieval pipelines, and Pinecone vector search to improve decision
-            speed and user adoption.
-          </p>
-        </article>
-
-        <article class="glass-card">
-          <span class="card-tag">ML Ranking</span>
-          <h3>Creator Matching Intelligence</h3>
-          <p>
-            Designed and deployed a two-stage recommendation and ranking system
-            for creator-brand matching with measurable improvements in
-            Precision@10 and NDCG@10.
-          </p>
-        </article>
-      </div>
-    </section>
-
-    <section class="section container" id="stack">
-      <div class="section-head">
-        <p class="section-label">Stack</p>
-        <h2>Technologies I work with</h2>
-      </div>
-
-      <div class="stack-list">
-        <span>Python</span>
-        <span>PyTorch</span>
-        <span>FastAPI</span>
-        <span>LangChain</span>
-        <span>LlamaIndex</span>
-        <span>FAISS</span>
-        <span>Pinecone</span>
-        <span>Docker</span>
-        <span>Vertex AI</span>
-        <span>Databricks</span>
-        <span>Spark</span>
-        <span>PostgreSQL</span>
-      </div>
-    </section>
-
-    <section class="section container" id="about">
-      <div class="about-box">
-        <div>
-          <p class="section-label">About</p>
-          <h2>Research-minded, production-ready</h2>
-        </div>
-        <p>
-          I build AI systems across LLM applications, retrieval-augmented
-          generation, recommendation systems, evaluation pipelines, and backend
-          deployment. My work combines experimentation, engineering, and
-          measurable delivery.
-        </p>
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer container" id="contact">
-    <div>
-      <h3>Let’s build something useful.</h3>
-      <p>For AI engineering, LLM systems, and applied ML collaborations.</p>
     </div>
 
-    <div class="footer-links">
-      <a href="mailto:ashwalohit@gmail.com">Email</a>
-      <a href="https://github.com/Lohit20" target="_blank">GitHub</a>
-      <a href="https://www.linkedin.com/in/lohit-ashwa-44422a245/" target="_blank">LinkedIn</a>
+    <div class="item">
+      <div class="dot"></div>
+      <div class="content">
+        <h3>Research Engineer — Retrocausal</h3>
+        <p>Built AI systems → 44% faster processing</p>
+      </div>
     </div>
-  </footer>
 
-  <script src="assets/js/main.js"></script>
+    <div class="item">
+      <div class="dot"></div>
+      <div class="content">
+        <h3>LLM Travel System</h3>
+        <p>Multi-agent + RAG pipeline</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section class="container section" id="work">
+  <h2>Projects</h2>
+
+  <div class="grid">
+    <div class="project">WHO LLM Evaluation</div>
+    <div class="project">Trading RAG System</div>
+    <div class="project">Fraud Detection</div>
+    <div class="project">Microservices Platform</div>
+  </div>
+</section>
+
+<footer id="contact">
+  <p>Contact: ashwalohit@gmail.com</p>
+</footer>
+
+<script src="assets/js/main.js"></script>
 </body>
 </html>

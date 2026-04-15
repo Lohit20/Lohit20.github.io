@@ -1,25 +1,21 @@
+const card = document.getElementById("profileCard");
 
-document.addEventListener('DOMContentLoaded', () => {
-  // Mobile menu
-  const btn = document.getElementById('menuBtn');
-  const nav = document.getElementById('mobileNav');
-  if (btn && nav) {
-    btn.addEventListener('click', () => nav.classList.toggle('hidden'));
-  }
+if (card) {
+  card.addEventListener("mousemove", (e) => {
+    const rect = card.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
 
-  // Typed headline
-  if (window.Typed) {
-    new Typed('#typed', {
-      strings: ['Data Scientist', 'Data Engineer', 'Machine Learning Engineer', 'Generative AI Enthusiast'],
-      typeSpeed: 45,
-      backSpeed: 30,
-      backDelay: 1400,
-      smartBackspace: true,
-      loop: true
-    });
-  }
+    const centerX = rect.width / 2;
+    const centerY = rect.height / 2;
 
-  // Year
-  const y = document.getElementById('year');
-  if (y) y.textContent = new Date().getFullYear();
-});
+    const rotateY = ((x - centerX) / centerX) * 8;
+    const rotateX = -((y - centerY) / centerY) * 8;
+
+    card.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-6px)`;
+  });
+
+  card.addEventListener("mouseleave", () => {
+    card.style.transform = "rotateX(0deg) rotateY(0deg) translateY(0px)";
+  });
+}

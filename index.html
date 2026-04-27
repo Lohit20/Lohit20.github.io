@@ -179,13 +179,10 @@
             <article class="neon-card p-6 md:p-7 md:justify-self-end w-full md:max-w-[880px]">
               <h3 class="text-2xl font-semibold leading-snug">Data Scientist Intern — CreatorOS</h3>
               <p class="text-xs text-slate-400 mt-1">London, UK · Remote</p>
-              <p class="mt-3 text-sm text-slate-300">CreatorOS needed a more reliable way to match brands with the right creators. I built a production-focused recommendation system that converted creator behaviour and campaign requirements into ranked creator suggestions.</p>
-              <ul class="list-disc pl-6 mt-3 space-y-1 text-slate-300">
-                <li>Designed a two-stage ML pipeline: RandomForest classification for creator segmentation and XGBoost regression for campaign-level ranking.</li>
-                <li>Engineered behavioural features from creator engagement, reach, activity, and campaign fit signals to improve match relevance.</li>
-                <li>Deployed the service as a FastAPI + Docker application on GCP Vertex AI with real-time inference under 250ms.</li>
-                <li>Used MistralOCR to convert unstructured client briefs into structured PostgreSQL records, reducing manual data entry.</li>
-                <li><b>Impact:</b> +12% Precision@10, +10% NDCG@10, and 63% reduction in manual operational overhead.</li>
+              <ul class="list-disc pl-6 mt-3 space-y-2 text-slate-300">
+                <li>The business was manually copying campaign requirements from client documents into spreadsheets, which was slow and error-prone. An automated ingestion pipeline was built using MistralOCR to read each document, extract relevant fields, and load the structured output directly into PostgreSQL — cutting data entry effort by 70%.</li>
+                <li>A recommendation service was then deployed to GCP Vertex AI using FastAPI and Docker, combining a pruned RandomForest classifier for creator segmentation with XGBoost regression for campaign ranking, running at under 250ms latency and improving match precision by 12% on Precision@10 and 10% on NDCG@10.</li>
+                <li>Behavioural features were engineered from creator engagement, reach, activity patterns, and campaign fit signals to improve creator-to-campaign matching relevance, contributing to a 63% reduction in manual operational overhead.</li>
               </ul>
             </article>
             <div class="relative flex items-center justify-center"><div class="flex items-center justify-center h-16 w-16 rounded-full bg-slate-900 ring-4 ring-slate-800"><i data-lucide="briefcase" class="h-6 w-6 text-slate-200"></i></div></div>
@@ -196,14 +193,12 @@
             <p class="order-3 md:order-1 text-slate-400 text-sm md:text-base md:text-right text-center">Mar 2025 – May 2025</p>
             <div class="order-2 relative flex items-center justify-center"><div class="flex items-center justify-center h-16 w-16 rounded-full bg-slate-900 ring-4 ring-slate-800"><i data-lucide="database" class="h-6 w-6 text-slate-200"></i></div></div>
             <article class="order-1 md:order-3 neon-card p-6 md:p-7 w-full md:max-w-[880px]">
-              <h3 class="text-2xl font-semibold leading-snug">Data Engineer — LLM Travel Planning PoC</h3>
-              <p class="text-xs text-slate-400 mt-1">Client Contract via Facebook · Remote</p>
-              <p class="mt-3 text-sm text-slate-300">Built an AI travel planning proof-of-concept that could understand user constraints, retrieve relevant travel records, and generate personalised itineraries from inconsistent multi-source datasets.</p>
-              <ul class="list-disc pl-6 mt-3 space-y-1 text-slate-300">
-                <li>Engineered Spark ETL pipelines in Databricks to unify flights, hotels, and activities into a clean query-ready schema.</li>
-                <li>Built a FAISS-based RAG layer indexing 50,000+ travel records for semantic retrieval instead of keyword-only search.</li>
-                <li>Created a multi-agent LLM workflow with planner, retriever, and executor agents to decompose user requests and generate final itineraries.</li>
-                <li>Focused on budget, date, location, and preference constraints to reduce unrealistic or hallucinated suggestions.</li>
+              <h3 class="text-2xl font-semibold leading-snug">Data Engineer, AI and Data Platform Delivery</h3>
+              <p class="text-xs text-slate-400 mt-1">Client Contract · Remote</p>
+              <ul class="list-disc pl-6 mt-3 space-y-2 text-slate-300">
+                <li>Led the Change of Value (COV) processing project for a manufacturing client's IoT device systems using Databricks Workflows and Spark SQL, building real-time streaming pipelines into the bronze layer. Fault-tolerant logic was designed to handle mid-flow outages, out-of-sequence data arrival, and partial data windows from incomplete sensor readings — ensuring reliable end-to-end data processing regardless of device disruption.</li>
+                <li>On a second engagement, raw travel data from multiple inconsistent sources was unified into structured JSON using Spark ETL pipelines in Databricks, then indexed into a FAISS vector database for semantic retrieval to reduce LLM hallucination.</li>
+                <li>A three-agent LLM system was built using LangChain and DBRX — a planner to decompose user travel requests, a retriever to query the FAISS index, and an executor to assemble the final itinerary — with prompt engineering applied at every stage to keep responses grounded and hallucination-free.</li>
               </ul>
             </article>
           </div>
@@ -212,13 +207,10 @@
             <article class="neon-card p-6 md:p-7 md:justify-self-end w-full md:max-w-[880px]">
               <h3 class="text-2xl font-semibold leading-snug">Research Engineer — Retrocausal</h3>
               <p class="text-xs text-slate-400 mt-1">Remote · Redmond, USA · Promoted from Intern</p>
-              <p class="mt-3 text-sm text-slate-300">Worked on production AI systems for industrial environments, combining computer vision, model optimisation, reporting automation, and deployment engineering.</p>
-              <ul class="list-disc pl-6 mt-3 space-y-1 text-slate-300">
-                <li>Built an automated ergonomics reporting system calculating REBA, RULA, NIOSH, SNOOK, and Hand Strain metrics directly from sensor data.</li>
-                <li>Integrated reporting into a Django backend via POST APIs, then refactored it into a Dockerized FastAPI microservice for independent deployment and scaling.</li>
-                <li>Converted YOLOv5 pose-estimation from PyTorch to OpenVINO IR and applied INT8 quantisation for CPU edge deployment.</li>
-                <li>Fine-tuned Timesformer+GPT-2 and ViT+GPT-2 for industrial video captioning to support assembly-line error reduction.</li>
-                <li><b>Impact:</b> 44% faster report generation, 2× faster inference, 36% lower compute cost, 25% fewer assembly errors, and 30% lower rework cost.</li>
+              <ul class="list-disc pl-6 mt-3 space-y-2 text-slate-300">
+                <li>Retrocausal needed to automatically detect missing or incorrectly installed components on a factory assembly line. The full data pipeline was owned: footage was collected and preprocessed, Timesformer+GPT-2 and ViT+GPT-2 were compared to find the most accurate architecture, and the chosen model was deployed to production — reducing assembly errors by 25% and rework costs by 30%.</li>
+                <li>A YOLOv5 inference pipeline was optimised using OpenVINO INT8 quantisation, achieving 2× faster inference and a 36% reduction in compute costs.</li>
+                <li>A FastAPI microservice was deployed to automate ergonomic risk scoring (REBA, RULA, NIOSH, SNOOK, Hand Strain) directly from sensor data, cutting report generation time by 44% and demonstrating consistent delivery of reliable, production-grade ML solutions.</li>
               </ul>
             </article>
             <div class="relative flex items-center justify-center"><div class="flex items-center justify-center h-16 w-16 rounded-full bg-slate-900 ring-4 ring-slate-800"><i data-lucide="briefcase" class="h-6 w-6 text-slate-200"></i></div></div>
@@ -231,12 +223,10 @@
             <article class="order-1 md:order-3 neon-card p-6 md:p-7 w-full md:max-w-[880px]">
               <h3 class="text-2xl font-semibold leading-snug">ML and Product Development Engineer Intern — Transaction Processing System</h3>
               <p class="text-xs text-slate-400 mt-1">Karachi, Pakistan</p>
-              <p class="mt-3 text-sm text-slate-300">Worked on ATM transaction analytics and a recommendation prototype to improve cash management decisions using machine learning and product-aligned data workflows.</p>
-              <ul class="list-disc pl-6 mt-3 space-y-1 text-slate-300">
-                <li>Developed Oracle SQL extraction workflows for 300,000+ ATM transaction records, reducing data preparation time by 20%.</li>
-                <li>Built an XGBoost-based ATM withdrawal recommendation model using recency, frequency, and time-of-day features.</li>
-                <li>Designed the pipeline from preprocessing and feature engineering through training, validation, and internal workflow integration.</li>
-                <li><b>Impact:</b> Reduced RMSE by 8% over baseline heuristics and showed 5–6% potential reduction in cash stockout events in simulation.</li>
+              <ul class="list-disc pl-6 mt-3 space-y-2 text-slate-300">
+                <li>The business needed a more reliable way to manage cash levels across a large ATM network. Oracle SQL extraction workflows were built to process 300,000+ ATM transaction records, cutting data preparation time by 20%.</li>
+                <li>An XGBoost-based withdrawal recommendation model was developed using recency, frequency, and time-of-day features, covering the full pipeline from preprocessing and feature engineering through training, validation, and internal workflow integration.</li>
+                <li>The model reduced RMSE by 8% over baseline heuristics and demonstrated a 5–6% potential reduction in cash stockout events in simulation.</li>
               </ul>
             </article>
           </div>
@@ -245,11 +235,10 @@
             <article class="neon-card p-6 md:p-7 md:justify-self-end w-full md:max-w-[880px]">
               <h3 class="text-2xl font-semibold leading-snug">Teaching & Academic Support — NUCES FAST University</h3>
               <p class="text-xs text-slate-400 mt-1">Karachi, Pakistan</p>
-              <p class="mt-3 text-sm text-slate-300">Supported students across programming, AI, and recommendation systems modules by explaining theory, debugging implementations, and helping students connect concepts to working code.</p>
-              <ul class="list-disc pl-6 mt-3 space-y-1 text-slate-300">
-                <li><b>Lab Assistant, OOP:</b> Mentored students on inheritance, polymorphism, abstraction, debugging, and software engineering practices.</li>
-                <li><b>TA, AI Programming:</b> Delivered support on search algorithms, algorithmic game theory, and knowledge representation and reasoning.</li>
-                <li><b>TA, Recommendation Systems:</b> Guided students through collaborative filtering, neural recommenders, model evaluation, hyperparameter optimisation, and ethics.</li>
+              <ul class="list-disc pl-6 mt-3 space-y-2 text-slate-300">
+                <li>Served as Lab Assistant for Object-Oriented Programming, mentoring students on inheritance, polymorphism, abstraction, and debugging — helping them connect theoretical concepts to working, well-structured code.</li>
+                <li>Acted as Teaching Assistant for AI Programming, delivering guidance on search algorithms, algorithmic game theory, and knowledge representation and reasoning across lab sessions and individual student support.</li>
+                <li>Supported the Recommendation Systems module by guiding students through collaborative filtering, neural recommenders, model evaluation, hyperparameter optimisation, and the ethical implications of deployed recommender systems.</li>
               </ul>
             </article>
             <div class="relative flex items-center justify-center"><div class="flex items-center justify-center h-16 w-16 rounded-full bg-slate-900 ring-4 ring-slate-800"><i data-lucide="graduation-cap" class="h-6 w-6 text-slate-200"></i></div></div>

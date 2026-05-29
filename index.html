@@ -1,539 +1,704 @@
-<!doctype html>
-<html lang="en" class="dark">
+<!DOCTYPE html>
+<html lang="en" data-theme="dark" data-motion="on" data-glass="on">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Lohit Ashwa Vaswani — Portfolio</title>
-  <meta name="description" content="Portfolio of Lohit Ashwa Vaswani — AI Engineer, Data Scientist, LLM Systems Builder, and ML Engineer." />
-  <meta name="theme-color" content="#0b1020" />
-  <link rel="icon" type="image/svg+xml" href="assets/img/avatar.svg" />
-
-  <!-- Tailwind (CDN) -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <!-- Icons + Typed.js -->
-  <script defer src="https://unpkg.com/lucide@latest"></script>
-  <script defer src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-
-  <!-- Original neon theme utilities + same animation style -->
-  <style>
-    html { scroll-behavior: smooth; }
-    :root{
-      --bg:#050816;--fg:#e5e7eb;
-      --grad-from:#8b5cf6;--grad-mid:#f0abfc;--grad-to:#fb923c;
-    }
-    body{background:var(--bg);color:var(--fg)}
-    .nav-blur{backdrop-filter:blur(10px)}
-    .section{padding-top:5rem;padding-bottom:5rem}
-    .section-compact{padding-top:2rem;padding-bottom:2rem}
-    .gradient-text{
-      background:linear-gradient(90deg,var(--grad-from),var(--grad-mid),var(--grad-to));
-      -webkit-background-clip:text;background-clip:text;color:transparent
-    }
-    .btn-gradient{display:inline-block;padding:.65rem 1rem;border-radius:1rem;font-weight:600;
-      background:linear-gradient(135deg,var(--grad-from),var(--grad-mid),var(--grad-to));color:#0b1020;
-      box-shadow:0 10px 25px -10px rgba(251,146,60,.45);transition:transform .15s,box-shadow .15s}
-    .btn-gradient:hover{transform:translateY(-1px);box-shadow:0 16px 32px -12px rgba(251,146,60,.55)}
-    .btn-outline{display:inline-block;padding:.65rem 1rem;border-radius:1rem;font-weight:600;
-      border:1px solid rgba(148,163,184,.35);color:var(--fg);transition:background .2s,border-color .2s,transform .15s}
-    .btn-outline:hover{background:rgba(148,163,184,.06);border-color:rgba(148,163,184,.5);transform:translateY(-1px)}
-    .neon-card{border-radius:1.5rem;padding:1rem;background:rgba(2,6,23,.6);border:1px solid rgba(30,41,59,.7);
-      box-shadow:0 1px 0 0 rgba(255,255,255,.03) inset,0 10px 30px -10px rgba(139,92,246,.25),0 10px 40px -18px rgba(251,146,60,.2);
-      transition:transform .15s,box-shadow .2s,border-color .2s}
-    .neon-card:hover{transform:translateY(-2px);border-color:rgba(99,102,241,.6);
-      box-shadow:0 1px 0 0 rgba(255,255,255,.05) inset,0 16px 36px -12px rgba(139,92,246,.35),0 18px 60px -18px rgba(251,146,60,.28)}
-    .tag{display:inline-block;padding:.25rem .55rem;border-radius:9999px;font-size:.7rem;letter-spacing:.02em;
-      border:1px solid rgba(148,163,184,.35);color:#c7d2fe;background:rgba(99,102,241,.12)}
-    a.link-underline{position:relative}
-    a.link-underline::after{content:"";position:absolute;left:0;bottom:-2px;width:100%;height:2px;
-      background:linear-gradient(90deg,var(--grad-from),var(--grad-mid),var(--grad-to));
-      transform:scaleX(0);transform-origin:left;transition:transform .25s}
-    a.link-underline:hover::after{transform:scaleX(1)}
-    ::selection{background:rgba(139,92,246,.35);color:#fff}
-    .icon-chip{border-radius:1rem;padding:.6rem;background:linear-gradient(135deg,rgba(139,92,246,.22),rgba(240,171,252,.18));
-      border:1px solid rgba(99,102,241,.3)}
-  </style>
-
-  <!-- SEO / social -->
-  <meta property="og:title" content="Lohit Ashwa Vaswani — Portfolio" />
-  <meta property="og:description" content="AI Engineer · Data Scientist · LLM Systems Builder — NLP • CV • GenAI • RAG • Recommenders • MLOps" />
-  <meta property="og:image" content="assets/img/avatar.svg" />
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"Person",
-    "name":"Lohit Ashwa Vaswani",
-    "email":"mailto:ashwalohit@gmail.com",
-    "url":"https://lohit20.github.io",
-    "sameAs":["https://www.linkedin.com/in/lohit-ashwa-44422a245/","https://github.com/Lohit20"],
-    "jobTitle":"AI Engineer · Data Scientist · LLM Systems Builder",
-    "knowsAbout":["NLP","Computer Vision","Generative AI","RAG","Recommendation Systems","MLOps","LLMOps"]
-  }
-  </script>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Lohit Ashwa Vaswani — AI Engineer · Data · Agentic AI · ML Systems</title>
+<meta name="description" content="Portfolio of Lohit Ashwa Vaswani — AI Engineer building production LLM systems, data pipelines, and ML at scale. London, UK." />
+<meta name="theme-color" content="#07070b" />
+<link rel="icon" type="image/svg+xml" href="assets/img/avatar.svg" />
+<meta property="og:title" content="Lohit Ashwa Vaswani — AI Engineer" />
+<meta property="og:description" content="Production AI systems across Data Engineering, Agentic AI, and ML — London, UK." />
+<meta property="og:image" content="assets/img/avatar.svg" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://lohit20.github.io" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Person","name":"Lohit Ashwa Vaswani","email":"mailto:ashwalohit@gmail.com","url":"https://lohit20.github.io","sameAs":["https://www.linkedin.com/in/lohit-ashwa-44422a245/","https://github.com/Lohit20"],"jobTitle":"AI Engineer · Data Scientist · LLM Systems Builder","knowsAbout":["NLP","Computer Vision","Generative AI","RAG","Recommendation Systems","MLOps","LLMOps"]}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400;1,6..72,500&family=Sora:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/css/styles.css" />
+<link rel="stylesheet" href="assets/css/components.css" />
+<link rel="stylesheet" href="assets/css/portfolio-v2.css" />
+<link rel="stylesheet" href="assets/css/portfolio-v3.css" />
 </head>
-<body class="text-slate-100">
+<body>
 
-  <!-- soft page glow -->
-  <div aria-hidden="true" class="pointer-events-none fixed -z-10 inset-0">
-    <div class="absolute -top-20 left-1/2 -translate-x-1/2 h-72 w-[40rem] rounded-full blur-3xl
-                bg-gradient-to-r from-purple-600/25 via-fuchsia-400/20 to-orange-300/20"></div>
+<div class="bg-field" aria-hidden="true">
+  <span class="blob b1"></span>
+  <span class="blob b2"></span>
+  <span class="blob b3"></span>
+  <span class="blob b4"></span>
+</div>
+
+<!-- ===================== TOP BAR ===================== -->
+<header class="topbar">
+  <div class="topbar-inner v3bar">
+    <a href="#data" data-role-link="data" class="brand">
+      <span class="dot"></span>
+      <span><b>Lohit Ashwa Vaswani</b></span>
+    </a>
+    <nav class="role-switch">
+      <a href="#data" data-role-link="data">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5M3 12c0 1.66 4 3 9 3s9-1.34 9-3"/></svg>
+        Data Engineer
+      </a>
+      <a href="#agentic" data-role-link="agentic">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="6" cy="6" r="3"/><circle cx="18" cy="6" r="3"/><circle cx="12" cy="18" r="3"/><path d="M6 9v3a3 3 0 0 0 3 3M18 9v3a3 3 0 0 1-3 3"/></svg>
+        Agentic AI Engineer
+      </a>
+      <a href="#ml" data-role-link="ml">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h4l3 8 4-16 3 8h4"/></svg>
+        ML Systems
+      </a>
+    </nav>
+    <div class="topbar-right">
+      <a href="assets/Lohit-Ashwa-Vaswani-Resume.pdf" target="_blank" rel="noopener" class="navlinks">
+        <span class="cta" style="font-family:var(--mono);font-size:12px;padding:7px 13px;border-radius:8px;background:var(--accent);color:var(--accent-ink)">Download CV</span>
+      </a>
+    </div>
+  </div>
+</header>
+
+<nav class="role-switch-mobile">
+  <a href="#data" data-role-link="data">Data</a>
+  <a href="#agentic" data-role-link="agentic">Agentic</a>
+  <a href="#ml" data-role-link="ml">ML</a>
+</nav>
+
+<main class="wrap v2">
+
+  <!-- ============================================================
+       VIEW 1 — DATA ENGINEER
+       ============================================================ -->
+  <div class="role-view" data-role="data">
+    <section class="role-hero">
+      <div class="bento">
+        <div class="tile role-hero-tile reveal">
+          <span class="role-status"><span class="dot"></span> Available now · London / Remote</span>
+          <span class="role-kicker">
+            <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5M3 12c0 1.66 4 3 9 3s9-1.34 9-3"/></svg></span>
+            Data Engineer · Pipelines &amp; Infrastructure
+          </span>
+          <h1 class="role-h1">The data layer<br /><span class="accent">AI runs on</span></h1>
+          <p class="role-lead">I build the ingestion, structuring and storage that production AI depends on — <b>fault-tolerant real-time streaming</b>, OCR → indicator-level JSON, and low-latency serving stores. From <b>100+ page PDFs to clean structured data</b> and IoT pipelines that don't drop events.</p>
+          <div class="role-actions">
+            <a href="#data-work" class="btn primary">See data systems <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+            <a href="https://github.com/Lohit20" target="_blank" rel="noopener" class="btn">GitHub</a>
+            <a href="assets/Lohit-Ashwa-Vaswani-Resume.pdf" target="_blank" rel="noopener" class="btn">Download CV</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="bento dash-grid">
+        <div class="tile dash-card reveal">
+          <div class="dc-top"><span class="dc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg></span></div>
+          <div><div class="dc-num"><span data-count="100">0</span><span class="suf">+</span></div><div class="dc-lab">page PDFs → structured JSON</div></div>
+          <div class="dc-spark"></div>
+        </div>
+        <div class="tile dash-card reveal">
+          <div class="dc-top"><span class="dc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h4l3 8 4-16 3 8h4"/></svg></span><span class="dc-live"><span class="dot"></span>24/7</span></div>
+          <div><div class="dc-num">RT</div><div class="dc-lab">fault-tolerant streaming (Spark)</div></div>
+          <div class="dc-spark"></div>
+        </div>
+        <div class="tile dash-card reveal">
+          <div class="dc-top"><span class="dc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg></span></div>
+          <div><div class="dc-num"><span data-count="300">0</span><span class="suf">K+</span></div><div class="dc-lab">ATM records processed</div></div>
+          <div class="dc-spark"></div>
+        </div>
+        <div class="tile dash-card reveal">
+          <div class="dc-top"><span class="dc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></span></div>
+          <div><div class="dc-num"><span data-count="3">0</span><span class="suf">×</span></div><div class="dc-lab">datastores orchestrated per product</div></div>
+          <div class="dc-spark"></div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="sec-head reveal"><span class="sec-eyebrow">How I build</span><h2 class="sec-title">A resilient <em>data pipeline</em></h2><p class="sec-sub">Raw, messy sources in — clean, queryable, AI-ready data out.</p></div>
+      <div class="bento"><div class="tile pipe-tile reveal">
+        <div class="arch" style="border:none;background:transparent;padding:0">
+          <div class="arch-row">
+            <div class="arch-box">Sources<span class="sub">PDF · IoT · APIs</span></div>
+            <div class="arch-conn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+            <div class="arch-box">Ingest<span class="sub">Kafka · Spark</span></div>
+            <div class="arch-conn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+            <div class="arch-box">Transform<span class="sub">Databricks · Spark SQL</span></div>
+            <div class="arch-conn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+            <div class="arch-box hl">Structure<span class="sub">Mistral OCR → JSON</span></div>
+            <div class="arch-conn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+            <div class="arch-box">Store<span class="sub">Postgres · Mongo · Redis</span></div>
+            <div class="arch-conn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+            <div class="arch-box hl">Serve<span class="sub">FastAPI</span></div>
+          </div>
+        </div>
+      </div></div>
+    </section>
+
+    <section>
+      <div class="sec-head reveal"><span class="sec-eyebrow">Toolkit</span><h2 class="sec-title">Data engineering <em>stack</em></h2></div>
+      <div class="bento"><div class="tile skill-tile reveal"><div class="skill-groups">
+        <div class="skill-group"><div class="sg-h">Pipelines &amp; Streaming</div><div class="chips"><span class="chip">Apache Spark</span><span class="chip">Spark SQL</span><span class="chip">Databricks</span><span class="chip">Kafka</span><span class="chip">Celery</span><span class="chip">ETL</span></div></div>
+        <div class="skill-group"><div class="sg-h">Storage &amp; Indexing</div><div class="chips"><span class="chip">PostgreSQL</span><span class="chip">MongoDB</span><span class="chip">Redis</span><span class="chip">Oracle</span><span class="chip">FAISS</span><span class="chip">Pinecone</span></div></div>
+        <div class="skill-group"><div class="sg-h">Processing &amp; Languages</div><div class="chips"><span class="chip">Python</span><span class="chip">SQL</span><span class="chip">Mistral OCR</span><span class="chip">Pandas</span><span class="chip">Schema validation</span></div></div>
+      </div></div></div>
+    </section>
+
+    <section id="data-work">
+      <div class="sec-head reveal"><span class="sec-eyebrow">Projects</span><h2 class="sec-title">Data systems <em>in production</em></h2><p class="sec-sub">Click any project to expand the architecture &amp; impact.</p></div>
+      <div class="bento">
+
+        <div class="tile case reveal">
+          <div class="case-head"><span class="case-logo">M</span><div class="case-title"><h3>Markaroo — Self-healing OCR-to-JSON pipeline</h3><div class="ct-meta"><span class="kbd live"><span class="dot"></span>Live</span> · <span>Mistral OCR · LLM · JSON schema</span></div></div><span class="case-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></span></div>
+          <div class="case-body"><div class="case-body-inner"><div class="case-content">
+            <div class="case-block"><span class="cb-label">Overview</span><p>Eight years of heterogeneous AQA mark scheme PDFs — different layouts, diagrams, rubric formats — unified into a single consistent JSON schema powering an AI marking engine.</p></div>
+            <div class="case-block"><span class="cb-label">What I built</span><ul><li>Two-stage pipeline: Mistral OCR for layout-aware extraction → LLM-driven structured JSON</li><li>Validation errors re-injected as corrective feedback into the next prompt (self-healing)</li><li>Cloudinary-hosted diagram assets extracted directly from source PDFs</li><li>First-pass extraction success on 7 of 8 mark schemes (2017–2024)</li></ul></div>
+            <div class="case-block"><span class="cb-label">Stack</span><div class="chips"><span class="chip">Mistral OCR</span><span class="chip">Kimi K2.6</span><span class="chip">JSON schema</span><span class="chip">Flask</span><span class="chip">Cloudinary</span></div></div>
+          </div></div></div>
+        </div>
+
+        <div class="tile case reveal">
+          <div class="case-head"><span class="case-logo">N</span><div class="case-title"><h3>Niagara Bottling — IoT fault-tolerant streaming pipeline</h3><div class="ct-meta"><span class="kbd">Mar – May 2025</span> · <span>Databricks · Spark SQL</span></div></div><span class="case-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></span></div>
+          <div class="case-body"><div class="case-body-inner"><div class="case-content">
+            <div class="case-block"><span class="cb-label">Overview</span><p>Change of Value (COV) processing for an IoT manufacturing system — real-time streaming into the bronze layer on Databricks, designed to survive every failure mode the factory floor could produce.</p></div>
+            <div class="case-block"><span class="cb-label">What I built</span><ul><li>Real-time Spark SQL streaming pipelines into the bronze layer on Databricks Workflows</li><li>Fault-tolerant logic for power/ISP outages cutting streams mid-flow</li><li>Handling for out-of-sequence data arrival and partial sensor windows</li></ul></div>
+            <div class="case-block"><span class="cb-label">Stack</span><div class="chips"><span class="chip">Databricks</span><span class="chip">Spark SQL</span><span class="chip">Apache Kafka</span><span class="chip">Python</span></div></div>
+          </div></div></div>
+        </div>
+
+        <div class="tile case reveal">
+          <div class="case-head"><span class="case-logo">T</span><div class="case-title"><h3>Twitter Word Clustering — Kafka ETL + ML pipeline</h3><div class="ct-meta"><span class="kbd">Jun 2023</span> · <span>Apache Kafka · ETL · Scikit-learn</span></div></div><span class="case-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></span></div>
+          <div class="case-body"><div class="case-body-inner"><div class="case-content">
+            <div class="case-block"><span class="cb-label">Overview</span><p>A real-time data engineering pipeline using Apache Kafka to ingest, filter and preprocess a continuous Twitter stream, then cluster it into coherent topic groups.</p></div>
+            <div class="case-block"><span class="cb-label">What I built</span><ul><li>High-throughput Kafka ingestion handling schema variability reliably</li><li>K-Means clustering over TF-IDF embeddings to group semantically similar tweets</li><li>Made the raw stream actionable for downstream sentiment &amp; trend monitoring</li></ul></div>
+            <div class="case-block"><span class="cb-label">Stack</span><div class="chips"><span class="chip">Apache Kafka</span><span class="chip">TF-IDF</span><span class="chip">K-Means</span><span class="chip">Python</span></div></div>
+          </div></div></div>
+        </div>
+
+        <div class="tile case reveal">
+          <div class="case-head"><span class="case-logo">S</span><div class="case-title"><h3>Stock Price Prediction — scraping → LSTM → Tableau</h3><div class="ct-meta"><span class="kbd">Dec 2022</span> · <span>Selenium · LSTM · Tableau</span></div></div><span class="case-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></span></div>
+          <div class="case-body"><div class="case-body-inner"><div class="case-content">
+            <div class="case-block"><span class="cb-label">Overview</span><p>End-to-end pipeline from automated NASDAQ data ingestion through LSTM forecasting to a stakeholder-facing Tableau dashboard.</p></div>
+            <div class="case-block"><span class="cb-label">What I built</span><ul><li>Selenium scraper automating ingestion across multiple tickers &amp; trading sessions</li><li>Multi-layer LSTM capturing long-range temporal dependencies (R² 0.97, MSE 0.068)</li><li>Interactive Tableau dashboard with trends &amp; 30-day forward projections</li></ul></div>
+            <div class="case-block"><span class="cb-label">Stack</span><div class="chips"><span class="chip">Selenium</span><span class="chip">LSTM (PyTorch)</span><span class="chip">Tableau</span><span class="chip">NASDAQ</span></div></div>
+          </div></div></div>
+        </div>
+
+      </div>
+    </section>
+
+    <section>
+      <div class="sec-head reveal"><span class="sec-eyebrow">Experience</span><h2 class="sec-title">Where I've built <em>data systems</em></h2></div>
+      <div class="bento"><div class="tile tl-tile reveal"><div class="timeline">
+        <div class="tl-item">
+          <div class="tl-marker"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></div>
+          <div class="tl-body">
+            <div class="role">AI Engineer — Data Layer</div>
+            <div class="org">Sparkmed &amp; Markaroo · London (Remote) &nbsp;<span class="when">May 2026 — Present</span></div>
+            <div class="desc">Own the data layer for two live SaaS products: self-healing OCR → JSON extraction, schema validation loops, and the Postgres/Mongo/Redis stores serving LLM inference in real time.</div>
+            <div class="chips tags"><span class="chip">Mistral OCR</span><span class="chip">PostgreSQL</span><span class="chip">Redis</span><span class="chip">MongoDB</span></div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-marker"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></div>
+          <div class="tl-body">
+            <div class="role">Data Scientist Intern</div>
+            <div class="org">CreatorOS · London (Remote) &nbsp;<span class="when">Sep — Dec 2025</span></div>
+            <div class="desc">Applied MistralOCR to automate structured data extraction from unstructured client briefs into PostgreSQL, eliminating manual copy-paste and cutting data entry effort by 70%.</div>
+            <div class="chips tags"><span class="chip">Mistral OCR</span><span class="chip">PostgreSQL</span><span class="chip">FastAPI</span></div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-marker"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></div>
+          <div class="tl-body">
+            <div class="role">Data Engineer (Client Contract)</div>
+            <div class="org">Niagara Bottling · Remote &nbsp;<span class="when">Mar — May 2025</span></div>
+            <div class="desc">Built fault-tolerant real-time streaming pipelines (Databricks, Spark SQL) for IoT manufacturing telemetry, and a FAISS-indexed travel itinerary ETL for a second client engagement.</div>
+            <div class="chips tags"><span class="chip">Spark SQL</span><span class="chip">Databricks</span><span class="chip">FAISS</span></div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-marker"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></div>
+          <div class="tl-body">
+            <div class="role">ML &amp; Product Dev Engineer Intern</div>
+            <div class="org">Transaction Processing System · Karachi &nbsp;<span class="when">Jul — Aug 2023</span></div>
+            <div class="desc">Built Oracle SQL extraction workflows for 300,000+ ATM records, cutting data prep time 20%, then containerised and deployed the model to the bank's internal server with prediction logging.</div>
+            <div class="chips tags"><span class="chip">Oracle SQL</span><span class="chip">Python</span><span class="chip">Docker</span></div>
+          </div>
+        </div>
+      </div></div></div>
+    </section>
   </div>
 
-  <!-- Navbar -->
-  <header class="sticky top-0 z-40 border-b border-slate-800/60 bg-slate-950/70 nav-blur">
-    <div class="absolute inset-0 -z-10 bg-gradient-to-r from-purple-900/20 via-fuchsia-800/15 to-orange-700/20"></div>
-    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
-      <a href="#" class="flex items-center gap-3 font-semibold">
-        <img src="assets/img/avatar.svg" alt="Avatar" class="w-8 h-8">
-        <span>Lohit</span>
-      </a>
-      <nav class="hidden md:flex items-center gap-6 text-sm">
-        <a href="#about" class="hover:opacity-80">About</a>
-        <a href="#skills" class="hover:opacity-80">Skills</a>
-        <a href="#experience" class="hover:opacity-80">Experience</a>
-        <a href="#projects" class="hover:opacity-80">Projects</a>
-        <a href="#education" class="hover:opacity-80">Education</a>
-        <a href="#achievements" class="hover:opacity-80">Achievements</a>
-        <a href="#contact" class="hover:opacity-80">Contact</a>
-      </nav>
-      <button id="menuBtn" class="md:hidden p-2 rounded-lg border border-slate-700" aria-label="Toggle menu">
-        <i data-lucide="menu"></i>
-      </button>
-    </div>
-    <div id="mobileNav" class="md:hidden hidden border-t border-slate-800">
-      <div class="px-4 py-3 flex flex-col gap-3 text-sm">
-        <a href="#about">About</a><a href="#skills">Skills</a><a href="#experience">Experience</a>
-        <a href="#projects">Projects</a><a href="#education">Education</a><a href="#achievements">Achievements</a><a href="#contact">Contact</a>
-      </div>
-    </div>
-  </header>
-
-  <!-- Hero -->
-  <section id="about" class="section">
-    <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-[1.2fr,1fr] gap-10 items-center">
-      <div>
-        <h1 class="text-4xl sm:text-5xl font-extrabold leading-tight">
-          Lohit Ashwa Vaswani<br />
-          <span class="gradient-text"><span id="typed"></span></span>
-        </h1>
-        <p class="mt-4 text-lg text-slate-300">
-          I build end-to-end AI systems across LLMs, NLP, Computer Vision, Recommenders, RAG, and MLOps —
-          from messy data and research ideas to deployed systems with measurable business impact.
-        </p>
-        <div class="mt-6 flex flex-wrap gap-3">
-          <a class="btn-gradient" href="#projects">View Projects</a>
-          <a class="btn-outline" href="assets/Lohit-Ashwa-Vaswani-Resume.pdf" target="_blank" rel="noopener">Download Resume</a>
+  <!-- ============================================================
+       VIEW 2 — AGENTIC AI ENGINEER
+       ============================================================ -->
+  <div class="role-view" data-role="agentic">
+    <section class="role-hero">
+      <div class="bento">
+        <div class="tile role-hero-tile reveal">
+          <span class="role-status"><span class="dot"></span> Available now · London / Remote</span>
+          <span class="role-kicker">
+            <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="6" cy="6" r="3"/><circle cx="18" cy="6" r="3"/><circle cx="12" cy="18" r="3"/><path d="M6 9v3a3 3 0 0 0 3 3M18 9v3a3 3 0 0 1-3 3"/></svg></span>
+            Agentic AI Engineer · LLM Orchestration
+          </span>
+          <h1 class="role-h1">Production<br /><span class="accent">agentic systems</span></h1>
+          <p class="role-lead">Multi-agent orchestration, RAG, tool calling, and the <b>evaluation loops that keep agents reliable</b> in production. Two live LLM products with paying users, grading and reasoning over real-world data every day.</p>
+          <div class="role-actions">
+            <a href="#agentic-work" class="btn primary">See agentic systems <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+            <a href="https://github.com/Lohit20" target="_blank" rel="noopener" class="btn">GitHub</a>
+            <a href="assets/Lohit-Ashwa-Vaswani-Resume.pdf" target="_blank" rel="noopener" class="btn">Download CV</a>
+          </div>
         </div>
       </div>
-      <div class="relative md:justify-self-end">
-        <div class="pointer-events-none absolute -inset-6 -z-10 rounded-[2rem] blur-2xl
-                    bg-gradient-to-tr from-purple-600/25 via-fuchsia-400/20 to-orange-300/20"></div>
-        <div class="rounded-[2rem] p-1 bg-gradient-to-tr from-slate-700/50 via-slate-600/30 to-slate-700/50">
-          <img src="assets/img/Profile Pic.jpeg" alt="Portrait of Lohit Ashwa Vaswani" loading="eager"
-               class="block h-72 w-72 sm:h-80 sm:w-80 md:h-[22rem] md:w-[22rem]
-                      object-cover rounded-[1.85rem] ring-1 ring-slate-700 shadow-2xl" />
+    </section>
+
+    <section>
+      <div class="bento dash-grid">
+        <div class="tile dash-card reveal">
+          <div class="dc-top"><span class="dc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M3 9h18M9 21V9"/></svg></span><span class="dc-live"><span class="dot"></span>LIVE</span></div>
+          <div><div class="dc-num"><span data-count="2">0</span><span class="suf">×</span></div><div class="dc-lab">live LLM products (paying users)</div></div>
+          <div class="dc-spark"></div>
+        </div>
+        <div class="tile dash-card reveal">
+          <div class="dc-top"><span class="dc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 6l-9.5 9.5-5-5L1 18"/><path d="M17 6h6v6"/></svg></span></div>
+          <div><div class="dc-num"><span data-count="70">0</span><span class="suf">%</span></div><div class="dc-lab">trader adoption (Trade for Sight)</div></div>
+          <div class="dc-spark"></div>
+        </div>
+        <div class="tile dash-card reveal">
+          <div class="dc-top"><span class="dc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a10 10 0 1 0 10 10H12z"/><path d="M12 2v10l7-7"/></svg></span></div>
+          <div><div class="dc-num"><span data-count="7">0</span><span class="suf">/8</span></div><div class="dc-lab">mark schemes extracted first-pass</div></div>
+          <div class="dc-spark"></div>
+        </div>
+        <div class="tile dash-card reveal">
+          <div class="dc-top"><span class="dc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="6" cy="6" r="3"/><circle cx="18" cy="6" r="3"/><circle cx="12" cy="18" r="3"/><path d="M6 9v3a3 3 0 0 0 3 3M18 9v3a3 3 0 0 1-3 3"/></svg></span></div>
+          <div><div class="dc-num"><span data-count="3">0</span></div><div class="dc-lab">agent systems shipped to production</div></div>
+          <div class="dc-spark"></div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Areas of Interest -->
-  <section id="interests" class="section-compact -mb-6">
-    <div class="max-w-4xl mx-auto px-4">
-      <div class="neon-card p-6 md:p-7">
-        <h3 class="text-sm uppercase tracking-wide text-slate-400 mb-4">Areas of Interest</h3>
-        <div class="flex flex-wrap gap-3">
-          <span class="px-3 py-1.5 rounded-full text-sm font-semibold text-slate-900 bg-gradient-to-r from-purple-500 via-fuchsia-400 to-orange-300 shadow-lg shadow-orange-500/20">Machine Learning Engineer</span>
-          <span class="px-3 py-1.5 rounded-full text-sm font-semibold text-slate-900 bg-gradient-to-r from-purple-500 via-fuchsia-400 to-orange-300 shadow-lg shadow-orange-500/20">LLMOps</span>
-          <span class="px-3 py-1.5 rounded-full text-sm font-semibold text-slate-900 bg-gradient-to-r from-purple-500 via-fuchsia-400 to-orange-300 shadow-lg shadow-orange-500/20">MLOps</span>
-          <span class="px-3 py-1.5 rounded-full text-sm font-semibold text-slate-900 bg-gradient-to-r from-purple-500 via-fuchsia-400 to-orange-300 shadow-lg shadow-orange-500/20">Cloud Computing</span>
-          <span class="px-3 py-1.5 rounded-full text-sm font-semibold text-slate-900 bg-gradient-to-r from-purple-500 via-fuchsia-400 to-orange-300 shadow-lg shadow-orange-500/20">Software Engineering</span>
+    <section>
+      <div class="sec-head reveal"><span class="sec-eyebrow">How I build</span><h2 class="sec-title">A reliable <em>agent loop</em></h2><p class="sec-sub">Grounded, tool-using, and validated — with a feedback loop that retries until checks pass.</p></div>
+      <div class="bento"><div class="tile flow-tile reveal">
+        <div class="agent-flow">
+          <div class="flow-node"><span class="fn-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span><span class="fn-t">User Query</span><span class="fn-s">intent + memory</span></div>
+          <div class="flow-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+          <div class="flow-node"><span class="fn-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></svg></span><span class="fn-t">Retriever</span><span class="fn-s">RAG context</span></div>
+          <div class="flow-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+          <div class="flow-node accent-node"><span class="fn-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M9 9h6v6H9z"/></svg></span><span class="fn-t">Planner Agent</span><span class="fn-s">orchestration</span></div>
+          <div class="flow-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+          <div class="flow-node"><span class="fn-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg></span><span class="fn-t">Tools</span><span class="fn-s">structured calls</span></div>
+          <div class="flow-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+          <div class="flow-node"><span class="fn-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></span><span class="fn-t">Evaluator</span><span class="fn-s">validate / score</span></div>
+        </div>
+        <div class="flow-loop">↻ failed validation re-injected as <span class="accent">corrective feedback</span> until schema &amp; quality checks pass</div>
+      </div></div>
+    </section>
+
+    <section>
+      <div class="sec-head reveal"><span class="sec-eyebrow">Capabilities</span><h2 class="sec-title">Agentic <em>building blocks</em></h2></div>
+      <div class="bento agentic-grid">
+        <div class="tile cap-card reveal"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="6" cy="6" r="3"/><circle cx="18" cy="6" r="3"/><circle cx="12" cy="18" r="3"/><path d="M6 9v3a3 3 0 0 0 3 3M18 9v3a3 3 0 0 1-3 3"/></svg></span><h4>Multi-Agent Systems</h4><p>Three-agent LangChain travel system with role separation — planner, retriever, executor — sharing a FAISS index.</p></div>
+        <div class="tile cap-card reveal"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h4l3 8 4-16 3 8h4"/></svg></span><h4>LLM Orchestration</h4><p>Celery/Redis async queues decoupling multi-second model calls from HTTP requests, with retry and failure handling.</p></div>
+        <div class="tile cap-card reveal"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M9 13l2 2 4-4"/></svg></span><h4>Tool Calling &amp; Structured Output</h4><p>Schema-constrained generation with Gemini, Kimi K2, and GLM-4.5V; self-healing JSON on validation failure.</p></div>
+        <div class="tile cap-card reveal"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a10 10 0 1 0 10 10H12z"/><path d="M12 2v10l7-7"/></svg></span><h4>RAG &amp; Grounding</h4><p>LlamaIndex + Pinecone / FAISS retrieval grounding answers in real data, with Chain-of-Thought prompting for reasoning.</p></div>
+        <div class="tile cap-card reveal"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></span><h4>Evaluation Pipelines</h4><p>QWK, BERTScore &amp; rubric-based LLM-as-judge harnesses benchmarked against human gold labels at UKHSA.</p></div>
+        <div class="tile cap-card reveal"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7V4h16v3M9 20h6M12 4v16"/></svg></span><h4>MCP &amp; A2A Protocols</h4><p>Standardised tool/server interfaces and agent-to-agent communication for composable, interoperable systems.</p></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="sec-head reveal"><span class="sec-eyebrow">Toolkit</span><h2 class="sec-title">Agentic AI <em>stack</em></h2></div>
+      <div class="bento"><div class="tile skill-tile reveal"><div class="skill-groups">
+        <div class="skill-group"><div class="sg-h">Orchestration</div><div class="chips"><span class="chip">LangChain</span><span class="chip">LlamaIndex</span><span class="chip">Celery</span><span class="chip">Tool calling</span><span class="chip">MCP</span><span class="chip">A2A</span></div></div>
+        <div class="skill-group"><div class="sg-h">Retrieval &amp; Grounding</div><div class="chips"><span class="chip">RAG</span><span class="chip">Pinecone</span><span class="chip">FAISS</span><span class="chip">Embeddings</span><span class="chip">Context engineering</span></div></div>
+        <div class="skill-group"><div class="sg-h">Models &amp; Reliability</div><div class="chips"><span class="chip">Gemini</span><span class="chip">Kimi K2.6</span><span class="chip">GLM-4.5V</span><span class="chip">Structured outputs</span><span class="chip">QLoRA / PEFT</span></div></div>
+      </div></div></div>
+    </section>
+
+    <section id="agentic-work">
+      <div class="sec-head reveal"><span class="sec-eyebrow">Projects</span><h2 class="sec-title">Agentic systems <em>in production</em></h2></div>
+      <div class="bento">
+
+        <div class="tile case reveal">
+          <div class="case-head"><span class="case-logo">S</span><div class="case-title"><h3>Sparkmed — Gemini grading + Sparkbot assistant</h3><div class="ct-meta"><span class="kbd live"><span class="dot"></span>Live · paying users</span> · <span>Gemini · Celery · Redis</span></div></div><span class="case-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></span></div>
+          <div class="case-body"><div class="case-body-inner"><div class="case-content">
+            <div class="case-block"><span class="cb-label">Overview</span><p>AI-first medical exam platform grading free-text answers across Viva, SBA, OSCE, and SJT formats with examiner-style clinical feedback — live with MRCP, MRCPCH, and FRCS candidates.</p></div>
+            <div class="case-block"><span class="cb-label">What I built</span><ul><li>Gemini grading engine with structured output schemas and examiner-style prompt engineering</li><li>Celery/Redis async queue decoupling multi-second LLM calls from the HTTP request cycle</li><li>Readiness model tracking blueprint coverage and adapting sessions to study state (flow / challenge / recovery)</li><li>Sparkbot: Gemini clinical Q&amp;A assistant with persistent session context and per-user rate limiting</li><li>OCR + LLM pipeline turning uploaded textbooks into exam-ready questions</li></ul></div>
+            <div class="case-block"><span class="cb-label">Impact</span><div class="case-metrics"><div class="m"><div class="v">480<span class="suf">+</span></div><div class="l">questions tracked per candidate</div></div><div class="m"><div class="v">0</div><div class="l">downtime on grading (async queue)</div></div></div></div>
+          </div></div></div>
+        </div>
+
+        <div class="tile case reveal">
+          <div class="case-head"><span class="case-logo">K</span><div class="case-title"><h3>Markaroo — Kimi K2.6 rubric-aware marking engine</h3><div class="ct-meta"><span class="kbd live"><span class="dot"></span>Live</span> · <span>Kimi K2.6 · AQA mark schemes</span></div></div><span class="case-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></span></div>
+          <div class="case-body"><div class="case-body-inner"><div class="case-content">
+            <div class="case-block"><span class="cb-label">Overview</span><p>Automated A-Level Economics marking against official AQA mark schemes — with separate prompting strategies for point-based and level-based rubrics, replicating the way human examiners actually mark.</p></div>
+            <div class="case-block"><span class="cb-label">What I built</span><ul><li>Kimi K2.6 marking engine with distinct logic for point-based (condition/accept/reject) vs level-based (band descriptors) rubrics</li><li>Self-healing OCR→JSON pipeline with validation errors re-injected as corrective feedback</li><li>Flask API with JWT auth, per-user rate limiting, and graceful LLM fallback</li></ul></div>
+            <div class="case-block"><span class="cb-label">Impact</span><div class="case-metrics"><div class="m"><div class="v">7/8</div><div class="l">first-pass extraction success</div></div><div class="m"><div class="v">8yrs</div><div class="l">AQA mark schemes normalised</div></div></div></div>
+          </div></div></div>
+        </div>
+
+        <div class="tile case reveal">
+          <div class="case-head"><span class="case-logo">T</span><div class="case-title"><h3>Trade for Sight — Llama-2 RAG financial assistant</h3><div class="ct-meta"><span class="kbd">MoU · BSc Final Year</span> · <span>LangChain · Pinecone · CoT</span></div></div><span class="case-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></span></div>
+          <div class="case-body"><div class="case-body-inner"><div class="case-content">
+            <div class="case-block"><span class="cb-label">Overview</span><p>A RAG assistant turning SQL market data into grounded, step-by-step natural language reasoning to help traders interpret complex graph-based market data faster.</p></div>
+            <div class="case-block"><span class="cb-label">What I built</span><ul><li>ETL pipeline transforming SQL numerical data into structured natural language representations</li><li>Llama-2 with Chain-of-Thought prompting for multi-variable graph reasoning</li><li>Pinecone + LlamaIndex retrieval grounding outputs in real source data</li></ul></div>
+            <div class="case-block full"><span class="cb-label">Impact</span><div class="case-metrics"><div class="m"><div class="v">70<span class="suf">%</span></div><div class="l">trader adoption</div></div><div class="m"><div class="v">+30<span class="suf">%</span></div><div class="l">engagement</div></div><div class="m"><div class="v">−50<span class="suf">%</span></div><div class="l">interpretation time</div></div></div></div>
+          </div></div></div>
+        </div>
+
+        <div class="tile case reveal">
+          <div class="case-head"><span class="case-logo">V</span><div class="case-title"><h3>Velour — Vera structured-output shopping agent</h3><div class="ct-meta"><span class="kbd">May 2025</span> · <span>GLM-4.5V · catalogue grounding</span></div></div><span class="case-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></span></div>
+          <div class="case-body"><div class="case-body-inner"><div class="case-content">
+            <div class="case-block"><span class="cb-label">Overview</span><p><b>Vera</b> — a floating in-app chat assistant — injects the full 685-product catalogue and the user's order history into context on every request to ground every recommendation in real inventory.</p></div>
+            <div class="case-block"><span class="cb-label">What I built</span><ul><li>GLM-4.5V with structured-output schema for consistent product recommendation format</li><li>Catalogue + order-history context injection preventing hallucinated SKUs</li><li>Multi-signal product search: keyword scoring, category aliases, natural-language price parsing, semantic fallback via all-MiniLM-L6-v2</li></ul></div>
+            <div class="case-block"><span class="cb-label">Impact</span><div class="case-metrics"><div class="m"><div class="v">685</div><div class="l">products grounded in context</div></div><div class="m"><div class="v">0</div><div class="l">hallucinated SKUs by design</div></div></div></div>
+          </div></div></div>
+        </div>
+
+      </div>
+    </section>
+
+    <section>
+      <div class="sec-head reveal"><span class="sec-eyebrow">Experience</span><h2 class="sec-title">Where I've shipped <em>agentic AI</em></h2></div>
+      <div class="bento"><div class="tile tl-tile reveal"><div class="timeline">
+        <div class="tl-item">
+          <div class="tl-marker"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></div>
+          <div class="tl-body">
+            <div class="role">AI Engineer</div>
+            <div class="org">Sparkmed &amp; Markaroo · London (Remote) &nbsp;<span class="when">May 2026 — Present</span></div>
+            <div class="desc">LLM orchestration end-to-end: rubric-aware grading agents, async inference queue, structured-output validation loops, and the eval harnesses that keep them honest — two products live with paying users.</div>
+            <div class="chips tags"><span class="chip">LLM Orchestration</span><span class="chip">Structured outputs</span><span class="chip">Celery/Redis</span></div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-marker"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></div>
+          <div class="tl-body">
+            <div class="role">Data Engineer — Agentic Systems</div>
+            <div class="org">Client Contract · Remote &nbsp;<span class="when">Mar — May 2025</span></div>
+            <div class="desc">Built a three-agent LangChain itinerary system with role separation (planner / retriever / executor) grounded via FAISS retrieval on a DBRX model.</div>
+            <div class="chips tags"><span class="chip">LangChain</span><span class="chip">FAISS</span><span class="chip">DBRX</span></div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-marker"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></div>
+          <div class="tl-body">
+            <div class="role">Research Engineer <span class="faint mono" style="font-size:11px">(promoted from intern)</span></div>
+            <div class="org">Retrocausal · Redmond, USA (Remote) &nbsp;<span class="when">Feb 2024 — Jan 2025</span></div>
+            <div class="desc">Ran a video-captioning study using Timesformer+GPT-2 and ViT+GPT-2 to surface assembly errors via vision-language grounding — reducing errors 25%.</div>
+            <div class="chips tags"><span class="chip">VLM</span><span class="chip">Prompt engineering</span><span class="chip">Evaluation</span></div>
+          </div>
+        </div>
+      </div></div></div>
+    </section>
+  </div>
+
+  <!-- ============================================================
+       VIEW 3 — ML SYSTEMS
+       ============================================================ -->
+  <div class="role-view" data-role="ml">
+    <section class="role-hero">
+      <div class="bento">
+        <div class="tile role-hero-tile reveal">
+          <span class="role-status"><span class="dot"></span> Available now · London / Remote</span>
+          <span class="role-kicker">
+            <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h4l3 8 4-16 3 8h4"/></svg></span>
+            ML Systems · Modeling, Eval &amp; MLOps
+          </span>
+          <h1 class="role-h1">ML systems,<br /><span class="accent">measured &amp; shipped</span></h1>
+          <p class="role-lead">Training, evaluation and deployment of models that hold up in production — recommenders, vision, NLP, and <b>frontier-LLM benchmarking</b> — served at low latency with real cost discipline.</p>
+          <div class="role-actions">
+            <a href="#ml-work" class="btn primary">See ML systems <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+            <a href="https://github.com/Lohit20" target="_blank" rel="noopener" class="btn">GitHub</a>
+            <a href="assets/Lohit-Ashwa-Vaswani-Resume.pdf" target="_blank" rel="noopener" class="btn">Download CV</a>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Skills -->
-  <section id="skills" class="section">
-    <div class="max-w-6xl mx-auto px-4">
-      <h2 class="text-3xl sm:text-4xl font-extrabold mb-8"><span class="gradient-text">Skills</span></h2>
-      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-        <div class="neon-card"><h3 class="font-semibold mb-2">Programming</h3><p class="text-sm">Python, SQL, NoSQL, JavaScript, C/C++</p></div>
-        <div class="neon-card"><h3 class="font-semibold mb-2">AI/ML Frameworks</h3><p class="text-sm">PyTorch, TensorFlow, Keras, Scikit-learn, OpenCV, Hugging Face Transformers</p></div>
-        <div class="neon-card"><h3 class="font-semibold mb-2">Agentic AI & LLMs</h3><p class="text-sm">LangChain, LlamaIndex, Prompt Engineering, Context Engineering, LLM Orchestration, MCP, A2A, QLoRA, PeFT</p></div>
-        <div class="neon-card"><h3 class="font-semibold mb-2">Databases & Vector Search</h3><p class="text-sm">PostgreSQL, Oracle, MongoDB, FAISS, Pinecone, ChromaDB</p></div>
-        <div class="neon-card"><h3 class="font-semibold mb-2">Cloud & DevOps</h3><p class="text-sm">GCP Vertex AI, AWS EC2, SageMaker, Lambda, Docker, MLflow, Git, CI/CD</p></div>
-        <div class="neon-card"><h3 class="font-semibold mb-2">Data Engineering & BI</h3><p class="text-sm">Apache Kafka, Databricks, Spark, ETL Pipelines, Tableau, Power BI, Selenium</p></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Experience — Original Vertical Timeline Animation/Style Preserved -->
-  <section id="experience" class="section">
-    <div class="max-w-6xl mx-auto px-4">
-      <h2 class="text-3xl sm:text-4xl font-extrabold mb-8"><span class="gradient-text">Experience</span></h2>
-      <div class="-mx-4 sm:mx-0 relative">
-        <span aria-hidden="true" class="pointer-events-none absolute inset-y-0 left-1/2 -translate-x-1/2 w-px bg-slate-800/80 rounded"></span>
-        <div class="space-y-12 relative z-10 px-4 sm:px-0">
-
-          <!-- Sparkmed & Markaroo -->
-          <div class="grid md:grid-cols-[1fr,72px,1fr] gap-6 items-center">
-            <article class="neon-card p-6 md:p-7 md:justify-self-end w-full md:max-w-[880px]">
-              <h3 class="text-2xl font-semibold leading-snug">AI Engineer — Sparkmed &amp; Markaroo</h3>
-              <p class="text-xs text-slate-400 mt-1">London, UK · Remote</p>
-              <p class="text-sm text-slate-300 mt-2 mb-3">Building and running two live AI exam preparation platforms, both with paying users, owning the full stack from model to deployment.</p>
-              <p class="text-sm font-semibold text-slate-200 mb-2">Sparkmed — AI-First Medical Education Platform (MRCP, MRCPCH, FRCS)</p>
-              <ul class="list-disc pl-6 space-y-2 text-slate-300 text-sm">
-                <li>Built a Gemini grading engine that scores open written answers across Viva, SBA, OSCE, and SJT formats and returns examiner-style clinical feedback with reasoning.</li>
-                <li>Engineered an async queue on Celery and Redis that moves multi-second model calls off the request cycle, keeping the interface responsive with full retry and failure handling.</li>
-                <li>Designed a readiness engine that tracks blueprint coverage, predicts pass likelihood after 480 attempted questions, and adapts each session to the candidate's study state — whether they are in flow and should be pushed harder, struggling and need easier recovery questions, or coasting and need a challenge to stay engaged.</li>
-                <li>Shipped Sparkbot, a Gemini clinical assistant, plus an OCR and LLM pipeline that turns uploaded textbooks into exam-ready questions and cut manual editorial effort.</li>
-                <li>Deployed the platform on Docker Compose (Flask, Celery, Redis, PostgreSQL, Nginx) with Jenkins CI/CD and zero-downtime releases, now serving paying customers.</li>
-              </ul>
-              <p class="text-sm font-semibold text-slate-200 mt-4 mb-2">Markaroo — AQA A-Level Economics Tutoring Platform</p>
-              <ul class="list-disc pl-6 space-y-2 text-slate-300 text-sm">
-                <li>Built a marking engine on Moonshot Kimi K2.6 that grades answers against official AQA mark schemes, with separate logic for point-based and level-based rubrics so it marks the way examiners do.</li>
-                <li>Designed a self-healing OCR-to-JSON pipeline that feeds validation errors back as corrections, hitting first-pass success on 7 of 8 mark schemes spanning 2017 to 2024.</li>
-                <li>Exposed the engine through a Flask API with JWT auth, rate limiting, and graceful fallback, so the platform stays up even when the model provider is degraded.</li>
-              </ul>
-            </article>
-            <div class="relative flex items-center justify-center"><div class="flex items-center justify-center h-16 w-16 rounded-full bg-slate-900 ring-4 ring-slate-800"><i data-lucide="cpu" class="h-6 w-6 text-slate-200"></i></div></div>
-            <p class="text-slate-400 text-sm md:text-base md:text-left text-center">May 2026 – Present</p>
-          </div>
-
-          <!-- CreatorOS -->
-          <div class="grid md:grid-cols-[1fr,72px,1fr] gap-6 items-center">
-            <p class="order-3 md:order-1 text-slate-400 text-sm md:text-base md:text-right text-center">Sep 2025 – Dec 2025</p>
-            <div class="order-2 relative flex items-center justify-center"><div class="flex items-center justify-center h-16 w-16 rounded-full bg-slate-900 ring-4 ring-slate-800"><i data-lucide="briefcase" class="h-6 w-6 text-slate-200"></i></div></div>
-            <article class="order-1 md:order-3 neon-card p-6 md:p-7 w-full md:max-w-[880px]">
-              <h3 class="text-2xl font-semibold leading-snug">Data Scientist Intern — CreatorOS</h3>
-              <p class="text-xs text-slate-400 mt-1">London, UK · Remote</p>
-              <ul class="list-disc pl-6 mt-3 space-y-2 text-slate-300">
-                <li>The business was manually copying campaign requirements from client documents into spreadsheets, which was slow and error-prone. An automated ingestion pipeline was built using MistralOCR to read each document, extract relevant fields, and load the structured output directly into PostgreSQL — cutting data entry effort by 70%.</li>
-                <li>A recommendation service was then deployed to GCP Vertex AI using FastAPI and Docker, combining a pruned RandomForest classifier for creator segmentation with XGBoost regression for campaign ranking, running at under 250ms latency and improving match precision by 12% on Precision@10 and 10% on NDCG@10.</li>
-                <li>Behavioural features were engineered from creator engagement, reach, activity patterns, and campaign fit signals to improve creator-to-campaign matching relevance, contributing to a 63% reduction in manual operational overhead.</li>
-              </ul>
-            </article>
-          </div>
-
-          <!-- Data Engineer -->
-          <div class="grid md:grid-cols-[1fr,72px,1fr] gap-6 items-center">
-            <article class="neon-card p-6 md:p-7 md:justify-self-end w-full md:max-w-[880px]">
-              <h3 class="text-2xl font-semibold leading-snug">Data Engineer — Client Contract</h3>
-              <p class="text-xs text-slate-400 mt-1">Remote</p>
-              <ul class="list-disc pl-6 mt-3 space-y-2 text-slate-300">
-                <li>Led the Change of Value project for Niagara Bottling's IoT systems, building real-time Spark SQL pipelines into the bronze layer on Databricks.</li>
-                <li>Designed fault-tolerant logic for outages, out-of-sequence data, and partial sensor windows, keeping processing reliable through device disruption.</li>
-                <li>Built a three-agent LLM system (LangChain, DBRX) over a FAISS index to generate travel itineraries, with prompting at each stage to keep outputs grounded.</li>
-              </ul>
-            </article>
-            <div class="relative flex items-center justify-center"><div class="flex items-center justify-center h-16 w-16 rounded-full bg-slate-900 ring-4 ring-slate-800"><i data-lucide="database" class="h-6 w-6 text-slate-200"></i></div></div>
-            <p class="text-slate-400 text-sm md:text-base md:text-left text-center">Mar 2025 – May 2025</p>
-          </div>
-
-          <!-- Retrocausal -->
-          <div class="grid md:grid-cols-[1fr,72px,1fr] gap-6 items-center">
-            <p class="order-3 md:order-1 text-slate-400 text-sm md:text-base md:text-right text-center">Feb 2024 – Jan 2025</p>
-            <div class="order-2 relative flex items-center justify-center"><div class="flex items-center justify-center h-16 w-16 rounded-full bg-slate-900 ring-4 ring-slate-800"><i data-lucide="briefcase" class="h-6 w-6 text-slate-200"></i></div></div>
-            <article class="order-1 md:order-3 neon-card p-6 md:p-7 w-full md:max-w-[880px]">
-              <h3 class="text-2xl font-semibold leading-snug">Research Engineer — Retrocausal</h3>
-              <p class="text-xs text-slate-400 mt-1">Redmond, USA · Remote · Promoted from Intern</p>
-              <ul class="list-disc pl-6 mt-3 space-y-2 text-slate-300">
-                <li>Built an ergonomics reporting tool computing REBA, RULA, NIOSH, SNOOK, and Hand Strain scores from sensor data, then refactored it into a Dockerised FastAPI service, cutting report time by 44%.</li>
-                <li>Took the production YOLOv5 pose model into OpenVINO with INT8 quantisation for CPU edge deployment, doubling inference speed and reducing compute cost by 36% with negligible accuracy loss.</li>
-                <li>Ran a comparative study of Timesformer+GPT-2 against ViT+GPT-2 for video captioning; the deployed system reduced assembly errors by 25% and rework costs by 30%.</li>
-              </ul>
-            </article>
-          </div>
-
-          <!-- TPS -->
-          <div class="grid md:grid-cols-[1fr,72px,1fr] gap-6 items-center">
-            <article class="neon-card p-6 md:p-7 md:justify-self-end w-full md:max-w-[880px]">
-              <h3 class="text-2xl font-semibold leading-snug">ML &amp; Product Development Engineer Intern — Transaction Processing System</h3>
-              <p class="text-xs text-slate-400 mt-1">Karachi, Pakistan</p>
-              <ul class="list-disc pl-6 mt-3 space-y-2 text-slate-300">
-                <li>Built an XGBoost ATM withdrawal model on 300,000+ records using recency, frequency, and time-of-day features, beating baseline heuristics by reducing RMSE 8%.</li>
-                <li>Wrote Oracle SQL extraction workflows that cut data preparation time by 20%, then containerised and deployed the model to the bank's internal server.</li>
-                <li>Piloted it across 200+ users showing a potential 5–6% drop in cash stockouts, with prediction logging and scheduled retraining for drift.</li>
-              </ul>
-            </article>
-            <div class="relative flex items-center justify-center"><div class="flex items-center justify-center h-16 w-16 rounded-full bg-slate-900 ring-4 ring-slate-800"><i data-lucide="briefcase" class="h-6 w-6 text-slate-200"></i></div></div>
-            <p class="text-slate-400 text-sm md:text-base md:text-left text-center">Jul 2023 – Aug 2023</p>
-          </div>
-
-          <!-- Teaching -->
-          <div class="grid md:grid-cols-[1fr,72px,1fr] gap-6 items-center">
-            <p class="order-3 md:order-1 text-slate-400 text-sm md:text-base md:text-right text-center">Aug 2022 – May 2024</p>
-            <div class="order-2 relative flex items-center justify-center"><div class="flex items-center justify-center h-16 w-16 rounded-full bg-slate-900 ring-4 ring-slate-800"><i data-lucide="graduation-cap" class="h-6 w-6 text-slate-200"></i></div></div>
-            <article class="order-1 md:order-3 neon-card p-6 md:p-7 w-full md:max-w-[880px]">
-              <h3 class="text-2xl font-semibold leading-snug">Teaching &amp; Academic Support — NUCES FAST University</h3>
-              <p class="text-xs text-slate-400 mt-1">Karachi, Pakistan</p>
-              <ul class="list-disc pl-6 mt-3 space-y-2 text-slate-300">
-                <li>Served as Lab Assistant for Object-Oriented Programming (Aug 2022 – Dec 2022), mentoring students on inheritance, polymorphism, and abstraction and guiding them through debugging their own code.</li>
-                <li>Worked as Teaching Assistant for AI Programming (Aug 2023 – Dec 2023), teaching search algorithms, algorithmic game theory, and knowledge representation, and grading student work.</li>
-                <li>Worked as Teaching Assistant for Recommendation Systems (Jan 2024 – May 2024), guiding students through collaborative filtering and neural recommenders and running seminars on evaluation, tuning, and recommender ethics.</li>
-              </ul>
-            </article>
-          </div>
-
+    <section>
+      <div class="bento dash-grid">
+        <div class="tile dash-card reveal">
+          <div class="dc-top"><span class="dc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h8l-1 8 10-12h-8z"/></svg></span></div>
+          <div><div class="dc-num">&lt;<span data-count="250">0</span><span class="suf">ms</span></div><div class="dc-lab">model serving latency (Vertex AI)</div></div>
+          <div class="dc-spark"></div>
+        </div>
+        <div class="tile dash-card reveal">
+          <div class="dc-top"><span class="dc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 6l-9.5 9.5-5-5L1 18"/><path d="M17 6h6v6"/></svg></span></div>
+          <div><div class="dc-num">+<span data-count="12">0</span><span class="suf">%</span></div><div class="dc-lab">Precision@10 (recommender)</div></div>
+          <div class="dc-spark"></div>
+        </div>
+        <div class="tile dash-card reveal">
+          <div class="dc-top"><span class="dc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></span></div>
+          <div><div class="dc-num">−<span data-count="36">0</span><span class="suf">%</span></div><div class="dc-lab">inference cost (INT8 quantisation)</div></div>
+          <div class="dc-spark"></div>
+        </div>
+        <div class="tile dash-card reveal">
+          <div class="dc-top"><span class="dc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></span></div>
+          <div><div class="dc-num"><span data-count="94">0</span><span class="suf">%</span></div><div class="dc-lab">validation accuracy (LoRA BSO)</div></div>
+          <div class="dc-spark"></div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Projects — Original Neon Card Grid Preserved, Content Expanded -->
-  <section id="projects" class="section">
-    <div class="max-w-6xl mx-auto px-4">
-      <h2 class="text-3xl sm:text-4xl font-extrabold mb-8"><span class="gradient-text">Projects</span></h2>
-      <div class="grid md:grid-cols-2 gap-4">
+    <section>
+      <div class="sec-head reveal"><span class="sec-eyebrow">How I build</span><h2 class="sec-title">An <em>MLOps lifecycle</em></h2><p class="sec-sub">Every model change is tracked, evaluated and gated before it reaches users.</p></div>
+      <div class="bento"><div class="tile pipe-tile reveal">
+        <div class="arch" style="border:none;background:transparent;padding:0">
+          <div class="arch-row">
+            <div class="arch-box">Data<span class="sub">features</span></div>
+            <div class="arch-conn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+            <div class="arch-box">Train<span class="sub">PyTorch · XGBoost</span></div>
+            <div class="arch-conn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+            <div class="arch-box hl">Evaluate<span class="sub">QWK · BERTScore</span></div>
+            <div class="arch-conn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+            <div class="arch-box">Registry<span class="sub">MLflow</span></div>
+            <div class="arch-conn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+            <div class="arch-box hl">Deploy<span class="sub">Vertex AI · FastAPI</span></div>
+            <div class="arch-conn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+            <div class="arch-box">Monitor<span class="sub">drift · cost</span></div>
+          </div>
+        </div>
+      </div></div>
+    </section>
 
-        <article class="neon-card p-6">
-          <h3 class="font-semibold">Automating WHO JEE Report Evaluation Using LLMs</h3>
-          <p class="text-xs text-slate-400 mt-1">MSc Thesis · UK Health Security Agency · Jun–Sep 2025</p>
-          <p class="text-sm mt-2 text-slate-300">Built an automated evaluation pipeline for WHO Joint External Evaluation reports, which are long public-health documents normally reviewed manually by domain experts. The system converts report PDFs into structured indicator-level data, scores report quality, and compares LLM judgements with human annotations.</p>
-          <ul class="list-disc pl-5 mt-3 text-sm text-slate-300 space-y-1">
-            <li>Used MistralOCR to parse 100+ page reports into structured JSON.</li>
-            <li>Evaluated Evidence Quality and Actionability using rubric-based prompts.</li>
-            <li>Benchmarked Gemini 2.5 Flash, Qwen-3, and Magistral-Medium using QWK and BERTScore.</li>
-            <li>Presented as a Proof of Concept at UKHSA and extended for peer-reviewed publication.</li>
-          </ul>
-          <div class="mt-3 flex flex-wrap gap-2 text-xs"><span class="tag">Mistral OCR</span><span class="tag">Gemini</span><span class="tag">Qwen-3</span><span class="tag">QWK</span><span class="tag">BERTScore</span></div>
-        </article>
+    <section>
+      <div class="sec-head reveal"><span class="sec-eyebrow">Toolkit</span><h2 class="sec-title">ML systems <em>stack</em></h2></div>
+      <div class="bento"><div class="tile skill-tile reveal"><div class="skill-groups">
+        <div class="skill-group"><div class="sg-h">Modeling</div><div class="chips"><span class="chip">PyTorch</span><span class="chip">TensorFlow</span><span class="chip">Keras</span><span class="chip">scikit-learn</span><span class="chip">XGBoost</span><span class="chip">Hugging Face</span></div></div>
+        <div class="skill-group"><div class="sg-h">Vision &amp; Optimisation</div><div class="chips"><span class="chip">OpenCV</span><span class="chip">YOLOv5</span><span class="chip">OpenVINO</span><span class="chip">INT8 quantisation</span><span class="chip">QLoRA / PEFT</span></div></div>
+        <div class="skill-group"><div class="sg-h">MLOps &amp; Serving</div><div class="chips"><span class="chip">MLflow</span><span class="chip">Vertex AI</span><span class="chip">FastAPI</span><span class="chip">Docker</span><span class="chip">CI/CD</span><span class="chip">QWK · BERTScore</span></div></div>
+      </div></div></div>
+    </section>
 
-        <article class="neon-card p-6">
-          <h3 class="font-semibold">Optimisation Methods for LoRA Hyperparameters</h3>
-          <p class="text-xs text-slate-400 mt-1">Nov 2025</p>
-          <p class="text-sm mt-2 text-slate-300">Developed a framework for optimising mixed discrete-continuous LoRA hyperparameters when fine-tuning DistilBERT under limited GPU resources. The project compared multiple search and metaheuristic strategies to find accurate fine-tuning configurations efficiently.</p>
-          <ul class="list-disc pl-5 mt-3 text-sm text-slate-300 space-y-1">
-            <li>Compared Random Search, Aquila Optimizer, DPSO-GA, BSO, and MOEA/D-DE.</li>
-            <li>Fine-tuned DistilBERT on a multi-class emotion classification task.</li>
-            <li>Achieved 94% validation accuracy using Blindfolded Spiderman Optimisation.</li>
-          </ul>
-          <div class="mt-3 flex flex-wrap gap-2 text-xs"><span class="tag">PyTorch</span><span class="tag">Transformers</span><span class="tag">LoRA</span><span class="tag">Metaheuristics</span></div>
-        </article>
+    <section id="ml-work">
+      <div class="sec-head reveal"><span class="sec-eyebrow">Projects</span><h2 class="sec-title">ML systems <em>in production</em></h2></div>
+      <div class="bento">
 
-        <article class="neon-card p-6">
-          <h3 class="font-semibold">Fraud Detection Benchmarking under Class Imbalance</h3>
-          <p class="text-xs text-slate-400 mt-1">Dec 2025</p>
-          <p class="text-sm mt-2 text-slate-300">Built a fraud detection benchmarking system for 300,000+ transactions where fraudulent cases represented only around 2% of the data. The goal was to compare reliable fraud detection strategies while controlling false positives.</p>
-          <ul class="list-disc pl-5 mt-3 text-sm text-slate-300 space-y-1">
-            <li>Used SMOTE-Tomek to address severe class imbalance.</li>
-            <li>Compared Logistic Regression, KNN, Random Forest, Naive Bayes, XGBoost, SVM, LDA, RIPPER, and Autoencoder+MLP.</li>
-            <li>Tested entropy-based, weighted average, threshold-aware, max probability, and trimmed mean aggregation.</li>
-            <li>Achieved 91% recall and reduced false positives from 10,000 to 800.</li>
-          </ul>
-          <div class="mt-3 flex flex-wrap gap-2 text-xs"><span class="tag">Scikit-learn</span><span class="tag">XGBoost</span><span class="tag">SMOTE-Tomek</span><span class="tag">Ensemble Learning</span></div>
-        </article>
+        <div class="tile case reveal">
+          <div class="case-head"><span class="case-logo">W</span><div class="case-title"><h3>WHO JEE — Frontier LLM benchmarking (MSc Thesis, Distinction)</h3><div class="ct-meta"><span class="kbd">PLOS Journal pending</span> · <span>QWK · BERTScore · UKHSA</span></div></div><span class="case-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></span></div>
+          <div class="case-body"><div class="case-body-inner"><div class="case-content">
+            <div class="case-block"><span class="cb-label">Overview</span><p>Benchmarked Gemini 2.5 Flash, Qwen-3, and Magistral-Medium against human annotation of WHO Joint External Evaluation reports — 100+ page complex public-health documents.</p></div>
+            <div class="case-block"><span class="cb-label">What I built</span><ul><li>MistralOCR pipeline parsing 100+ page PDFs into indicator-level structured JSON</li><li>Rubric-based LLM evaluation across Evidence Quality and Actionability dimensions</li><li>Quadratic Weighted Kappa + BERTScore harness vs human gold labels</li><li>Presented as PoC at UKHSA, extending for PLOS Journal publication</li></ul></div>
+            <div class="case-block full"><span class="cb-label">Models benchmarked</span><div class="chips"><span class="chip">Gemini 2.5 Flash</span><span class="chip">Qwen-3</span><span class="chip">Magistral-Medium</span><span class="chip">QWK</span><span class="chip">BERTScore</span></div></div>
+          </div></div></div>
+        </div>
 
-        <article class="neon-card p-6">
-          <h3 class="font-semibold">Biomedical Abbreviation Detection and Expansion</h3>
-          <p class="text-xs text-slate-400 mt-1">Apr 2025</p>
-          <p class="text-sm mt-2 text-slate-300">Built a biomedical NLP system to identify abbreviations and long-form expansions in scientific literature. This helps users understand technical medical text where abbreviations are frequent and context-specific.</p>
-          <ul class="list-disc pl-5 mt-3 text-sm text-slate-300 space-y-1">
-            <li>Used BIO token classification for abbreviation and expansion detection.</li>
-            <li>Benchmarked BioBERT and DistilBERT on the PLOD-CW-25 dataset.</li>
-            <li>Experimented with Cross-Entropy, Weighted Cross-Entropy, and Focal Loss.</li>
-            <li>Deployed the best model with a Flask chatbot interface and token-level logging.</li>
-          </ul>
-          <div class="mt-3 flex flex-wrap gap-2 text-xs"><span class="tag">BioBERT</span><span class="tag">DistilBERT</span><span class="tag">Flask</span><span class="tag">Focal Loss</span></div>
-        </article>
+        <div class="tile case reveal">
+          <div class="case-head"><span class="case-logo">F</span><div class="case-title"><h3>Fraud Detection Benchmarking — ensembles vs advanced models</h3><div class="ct-meta"><span class="kbd">Dec 2025</span> · <span>Scikit-learn · XGBoost · SMOTE-Tomek</span></div></div><span class="case-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></span></div>
+          <div class="case-body"><div class="case-body-inner"><div class="case-content">
+            <div class="case-block"><span class="cb-label">Overview</span><p>Fraud detection on 300,000+ transactions with ~2% fraud rate, benchmarking ensemble aggregation strategies against advanced standalone models under severe class imbalance.</p></div>
+            <div class="case-block"><span class="cb-label">What I built</span><ul><li>SMOTE-Tomek for imbalance + 5 aggregation strategies (entropy, weighted, threshold-aware, max-prob, trimmed mean)</li><li>Benchmarked XGBoost, Linear SVM, LDA, RIPPER &amp; Autoencoder+MLP on ROC-AUC / PR-AUC / F1</li><li>Trimmed-mean identified as best balanced ensemble; XGBoost as best standalone</li></ul></div>
+            <div class="case-block full"><span class="cb-label">Results</span><div class="case-metrics"><div class="m"><div class="v">91<span class="suf">%</span></div><div class="l">recall</div></div><div class="m"><div class="v">800</div><div class="l">false positives (from 10k)</div></div><div class="m"><div class="v">0.97</div><div class="l">XGBoost ROC-AUC</div></div></div></div>
+          </div></div></div>
+        </div>
 
-        <article class="neon-card p-6">
-          <h3 class="font-semibold">E-Commerce Microservices Platform</h3>
-          <p class="text-xs text-slate-400 mt-1">May 2025</p>
-          <p class="text-sm mt-2 text-slate-300">Designed a fully decoupled e-commerce platform with separate services for user management, product catalogue, transaction processing, and recommendations. The system focuses on scalability, independent deployment, secure access, and semantic product discovery.</p>
-          <ul class="list-disc pl-5 mt-3 text-sm text-slate-300 space-y-1">
-            <li>Implemented FastAPI microservices with MongoDB persistence.</li>
-            <li>Added JWT authentication, bcrypt password hashing, and role-based access for admin, buyer, and seller roles.</li>
-            <li>Integrated Sentence Transformers for natural-language product search.</li>
-            <li>Used Docker Compose, Postman API testing, Locust load testing, and React frontend.</li>
-          </ul>
-          <div class="mt-3 flex flex-wrap gap-2 text-xs"><span class="tag">FastAPI</span><span class="tag">MongoDB</span><span class="tag">Docker</span><span class="tag">React</span><span class="tag">Locust</span></div>
-        </article>
+        <div class="tile case reveal">
+          <div class="case-head"><span class="case-logo">L</span><div class="case-title"><h3>LoRA Hyperparameter Optimisation — metaheuristics</h3><div class="ct-meta"><span class="kbd">Nov 2025</span> · <span>PyTorch · DistilBERT · BSO</span></div></div><span class="case-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></span></div>
+          <div class="case-body"><div class="case-body-inner"><div class="case-content">
+            <div class="case-block"><span class="cb-label">Overview</span><p>A hyperparameter optimisation framework for LoRA-based fine-tuning of DistilBERT on multi-class emotion classification under strict GPU constraints.</p></div>
+            <div class="case-block"><span class="cb-label">What I built</span><ul><li>Implemented &amp; compared 5 strategies: Random Search, Aquila Optimizer, DPSO+GA, BSO, MOEA/D-DE</li><li>Consistent experimental setup across all methods for fair comparison</li><li>BSO outperformed population-based methods while converging faster</li></ul></div>
+            <div class="case-block"><span class="cb-label">Result</span><div class="case-metrics"><div class="m"><div class="v">94<span class="suf">%</span></div><div class="l">validation accuracy (BSO)</div></div></div></div>
+          </div></div></div>
+        </div>
 
-        <article class="neon-card p-6">
-          <h3 class="font-semibold">LLM Trading Insights System (Llama-2 RAG)</h3>
-          <p class="text-xs text-slate-400 mt-1">BSc Final Year Project · Trade for Sight MoU · Aug 2023–Mar 2024</p>
-          <p class="text-sm mt-2 text-slate-300">Built a financial-domain AI assistant to help traders interpret complex graph-based market data faster. The system transforms structured SQL data into language-friendly formats, retrieves relevant context, and produces grounded explanations.</p>
-          <ul class="list-disc pl-5 mt-3 text-sm text-slate-300 space-y-1">
-            <li>Created ETL pipeline from SQL numerical data to structured natural language representations.</li>
-            <li>Used Llama-2 with Chain-of-Thought prompting for step-by-step reasoning over financial graphs.</li>
-            <li>Grounded outputs with Pinecone vector search and LlamaIndex retrieval to reduce hallucinations.</li>
-            <li><b>Impact:</b> 30% increase in engagement, 50% reduction in interpretation time, 70% adoption among active traders.</li>
-          </ul>
-          <div class="mt-3 flex flex-wrap gap-2 text-xs"><span class="tag">Llama-2</span><span class="tag">LangChain</span><span class="tag">LlamaIndex</span><span class="tag">Pinecone</span><span class="tag">RAG</span></div>
-        </article>
+        <div class="tile case reveal">
+          <div class="case-head"><span class="case-logo">B</span><div class="case-title"><h3>Biomedical Abbreviation Detection — BioBERT NER</h3><div class="ct-meta"><span class="kbd">Apr 2025</span> · <span>BioBERT · DistilBERT · Focal Loss</span></div></div><span class="case-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></span></div>
+          <div class="case-body"><div class="case-body-inner"><div class="case-content">
+            <div class="case-block"><span class="cb-label">Overview</span><p>Token-level BIO tagging pipeline to detect abbreviations and long-form expansions in scientific literature, with a Flask chatbot interface for real-time expansion.</p></div>
+            <div class="case-block"><span class="cb-label">What I built</span><ul><li>BIO token classification benchmarking BioBERT vs DistilBERT on PLOD-CW-25 dataset</li><li>Experimented with Cross-Entropy, Weighted Cross-Entropy, and Focal Loss (Focal improved minority recall)</li><li>Augmented training with filtered PLODv2 subsets; deployed best model to Hugging Face</li><li>Flask chatbot interface with custom token-level logging for model monitoring</li></ul></div>
+            <div class="case-block"><span class="cb-label">Result</span><div class="case-metrics"><div class="m"><div class="v">0.85</div><div class="l">BioBERT F1 score</div></div></div></div>
+          </div></div></div>
+        </div>
 
-        <article class="neon-card p-6">
-          <h3 class="font-semibold">Llama-2 Augmented Mental Health Support System</h3>
-          <p class="text-xs text-slate-400 mt-1">Dec 2023</p>
-          <p class="text-sm mt-2 text-slate-300">Fine-tuned Llama-2 7B on mental health counselling conversations to create a virtual therapist-style assistant capable of generating empathetic and context-aware responses.</p>
-          <ul class="list-disc pl-5 mt-3 text-sm text-slate-300 space-y-1">
-            <li>Applied QLoRA to reduce memory requirements from 28GB to 6GB.</li>
-            <li>Used PeFT with LoRA adapters to update less than 1% of parameters.</li>
-            <li>Trained on Kaggle P100 GPU and published the model to Hugging Face.</li>
-          </ul>
-          <div class="mt-3 flex flex-wrap gap-2 text-xs"><span class="tag">Llama-2</span><span class="tag">QLoRA</span><span class="tag">PeFT</span><span class="tag">Gradio</span></div>
-        </article>
+        <div class="tile case reveal">
+          <div class="case-head"><span class="case-logo">C</span><div class="case-title"><h3>CreatorOS — Two-stage brand-to-creator recommender</h3><div class="ct-meta"><span class="kbd">Sep – Dec 2025</span> · <span>XGBoost · Vertex AI · FastAPI</span></div></div><span class="case-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></span></div>
+          <div class="case-body"><div class="case-body-inner"><div class="case-content">
+            <div class="case-block"><span class="cb-label">Overview</span><p>Two-stage recommender solving CreatorOS's core product problem of unreliable brand-to-creator matching, deployed to GCP Vertex AI at sub-250ms latency.</p></div>
+            <div class="case-block"><span class="cb-label">What I built</span><ul><li>Pruned RandomForest classifier for creator segmentation (stage 1)</li><li>XGBoost regression model for campaign-level ranking (stage 2)</li><li>Feature engineering from engagement, reach, activity patterns and campaign fit signals</li><li>FastAPI + Docker deployment on GCP Vertex AI at &lt;250ms latency</li></ul></div>
+            <div class="case-block full"><span class="cb-label">Impact</span><div class="case-metrics"><div class="m"><div class="v">+12<span class="suf">%</span></div><div class="l">Precision@10</div></div><div class="m"><div class="v">+10<span class="suf">%</span></div><div class="l">NDCG@10</div></div><div class="m"><div class="v">−63<span class="suf">%</span></div><div class="l">manual ops overhead</div></div></div></div>
+          </div></div></div>
+        </div>
 
-        <article class="neon-card p-6">
-          <h3 class="font-semibold">E-Commerce Visual Search System (CLIP + ViT)</h3>
-          <p class="text-xs text-slate-400 mt-1">Oct–Nov 2023</p>
-          <p class="text-sm mt-2 text-slate-300">Built a multi-modal product search system where users can search using either an image upload or a natural language description instead of relying on exact keyword matching.</p>
-          <ul class="list-disc pl-5 mt-3 text-sm text-slate-300 space-y-1">
-            <li>Used CLIP and Vision Transformer embeddings to represent images and text in the same vector space.</li>
-            <li>Stored product embeddings in Pinecone and retrieved nearest matches using cosine similarity.</li>
-            <li>Deployed a real-time Streamlit interface with ranked semantic search results.</li>
-          </ul>
-          <div class="mt-3 flex flex-wrap gap-2 text-xs"><span class="tag">CLIP</span><span class="tag">ViT</span><span class="tag">Pinecone</span><span class="tag">Streamlit</span></div>
-        </article>
-
-        <article class="neon-card p-6">
-          <h3 class="font-semibold">Hybrid Movie Recommender (RL + CBF)</h3>
-          <p class="text-xs text-slate-400 mt-1">Mar 2023</p>
-          <p class="text-sm mt-2 text-slate-300">Designed a recommendation engine that combines adaptive exploration with item-feature matching. The goal was to improve recommendation diversity while reducing cold-start issues.</p>
-          <ul class="list-disc pl-5 mt-3 text-sm text-slate-300 space-y-1">
-            <li>Used multi-armed bandits to balance exploration and exploitation.</li>
-            <li>Combined collaborative signals with content-based filtering using metadata such as genre and cast.</li>
-            <li>Evaluated both recommendation accuracy and diversity.</li>
-          </ul>
-          <div class="mt-3 flex flex-wrap gap-2 text-xs"><span class="tag">Reinforcement Learning</span><span class="tag">Python</span><span class="tag">Scikit-learn</span><span class="tag">Recommendation Systems</span></div>
-        </article>
-
-        <article class="neon-card p-6">
-          <h3 class="font-semibold">Stock Price Prediction Using LSTM</h3>
-          <p class="text-xs text-slate-400 mt-1">Dec 2022</p>
-          <p class="text-sm mt-2 text-slate-300">Built a time-series prediction project to forecast stock movement and present insights through an interactive dashboard for non-technical stakeholders.</p>
-          <ul class="list-disc pl-5 mt-3 text-sm text-slate-300 space-y-1">
-            <li>Collected real-time stock data from NASDAQ using Selenium automation.</li>
-            <li>Trained a multi-layer LSTM model to capture long-range temporal patterns.</li>
-            <li>Achieved R² of 97% and MSE of 0.0680 on held-out test data.</li>
-            <li>Built Tableau dashboard showing historical trends and 30-day projections.</li>
-          </ul>
-          <div class="mt-3 flex flex-wrap gap-2 text-xs"><span class="tag">Selenium</span><span class="tag">LSTM</span><span class="tag">PyTorch</span><span class="tag">Tableau</span></div>
-        </article>
-
-        <article class="neon-card p-6">
-          <h3 class="font-semibold">Twitter Word Clustering (ETL + ML)</h3>
-          <p class="text-xs text-slate-400 mt-1">Jun 2023</p>
-          <p class="text-sm mt-2 text-slate-300">Built a streaming data engineering pipeline to collect, preprocess, and cluster Twitter text into meaningful topics for downstream sentiment and trend analysis.</p>
-          <ul class="list-disc pl-5 mt-3 text-sm text-slate-300 space-y-1">
-            <li>Used Apache Kafka for real-time ingestion and filtering.</li>
-            <li>Handled noisy text preprocessing and schema variability.</li>
-            <li>Applied TF-IDF embeddings and K-Means clustering to group semantically similar tweets.</li>
-          </ul>
-          <div class="mt-3 flex flex-wrap gap-2 text-xs"><span class="tag">Kafka</span><span class="tag">ETL</span><span class="tag">TF-IDF</span><span class="tag">K-Means</span></div>
-        </article>
-
-        <article class="neon-card p-6">
-          <h3 class="font-semibold">Contextualised Course and Role Assignment</h3>
-          <p class="text-xs text-slate-400 mt-1">Dec 2022</p>
-          <p class="text-sm mt-2 text-slate-300">Built a knowledge representation system that matched university instructors to courses using NLP, ontologies, and semantic reasoning.</p>
-          <ul class="list-disc pl-5 mt-3 text-sm text-slate-300 space-y-1">
-            <li>Parsed teacher resumes using NLP entity extraction and skill classification.</li>
-            <li>Designed OWL/RDFS ontologies for qualifications, course requirements, and prerequisite relationships.</li>
-            <li>Used SPARQL queries to infer and retrieve optimal course-instructor pairings.</li>
-          </ul>
-          <div class="mt-3 flex flex-wrap gap-2 text-xs"><span class="tag">NLP</span><span class="tag">OWL/RDFS</span><span class="tag">SPARQL</span><span class="tag">spaCy</span></div>
-        </article>
+        <div class="tile case reveal">
+          <div class="case-head"><span class="case-logo">E</span><div class="case-title"><h3>Visual Search System — CLIP + ViT multi-modal retrieval</h3><div class="ct-meta"><span class="kbd">Oct – Nov 2023</span> · <span>CLIP · ViT · Pinecone · Streamlit</span></div></div><span class="case-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></span></div>
+          <div class="case-body"><div class="case-body-inner"><div class="case-content">
+            <div class="case-block"><span class="cb-label">Overview</span><p>Multi-modal product search allowing users to search by image upload or natural language description — no precise keywords needed.</p></div>
+            <div class="case-block"><span class="cb-label">What I built</span><ul><li>CLIP + Vision Transformer generating unified image-text embeddings</li><li>Pinecone vector store with cosine-similarity retrieval</li><li>Dual search modes in one pipeline, deployed via a real-time Streamlit interface</li></ul></div>
+            <div class="case-block"><span class="cb-label">Stack</span><div class="chips"><span class="chip">CLIP</span><span class="chip">ViT</span><span class="chip">Pinecone</span><span class="chip">Streamlit</span><span class="chip">PyTorch</span></div></div>
+          </div></div></div>
+        </div>
 
       </div>
-      <div class="mt-4 text-sm"><a class="link-underline" href="https://github.com/Lohit20" target="_blank" rel="noopener">See more on GitHub →</a></div>
+    </section>
+
+    <section>
+      <div class="sec-head reveal"><span class="sec-eyebrow">Experience</span><h2 class="sec-title">Where I've built <em>ML systems</em></h2></div>
+      <div class="bento"><div class="tile tl-tile reveal"><div class="timeline">
+        <div class="tl-item">
+          <div class="tl-marker"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></div>
+          <div class="tl-body">
+            <div class="role">AI Engineer — Modeling &amp; Eval</div>
+            <div class="org">Sparkmed &amp; Markaroo · London (Remote) &nbsp;<span class="when">May 2026 — Present</span></div>
+            <div class="desc">Built a candidate-readiness prediction model and frontier-LLM evaluation harnesses (QWK, BERTScore) benchmarking grading quality against human gold labels for both live products.</div>
+            <div class="chips tags"><span class="chip">QWK</span><span class="chip">BERTScore</span><span class="chip">MLflow</span></div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-marker"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></div>
+          <div class="tl-body">
+            <div class="role">Data Scientist Intern</div>
+            <div class="org">CreatorOS · London (Remote) &nbsp;<span class="when">Sep — Dec 2025</span></div>
+            <div class="desc">Shipped a two-stage brand-to-creator recommender (RandomForest + XGBoost) on GCP Vertex AI at sub-250ms: +12% Precision@10, +10% NDCG@10, −63% manual ops overhead.</div>
+            <div class="chips tags"><span class="chip">XGBoost</span><span class="chip">Vertex AI</span><span class="chip">FastAPI</span></div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-marker"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></div>
+          <div class="tl-body">
+            <div class="role">Research Engineer <span class="faint mono" style="font-size:11px">(promoted from intern)</span></div>
+            <div class="org">Retrocausal · Redmond, USA (Remote) &nbsp;<span class="when">Feb 2024 — Jan 2025</span></div>
+            <div class="desc">Quantised a YOLOv5 pose model to OpenVINO INT8 — 2× throughput, −36% cost — and ran a Timesformer+GPT-2 vs ViT+GPT-2 captioning study, cutting assembly errors 25%.</div>
+            <div class="chips tags"><span class="chip">YOLOv5</span><span class="chip">OpenVINO</span><span class="chip">INT8</span></div>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-marker"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></div>
+          <div class="tl-body">
+            <div class="role">ML &amp; Product Dev Engineer Intern</div>
+            <div class="org">Transaction Processing System · Karachi &nbsp;<span class="when">Jul — Aug 2023</span></div>
+            <div class="desc">XGBoost ATM withdrawal model on 300K+ records — RMSE −8% over baseline, piloted across 200+ users showing 5–6% potential reduction in cash stockouts, with scheduled retraining for drift.</div>
+            <div class="chips tags"><span class="chip">XGBoost</span><span class="chip">Docker</span><span class="chip">Oracle SQL</span></div>
+          </div>
+        </div>
+      </div></div></div>
+    </section>
+  </div>
+
+  <!-- ===================== SHARED: EDUCATION + CERTIFICATIONS ===================== -->
+  <section id="credentials">
+    <div class="sec-head reveal">
+      <span class="sec-eyebrow">Credentials</span>
+      <h2 class="sec-title">Education &amp; <em>certifications</em></h2>
     </div>
-  </section>
-
-  <!-- Education — Original Vertical Timeline Style Preserved -->
-  <section id="education" class="section">
-    <div class="max-w-6xl mx-auto px-4">
-      <h2 class="text-3xl sm:text-4xl font-extrabold mb-8"><span class="gradient-text">Education</span></h2>
-      <div class="-mx-4 sm:mx-0 relative">
-        <span aria-hidden="true" class="pointer-events-none absolute inset-y-0 left-1/2 -translate-x-1/2 w-px bg-slate-800/80 rounded"></span>
-        <div class="space-y-12 relative z-10 px-4 sm:px-0">
-
-          <div class="grid md:grid-cols-[1fr,72px,1fr] gap-6 items-center">
-            <article class="neon-card p-6 md:p-7 w-full md:max-w-[880px] md:justify-self-end">
-              <div class="flex items-start gap-3 mb-3"><div class="icon-chip shrink-0"><i data-lucide="graduation-cap" class="h-5 w-5"></i></div><div><h3 class="text-2xl font-semibold leading-snug">University of Surrey</h3><p class="text-sm text-slate-400 mt-0.5">MSc — Data Science · Distinction</p></div></div>
-              <p class="italic text-slate-300">Relevant Coursework</p>
-              <ul class="list-disc pl-6 mt-2 space-y-1 text-slate-300"><li>Machine Learning & Data Mining</li><li>Data Science Principles & Practices</li><li>Natural Language Processing</li><li>Cloud Computing</li></ul>
-            </article>
-            <div class="relative flex items-center justify-center"><div class="flex items-center justify-center h-16 w-16 rounded-full bg-slate-900 ring-4 ring-slate-800"><i data-lucide="bookmark" class="h-6 w-6 text-slate-200"></i></div></div>
-            <p class="text-slate-400 text-sm md:text-base md:text-left text-center">Feb 2025 – Feb 2026</p>
+    <div class="bento cred-grid">
+      <div class="tile edu-tile reveal">
+        <div class="cred-h">
+          <span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10L12 5 2 10l10 5 10-5z"/><path d="M6 12v5c0 1 2.7 3 6 3s6-2 6-3v-5"/></svg></span>
+          Education
+        </div>
+        <div class="edu-list">
+          <div class="edu-item">
+            <div class="et"><span class="deg">MSc Data Science<span class="badge-distinction">Distinction</span></span><span class="yr">Feb 2025 — Feb 2026</span></div>
+            <div class="sch">University of Surrey · Guildford, UK</div>
+            <div class="mods">Machine Learning &amp; Data Mining · Data Science Principles &amp; Practices · Natural Language Processing · Cloud Computing</div>
           </div>
-
-          <div class="grid md:grid-cols-[1fr,72px,1fr] gap-6 items-center">
-            <p class="order-3 md:order-1 text-slate-400 text-sm md:text-base md:text-right text-center">Sep 2020 – Jun 2024</p>
-            <div class="order-2 relative flex items-center justify-center"><div class="flex items-center justify-center h-16 w-16 rounded-full bg-slate-900 ring-4 ring-slate-800"><i data-lucide="bookmark" class="h-6 w-6 text-slate-200"></i></div></div>
-            <article class="order-1 md:order-3 neon-card p-6 md:p-7 w-full md:max-w-[880px] md:justify-self-start relative">
-              <span class="hidden md:block absolute top-10 -left-2 h-0 w-0 border-y-[10px] border-y-transparent border-r-[10px] border-r-slate-700"></span>
-              <div class="flex items-start gap-3 mb-3"><div class="icon-chip shrink-0"><i data-lucide="graduation-cap" class="h-5 w-5"></i></div><div><h3 class="text-2xl font-semibold leading-snug">NUCES FAST University</h3><p class="text-sm text-slate-400 mt-0.5">BSc — Artificial Intelligence · CGPA 3.33 · Three-Time Dean’s List</p></div></div>
-              <p class="italic text-slate-300">Relevant Coursework</p>
-              <ul class="list-disc pl-6 mt-2 space-y-1 text-slate-300"><li>Data Structures & Algorithms</li><li>Machine Learning & NLP</li><li>Computer Vision</li><li>Generative AI</li><li>Databases & OOP</li></ul>
-            </article>
+          <div class="edu-item">
+            <div class="et"><span class="deg">BSc Artificial Intelligence</span><span class="yr">Sep 2020 — Jun 2024</span></div>
+            <div class="sch">NUCES FAST University · Karachi, Pakistan · CGPA 3.33 · Three-Time Dean's List</div>
+            <div class="mods">Data Structures · Algorithms · Generative AI · Computer Vision · ML · NLP · Databases · OOP</div>
           </div>
-
-          <div class="grid md:grid-cols-[1fr,72px,1fr] gap-6 items-center">
-            <article class="neon-card p-6 md:p-7 w-full md:max-w-[880px] md:justify-self-end">
-              <div class="flex items-start gap-3 mb-3"><div class="icon-chip shrink-0"><i data-lucide="school" class="h-5 w-5"></i></div><div><h3 class="text-2xl font-semibold leading-snug">Cedar College</h3><p class="text-sm text-slate-400 mt-0.5">A-Levels</p></div></div>
-              <p class="italic text-slate-300">Subjects</p>
-              <p class="text-sm text-slate-300 mt-2">Computer Science, Mathematics, Physics, Chemistry</p>
-            </article>
-            <div class="relative flex items-center justify-center"><div class="flex items-center justify-center h-16 w-16 rounded-full bg-slate-900 ring-4 ring-slate-800"><i data-lucide="bookmark" class="h-6 w-6 text-slate-200"></i></div></div>
-            <p class="text-slate-400 text-sm md:text-base md:text-left text-center">Aug 2018 – Jun 2020</p>
+          <div class="edu-item">
+            <div class="et"><span class="deg">A-Levels</span><span class="yr">Aug 2018 — Jun 2020</span></div>
+            <div class="sch">Cedar College · Karachi, Pakistan</div>
+            <div class="mods">Computer Science · Mathematics · Physics · Chemistry</div>
           </div>
+        </div>
+        <div class="honours">
+          <div class="hh">Honours &amp; Awards</div>
+          <div class="chips">
+            <span class="chip">MSc Dissertation — Distinction (2025)</span>
+            <span class="chip">3× Dean's List — NUCES FAST</span>
+            <span class="chip">PROCOM Data Science — 7th / 30+ teams</span>
+            <span class="chip">IEEE AI TechEx — Finalist</span>
+          </div>
+        </div>
+      </div>
 
+      <div class="tile cert-tile reveal">
+        <div class="cred-h">
+          <span class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="6"/><path d="M8.5 13.5L7 22l5-3 5 3-1.5-8.5"/></svg></span>
+          Certifications
+        </div>
+        <div class="cert-list">
+          <div class="cert-item"><span class="cv-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h4l3 8 4-16 3 8h4"/></svg></span><div><div class="cn">Orchestrating Workflows for GenAI Applications</div><div class="cm"><span class="org">DeepLearning.AI</span> · Jul 2025</div></div></div>
+          <div class="cert-item"><span class="cv-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v12H4z"/><path d="M8 20h8M12 16v4"/></svg></span><div><div class="cn">Introduction to LLMs in Python</div><div class="cm"><span class="org">DataCamp</span> · Apr 2024</div></div></div>
+          <div class="cert-item"><span class="cv-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M12 2v4m0 12v4M4.2 4.2l2.8 2.8m10 10l2.8 2.8M2 12h4m12 0h4"/></svg></span><div><div class="cn">Generative AI Concepts</div><div class="cm"><span class="org">DataCamp</span> · Mar 2024</div></div></div>
+          <div class="cert-item"><span class="cv-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><circle cx="7" cy="7" r="1"/></svg></span><div><div class="cn">TensorFlow for AI, ML &amp; Deep Learning</div><div class="cm"><span class="org">DeepLearning.AI</span> · Aug 2023</div></div></div>
+          <div class="cert-item"><span class="cv-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg></span><div><div class="cn">Ensemble Methods in Python</div><div class="cm"><span class="org">DataCamp</span> · Nov 2022</div></div></div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Achievements -->
-  <section id="achievements" class="section">
-    <div class="max-w-6xl mx-auto px-4">
-      <h2 class="text-3xl sm:text-4xl font-extrabold mb-8"><span class="gradient-text">Achievements & Certifications</span></h2>
-      <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-        <article class="neon-card p-6 flex flex-col"><div class="flex items-center gap-3 mb-3"><div class="icon-chip shrink-0"><i data-lucide="award" class="h-5 w-5"></i></div><h3 class="font-semibold leading-snug">Orchestrating Workflows for GenAI Applications</h3></div><p class="text-slate-400 text-sm">DeepLearning.AI</p><p class="mt-4 text-slate-400 text-sm">Issued on:<br><span class="text-slate-200">July 2025</span></p><a href="https://learn.deeplearning.ai/accomplishments/4a59df9e-8f13-44bc-a90a-28d967fd94e7?usp=sharing" target="_blank" rel="noopener" class="mt-4 btn-outline text-center">See Credential</a></article>
-        <article class="neon-card p-6 flex flex-col"><div class="flex items-center gap-3 mb-3"><div class="icon-chip shrink-0"><i data-lucide="award" class="h-5 w-5"></i></div><h3 class="font-semibold leading-snug">Introduction to LLMs in Python</h3></div><p class="text-slate-400 text-sm">DataCamp</p><p class="mt-4 text-slate-400 text-sm">Issued on:<br><span class="text-slate-200">Apr 2024</span></p><a href="assets/img/Introduction to LLMs in Python.pdf" target="_blank" rel="noopener" class="mt-4 btn-outline text-center">See Credential</a></article>
-        <article class="neon-card p-6 flex flex-col"><div class="flex items-center gap-3 mb-3"><div class="icon-chip shrink-0"><i data-lucide="award" class="h-5 w-5"></i></div><h3 class="font-semibold leading-snug">TensorFlow for AI, ML & Deep Learning</h3></div><p class="text-slate-400 text-sm">DeepLearning.AI</p><p class="mt-4 text-slate-400 text-sm">Issued on:<br><span class="text-slate-200">Aug 2023</span></p><a href="https://www.coursera.org/account/accomplishments/verify/NCQNQANZ6TP8" target="_blank" rel="noopener" class="mt-4 btn-outline text-center">See Credential</a></article>
-        <article class="neon-card p-6 flex flex-col"><div class="flex items-center gap-3 mb-3"><div class="icon-chip shrink-0"><i data-lucide="trophy" class="h-5 w-5"></i></div><h3 class="font-semibold leading-snug">Honours & Awards</h3></div><ul class="list-disc pl-5 text-slate-300 text-sm space-y-1"><li>MSc Dissertation Distinction</li><li>Three-Time Dean’s List</li><li>PROCOM Data Science: 7th out of 30+ teams</li><li>IEEE AI-Enabled TechEx Poster Finalist</li></ul></article>
+  <!-- ===================== SHARED: WHY HIRE + CONTACT ===================== -->
+  <section id="hire">
+    <div class="bento hire-grid">
+      <div class="tile hire-lead reveal">
+        <span class="sec-eyebrow" style="align-self:flex-start">Why hire me</span>
+        <h2>One engineer, <em>full ownership</em>.</h2>
+        <p>Data, agents, or models — I take systems from problem to production, with evaluation and deploy pipelines behind them.</p>
+      </div>
+      <div class="hire-cards">
+        <div class="tile hire-card reveal"><span class="hi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3h18v18H3z"/><path d="M3 9h18M9 21V9"/></svg></span><h4>Production experience</h4><p>Two live AI SaaS products with paying users, shipped and maintained end-to-end.</p></div>
+        <div class="tile hire-card reveal"><span class="hi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg></span><h4>Deployment depth</h4><p>Async inference, Celery/Redis, Docker Compose, Jenkins CI/CD — the unglamorous parts that keep systems up.</p></div>
+        <div class="tile hire-card reveal"><span class="hi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></span><h4>Eval-first mindset</h4><p>Metrics and failure modes defined before prompts or models — QWK, BERTScore, and rubric-based harnesses.</p></div>
+        <div class="tile hire-card reveal"><span class="hi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></span><h4>End-to-end ownership</h4><p>Problem → data → model → eval → deploy → monitor. The whole loop, not just one layer.</p></div>
       </div>
     </div>
   </section>
 
-  <!-- Contact -->
-  <section id="contact" class="section">
-    <div class="max-w-6xl mx-auto px-4">
-      <h2 class="text-3xl sm:text-4xl font-extrabold mb-8"><span class="gradient-text">Contact</span></h2>
-      <div class="grid gap-6 md:grid-cols-3 auto-rows-fr">
-        <article class="neon-card p-6 flex flex-col h-full"><div class="flex items-start gap-4"><div class="icon-chip shrink-0"><i data-lucide="map-pin" class="h-5 w-5"></i></div><div class="min-w-0"><h3 class="text-lg font-semibold mb-1">Location</h3><p class="text-slate-300 text-base leading-relaxed">London, United Kingdom</p><a href="https://maps.google.com/?q=London,+United+Kingdom" target="_blank" rel="noopener" class="mt-4 inline-flex items-center gap-2 rounded-full border border-slate-700 px-3 py-1.5 text-sm hover:border-slate-500 w-fit"><i data-lucide="navigation" class="h-4 w-4"></i> Open in Maps</a></div></div><div class="mt-auto"></div></article>
-        <article class="neon-card p-6 flex flex-col h-full"><div class="flex items-start gap-4"><div class="icon-chip shrink-0"><i data-lucide="share-2" class="h-5 w-5"></i></div><div class="min-w-0"><h3 class="text-lg font-semibold mb-3">Social Profiles</h3><div class="flex items-center gap-3"><a href="https://www.linkedin.com/in/lohit-ashwa-44422a245/" target="_blank" rel="noopener" class="rounded-full p-2.5 bg-slate-800/60 ring-1 ring-slate-700 hover:ring-slate-500 transition hover:-translate-y-0.5" aria-label="LinkedIn"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a><a href="https://github.com/Lohit20" target="_blank" rel="noopener" class="rounded-full p-2.5 bg-slate-800/60 ring-1 ring-slate-700 hover:ring-slate-500 transition hover:-translate-y-0.5" aria-label="GitHub"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg></a><a href="mailto:ashwalohit@gmail.com" class="rounded-full p-2.5 bg-slate-800/60 ring-1 ring-slate-700 hover:ring-slate-500 transition hover:-translate-y-0.5" aria-label="Email"><i data-lucide="mail" class="h-5 w-5"></i></a></div></div></div><div class="mt-auto"></div></article>
-        <article class="neon-card p-6 flex flex-col h-full"><div class="flex items-start gap-4"><div class="icon-chip shrink-0"><i data-lucide="phone" class="h-5 w-5"></i></div><div class="min-w-0"><h3 class="text-lg font-semibold mb-1">Contact</h3><p class="text-slate-300 text-base"><a href="tel:+447424734575" class="link-underline whitespace-nowrap" aria-label="Call +44 7424 734575">+44 7424 734575</a></p><p class="mt-2 text-slate-300 text-base"><a href="mailto:ashwalohit@gmail.com" class="link-underline">ashwalohit@gmail.com</a></p><div class="mt-3 flex items-center gap-2 text-sm"><a href="https://wa.me/447424734575" target="_blank" rel="noopener" class="rounded-full px-3 py-1.5 border border-slate-700 hover:border-slate-500">WhatsApp</a><a href="sms:+447424734575" class="rounded-full px-3 py-1.5 border border-slate-700 hover:border-slate-500">Text</a></div></div></div><div class="mt-auto"></div></article>
+  <section id="contact">
+    <div class="sec-head reveal">
+      <span class="sec-eyebrow">Get in touch</span>
+      <h2 class="sec-title">Let's build something <em>that ships</em></h2>
+      <p class="sec-sub">Open to Data Engineer, Agentic AI, Applied AI &amp; ML / LLM Engineer roles in London or remote.</p>
+    </div>
+    <div class="bento">
+      <div class="tile contact-grid reveal">
+        <div class="contact-left">
+          <div class="ci"><span class="k">Email</span><a class="v" href="mailto:ashwalohit@gmail.com">ashwalohit@gmail.com</a></div>
+          <div class="ci"><span class="k">Location</span><span class="v">London, UK · work authorised</span></div>
+          <div class="ci"><span class="k">Phone</span><span class="v">+44 7424 734575</span></div>
+          <div class="ci"><span class="k">Elsewhere</span>
+            <div class="contact-socials">
+              <a href="https://github.com/Lohit20" target="_blank" rel="noopener" class="btn">GitHub</a>
+              <a href="https://www.linkedin.com/in/lohit-ashwa-44422a245/" target="_blank" rel="noopener" class="btn">LinkedIn</a>
+              <a href="assets/Lohit-Ashwa-Vaswani-Resume.pdf" target="_blank" rel="noopener" class="btn">CV</a>
+            </div>
+          </div>
+        </div>
+        <form class="contact-form" id="contactForm" novalidate>
+          <div class="frow">
+            <label>Full name <input type="text" name="name" placeholder="Your name" required /></label>
+            <label>Email <input type="email" name="email" placeholder="you@company.com" required /></label>
+          </div>
+          <label>Message <textarea name="message" placeholder="Tell me about the role or project…" required></textarea></label>
+          <div class="submit-row">
+            <button type="submit" class="btn primary">Send message <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+            <p class="form-note" id="formNote"></p>
+          </div>
+        </form>
       </div>
+    </div>
+    <div class="foot-meta">
+      <span>© 2026 Lohit Ashwa Vaswani</span>
+      <span>Data · Agentic AI · ML Systems · London, UK</span>
+      <span>One engineer, three lenses</span>
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer class="py-10 border-t border-slate-800">
-    <div class="max-w-6xl mx-auto px-4 text-sm opacity-80 flex items-center justify-between">
-      <span>© <span id="year"></span> Lohit Ashwa Vaswani</span>
-      <span>Built with HTML + Tailwind + Typed.js</span>
-    </div>
-  </footer>
+</main>
 
-  <!-- Small JS: mobile nav, typed headline, year -->
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const btn = document.getElementById('menuBtn');
-      const nav = document.getElementById('mobileNav');
-      if (btn && nav) btn.addEventListener('click', () => nav.classList.toggle('hidden'));
-
-      if (window.Typed) {
-        new Typed('#typed', {
-          strings: ['AI Engineer', 'Data Scientist', 'ML Engineer', 'LLM Systems Builder'],
-          typeSpeed: 45, backSpeed: 30, backDelay: 1400, smartBackspace: true, loop: true
-        });
-      }
-      const y = document.getElementById('year'); if (y) y.textContent = new Date().getFullYear();
-      if (window.lucide) lucide.createIcons();
-    });
-  </script>
+<script src="assets/js/portfolio-v3-switch.js"></script>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" crossorigin="anonymous"></script>
+<script type="text/babel" src="assets/js/tweaks-panel.jsx"></script>
+<script type="text/babel" src="assets/js/tweaks-v3.jsx"></script>
 </body>
 </html>

@@ -1,0 +1,112 @@
+/* ============================================================
+   Portfolio v3 — 3 role-lens pages (Data / Agentic / ML)
+   Layered on styles.css + components.css + portfolio-v2.css
+   ============================================================ */
+
+/* ---- top-bar page switcher (segmented) ---- */
+.topbar-inner.v3bar { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; }
+.v3bar .brand { justify-self: start; }
+.v3bar .topbar-right { justify-self: end; display: flex; align-items: center; gap: 10px; }
+.role-switch {
+  justify-self: center;
+  display: flex; gap: 3px; padding: 4px;
+  border-radius: 13px; border: 1px solid var(--glass-border);
+  background: var(--glass); -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px);
+}
+.role-switch a {
+  font-family: var(--mono); font-size: 12px; color: var(--ink-soft);
+  padding: 8px 14px; border-radius: 9px; transition: .2s; white-space: nowrap;
+  display: flex; align-items: center; gap: 7px;
+}
+.role-switch a svg { width: 14px; height: 14px; }
+.role-switch a:hover { color: var(--ink); }
+.role-switch a.active { background: var(--accent); color: var(--accent-ink); box-shadow: 0 4px 14px var(--accent-glow); }
+@media (max-width: 900px) {
+  .topbar-inner.v3bar { grid-template-columns: 1fr auto; }
+  .role-switch { display: none; }
+  .v3bar .brand { grid-column: 1; }
+  .v3bar .topbar-right { grid-column: 2; }
+}
+
+/* ---- view toggling ---- */
+.role-view { display: none; }
+.role-view.active { display: block; animation: viewIn .5s cubic-bezier(.2,.7,.3,1); }
+@keyframes viewIn { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
+html[data-motion="off"] .role-view.active { animation: none; }
+
+/* mobile role switch */
+.role-switch-mobile { display: none; }
+@media (max-width: 900px) {
+  .role-switch-mobile {
+    display: flex; gap: 3px; padding: 5px; margin: 14px auto 0; width: fit-content;
+    border-radius: 13px; border: 1px solid var(--glass-border); background: var(--glass);
+    -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px);
+  }
+  .role-switch-mobile a { font-family: var(--mono); font-size: 11px; color: var(--ink-soft); padding: 7px 11px; border-radius: 9px; }
+  .role-switch-mobile a.active { background: var(--accent); color: var(--accent-ink); }
+}
+
+/* ---- role hero ---- */
+.role-hero { padding-top: 30px; }
+.role-hero-tile {
+  grid-column: span 12; display: flex; flex-direction: column; gap: 20px;
+  min-height: 380px; justify-content: center; padding: 44px;
+}
+.role-kicker {
+  display: inline-flex; align-items: center; gap: 9px; width: fit-content;
+  font-family: var(--mono); font-size: 12px; letter-spacing: .14em; text-transform: uppercase;
+  color: var(--accent);
+}
+.role-kicker .ic { width: 26px; height: 26px; border-radius: 8px; display: grid; place-items: center; background: var(--accent-soft); border: 1px solid var(--accent-glow); }
+.role-kicker .ic svg { width: 15px; height: 15px; }
+.role-h1 {
+  font-family: var(--display); font-weight: 600; letter-spacing: -.035em; line-height: 1.0;
+  font-size: clamp(38px, 6vw, 76px);
+}
+.role-h1 .accent { color: var(--accent); }
+.role-lead { font-size: clamp(15px, 1.7vw, 19px); color: var(--ink-soft); max-width: 64ch; text-wrap: pretty; }
+.role-lead b { color: var(--ink); font-weight: 600; }
+.role-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 6px; }
+.role-status {
+  display: inline-flex; align-items: center; gap: 8px; width: fit-content;
+  font-family: var(--mono); font-size: 12px; color: var(--live);
+  background: var(--live-bg); border: 1px solid color-mix(in srgb, var(--live) 30%, transparent);
+  border-radius: 999px; padding: 6px 13px;
+}
+.role-status .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--live); animation: pulse 2.6s infinite; }
+
+/* ---- education & certifications ---- */
+.cred-grid { display: grid; grid-template-columns: 1.15fr 1fr; gap: var(--gap); }
+.edu-tile { grid-column: span 1; }
+.cert-tile { grid-column: span 1; }
+.cred-h { font-family: var(--display); font-weight: 600; font-size: 17px; letter-spacing: -.01em; display: flex; align-items: center; gap: 10px; margin-bottom: 18px; }
+.cred-h .ci { width: 30px; height: 30px; border-radius: 8px; display: grid; place-items: center; color: var(--accent); background: var(--accent-soft); border: 1px solid var(--accent-glow); }
+.cred-h .ci svg { width: 16px; height: 16px; }
+
+.edu-list { display: flex; flex-direction: column; gap: 16px; }
+.edu-item { padding-bottom: 16px; border-bottom: 1px solid var(--line-soft); }
+.edu-item:last-child { border-bottom: none; padding-bottom: 0; }
+.edu-item .et { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+.edu-item .deg { font-family: var(--display); font-weight: 600; font-size: 15.5px; }
+.edu-item .yr { font-family: var(--mono); font-size: 11px; color: var(--ink-faint); white-space: nowrap; }
+.edu-item .sch { font-family: var(--mono); font-size: 12px; color: var(--accent); margin-top: 3px; }
+.edu-item .badge-distinction { display: inline-block; font-family: var(--mono); font-size: 10px; color: var(--accent); border: 1px solid var(--accent-glow); background: var(--accent-soft); border-radius: 6px; padding: 2px 7px; margin-left: 8px; vertical-align: middle; }
+.edu-item .mods { font-size: 12.5px; color: var(--ink-soft); margin-top: 8px; text-wrap: pretty; }
+
+.cert-list { display: flex; flex-direction: column; gap: 10px; }
+.cert-item {
+  display: flex; align-items: center; gap: 12px; padding: 12px 14px; border-radius: 11px;
+  border: 1px solid var(--glass-border); background: var(--glass);
+  -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); transition: .2s;
+}
+.cert-item:hover { border-color: var(--accent); transform: translateX(3px); }
+.cert-item .cv-ic { width: 30px; height: 30px; border-radius: 8px; flex-shrink: 0; display: grid; place-items: center; color: var(--accent); background: var(--accent-soft); }
+.cert-item .cv-ic svg { width: 15px; height: 15px; }
+.cert-item .cn { font-family: var(--body); font-weight: 600; font-size: 13.5px; line-height: 1.25; }
+.cert-item .cm { font-family: var(--mono); font-size: 10.5px; color: var(--ink-faint); margin-top: 2px; }
+.cert-item .cm .org { color: var(--accent); }
+
+.honours { margin-top: 20px; padding-top: 16px; border-top: 1px solid var(--line-soft); }
+.honours .hh { font-family: var(--mono); font-size: 11px; letter-spacing: .12em; text-transform: uppercase; color: var(--ink-faint); margin-bottom: 10px; }
+.honours .chips { gap: 8px; }
+@media (max-width: 760px) { .cred-grid { grid-template-columns: 1fr; } }

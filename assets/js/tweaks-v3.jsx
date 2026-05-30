@@ -2,7 +2,7 @@
    Tweaks bridge (v3) — dark + red accent default
    ============================================================ */
 const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
-  "theme": "dark",
+  "theme": "light",
   "accent": "#e5484d",
   "displayFont": "Space Grotesk",
   "glass": true,

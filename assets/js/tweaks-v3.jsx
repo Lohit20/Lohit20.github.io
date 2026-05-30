@@ -1,9 +1,9 @@
 /* ============================================================
-   Tweaks bridge (v3) — dark + violet accent default
+   Tweaks bridge (v3) — dark + red accent default
    ============================================================ */
 const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
   "theme": "dark",
-  "accent": "#D97757",
+  "accent": "#e5484d",
   "displayFont": "Space Grotesk",
   "glass": true,
   "motion": true

@@ -249,9 +249,30 @@ html[data-motion="off"] .reveal.armed { opacity: 1; transform: none; transition:
 .btn svg { width: 16px; height: 16px; }
 .btn { white-space: nowrap; }
 
+/* ---- macOS-style dark/light segmented toggle ---- */
+.theme-seg {
+  display: flex; gap: 2px; padding: 3px;
+  border-radius: 10px; border: 1px solid var(--glass-border);
+  background: var(--glass); -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px);
+}
+.ts-opt {
+  display: inline-flex; align-items: center; gap: 5px;
+  font-family: var(--mono); font-size: 11px; color: var(--ink-faint);
+  padding: 5px 11px; border-radius: 7px; border: none; background: transparent;
+  cursor: pointer; transition: .18s; white-space: nowrap;
+}
+.ts-opt svg { width: 12px; height: 12px; }
+.ts-opt:hover { color: var(--ink); }
+.ts-opt.active {
+  background: var(--panel-2); color: var(--ink);
+  box-shadow: 0 1px 4px rgba(0,0,0,.18), 0 0 0 1px var(--glass-border);
+}
+html[data-theme="dark"] .ts-opt.active { background: var(--panel); }
+
 @media (max-width: 860px) {
   .bento { grid-template-columns: repeat(6, 1fr); }
   .navlinks .hide-sm { display: none; }
+  .theme-seg { display: none; }
 }
 @media (max-width: 560px) {
   .bento { grid-template-columns: repeat(2, 1fr); }

@@ -153,3 +153,41 @@ html[data-theme="dark"] {
 .hire-card p { font-size: 13px; color: var(--ink-soft); text-wrap: pretty; }
 @media (max-width: 860px) { .hire-lead, .hire-cards { grid-column: span 12; } }
 @media (max-width: 480px) { .hire-cards { grid-template-columns: 1fr; } }
+
+/* ---- mobile overrides ---- */
+@media (max-width: 640px) {
+  /* stat cards — 2 per row */
+  .dash-card { grid-column: span 1 !important; min-height: 110px; }
+  .dash-card .dc-num { font-size: clamp(22px, 7vw, 30px); }
+
+  /* pipeline / arch diagram */
+  .pipe-tile { padding: 20px 14px; }
+  .arch-box { font-size: 10px; padding: 8px 10px; }
+  .arch-box .sub { font-size: 8.5px; }
+
+  /* agent flow */
+  .flow-tile { padding: 20px 14px; }
+  .flow-node { min-width: 90px; padding: 12px 10px; }
+  .flow-node .fn-t { font-size: 12px; }
+  .flow-node .fn-s { font-size: 8.5px; }
+  .flow-loop { font-size: 10px; }
+
+  /* capability cards — 1 per row */
+  .cap-card { grid-column: span 2 !important; }
+
+  /* case studies */
+  .case-head { padding: 16px 14px; gap: 12px; }
+  .case-logo { width: 36px; height: 36px; font-size: 14px; border-radius: 9px; }
+  .case-title h3 { font-size: clamp(14px, 4.5vw, 18px); }
+  .case-content { padding: 4px 14px 20px; gap: 16px; }
+  .case-metrics { gap: 16px; }
+  .case-metrics .m .v { font-size: 20px; }
+  .case-toggle { width: 30px; height: 30px; }
+
+  /* skill groups */
+  .skill-tile { padding: 20px 14px; }
+
+  /* hire */
+  .hire-lead h2 { font-size: clamp(22px, 7vw, 30px); }
+  .hire-card { grid-column: span 1; }
+}

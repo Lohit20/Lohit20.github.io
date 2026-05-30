@@ -178,3 +178,18 @@
   .stat { grid-column: span 1; }
   .hero-name { font-size: 44px; }
 }
+
+@media (max-width: 640px) {
+  /* timeline */
+  .tl-body .role { font-size: 15px; }
+  .tl-body .desc { font-size: 13.5px; }
+  .tl-body .org { font-size: 11.5px; }
+
+  /* contact */
+  .contact-grid { padding: 20px 16px; gap: 22px; }
+  .contact-left .ci .v { font-size: 14px; }
+  .foot-meta { font-size: 11px; gap: 8px; }
+
+  /* mobile role switch show on small phones */
+  .role-switch-mobile { display: flex; }
+}

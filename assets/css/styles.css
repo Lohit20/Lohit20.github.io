@@ -275,5 +275,26 @@ html[data-theme="dark"] .ts-opt.active { background: var(--panel); }
   .theme-seg { display: none; }
 }
 @media (max-width: 560px) {
-  .bento { grid-template-columns: repeat(2, 1fr); }
+  .bento { grid-template-columns: repeat(2, 1fr); gap: 8px; }
+}
+
+/* ========================================================
+   MOBILE — comprehensive responsive overrides
+   ======================================================== */
+@media (max-width: 640px) {
+  /* section spacing */
+  section { padding: 40px 0; }
+  .sec-head { margin-bottom: 28px; gap: 14px; }
+  .sec-title { font-size: clamp(24px, 7vw, 34px); }
+  .sec-sub { font-size: 14px; }
+  .wrap { padding: 0 16px; }
+
+  /* topbar */
+  .topbar-inner { padding: 11px 16px; }
+  .brand b { font-size: 12px; }
+  .navlinks .cta { font-size: 11px !important; padding: 6px 10px !important; }
+
+  /* tile base */
+  .tile { padding: 16px; }
+  .bento { gap: 8px; }
 }

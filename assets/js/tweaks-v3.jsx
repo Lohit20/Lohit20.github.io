@@ -3,7 +3,7 @@
    ============================================================ */
 const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
   "theme": "dark",
-  "accent": "#6d4aff",
+  "accent": "#D97757",
   "displayFont": "Space Grotesk",
   "glass": true,
   "motion": true

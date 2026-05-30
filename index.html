@@ -425,10 +425,10 @@
           <span class="role-status"><span class="dot"></span> Available now · London / Remote</span>
           <span class="role-kicker">
             <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h4l3 8 4-16 3 8h4"/></svg></span>
-            ML Systems · Modeling, Eval &amp; MLOps
+            ML Systems · Train · Evaluate · Optimise · Ship
           </span>
-          <h1 class="role-h1">ML systems,<br /><span class="accent">measured &amp; shipped</span></h1>
-          <p class="role-lead">Training, evaluation and deployment of models that hold up in production — recommenders, vision, NLP, and <b>frontier-LLM benchmarking</b> — served at low latency with real cost discipline.</p>
+          <h1 class="role-h1">Models trained,<br /><span class="accent">evaluated &amp; shipped</span></h1>
+          <p class="role-lead">QLoRA fine-tuning on a single GPU, INT8 quantisation for <b>2× throughput</b>, &lt;250ms serving on Vertex AI, and eval harnesses (QWK · BERTScore · F1) that gate every model before it reaches users — recommenders, vision, NLP, and frontier-LLM benchmarking, all the way to production.</p>
           <div class="role-actions">
             <a href="#ml-work" class="btn primary">See ML systems <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
             <a href="https://github.com/Lohit20" target="_blank" rel="noopener" class="btn">GitHub</a>
@@ -446,13 +446,13 @@
           <div class="dc-spark"></div>
         </div>
         <div class="tile dash-card reveal">
-          <div class="dc-top"><span class="dc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 6l-9.5 9.5-5-5L1 18"/><path d="M17 6h6v6"/></svg></span></div>
-          <div><div class="dc-num">+<span data-count="12">0</span><span class="suf">%</span></div><div class="dc-lab">Precision@10 (recommender)</div></div>
+          <div class="dc-top"><span class="dc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg></span></div>
+          <div><div class="dc-num">−<span data-count="78">0</span><span class="suf">%</span></div><div class="dc-lab">GPU memory (QLoRA: 28 GB → 6 GB)</div></div>
           <div class="dc-spark"></div>
         </div>
         <div class="tile dash-card reveal">
           <div class="dc-top"><span class="dc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></span></div>
-          <div><div class="dc-num">−<span data-count="36">0</span><span class="suf">%</span></div><div class="dc-lab">inference cost (INT8 quantisation)</div></div>
+          <div><div class="dc-num">−<span data-count="36">0</span><span class="suf">%</span></div><div class="dc-lab">inference cost · 2× throughput (INT8)</div></div>
           <div class="dc-spark"></div>
         </div>
         <div class="tile dash-card reveal">
@@ -468,17 +468,19 @@
       <div class="bento"><div class="tile pipe-tile reveal">
         <div class="arch" style="border:none;background:transparent;padding:0">
           <div class="arch-row">
-            <div class="arch-box">Data<span class="sub">features</span></div>
+            <div class="arch-box">Data<span class="sub">features · augmentation</span></div>
             <div class="arch-conn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
-            <div class="arch-box">Train<span class="sub">PyTorch · XGBoost</span></div>
+            <div class="arch-box hl">Train / Fine-tune<span class="sub">QLoRA · PEFT · PyTorch</span></div>
             <div class="arch-conn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
-            <div class="arch-box hl">Evaluate<span class="sub">QWK · BERTScore</span></div>
+            <div class="arch-box">Optimise<span class="sub">INT8 · quantisation</span></div>
+            <div class="arch-conn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+            <div class="arch-box hl">Evaluate<span class="sub">QWK · BERTScore · F1</span></div>
             <div class="arch-conn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
             <div class="arch-box">Registry<span class="sub">MLflow</span></div>
             <div class="arch-conn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
-            <div class="arch-box hl">Deploy<span class="sub">Vertex AI · FastAPI</span></div>
+            <div class="arch-box hl">Deploy<span class="sub">Vertex AI · FastAPI · Docker</span></div>
             <div class="arch-conn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
-            <div class="arch-box">Monitor<span class="sub">drift · cost</span></div>
+            <div class="arch-box">Monitor<span class="sub">drift · cost · latency</span></div>
           </div>
         </div>
       </div></div>
@@ -487,15 +489,24 @@
     <section>
       <div class="sec-head reveal"><span class="sec-eyebrow">Toolkit</span><h2 class="sec-title">ML systems <em>stack</em></h2></div>
       <div class="bento"><div class="tile skill-tile reveal"><div class="skill-groups">
-        <div class="skill-group"><div class="sg-h">Modeling</div><div class="chips"><span class="chip">PyTorch</span><span class="chip">TensorFlow</span><span class="chip">Keras</span><span class="chip">scikit-learn</span><span class="chip">XGBoost</span><span class="chip">Hugging Face</span></div></div>
-        <div class="skill-group"><div class="sg-h">Vision &amp; Optimisation</div><div class="chips"><span class="chip">OpenCV</span><span class="chip">YOLOv5</span><span class="chip">OpenVINO</span><span class="chip">INT8 quantisation</span><span class="chip">QLoRA / PEFT</span></div></div>
-        <div class="skill-group"><div class="sg-h">MLOps &amp; Serving</div><div class="chips"><span class="chip">MLflow</span><span class="chip">Vertex AI</span><span class="chip">FastAPI</span><span class="chip">Docker</span><span class="chip">CI/CD</span><span class="chip">QWK · BERTScore</span></div></div>
+        <div class="skill-group"><div class="sg-h">Training &amp; Fine-tuning</div><div class="chips"><span class="chip">PyTorch</span><span class="chip">TensorFlow</span><span class="chip">Keras</span><span class="chip">scikit-learn</span><span class="chip">XGBoost</span><span class="chip">Hugging Face</span><span class="chip">QLoRA</span><span class="chip">PEFT</span><span class="chip">DistilBERT</span><span class="chip">BioBERT</span><span class="chip">Timesformer</span></div></div>
+        <div class="skill-group"><div class="sg-h">Vision &amp; Optimisation</div><div class="chips"><span class="chip">OpenCV</span><span class="chip">YOLOv5</span><span class="chip">CLIP</span><span class="chip">ViT</span><span class="chip">OpenVINO</span><span class="chip">INT8 quantisation</span></div></div>
+        <div class="skill-group"><div class="sg-h">Eval · MLOps · Serving</div><div class="chips"><span class="chip">QWK</span><span class="chip">BERTScore</span><span class="chip">F1 · ROC-AUC · PR-AUC</span><span class="chip">MLflow</span><span class="chip">Vertex AI</span><span class="chip">FastAPI</span><span class="chip">Docker</span><span class="chip">Jenkins CI/CD</span></div></div>
       </div></div></div>
     </section>
 
     <section id="ml-work">
       <div class="sec-head reveal"><span class="sec-eyebrow">Projects</span><h2 class="sec-title">ML systems <em>in production</em></h2></div>
       <div class="bento">
+
+        <div class="tile case reveal">
+          <div class="case-head"><span class="case-logo">Q</span><div class="case-title"><h3>QLoRA Llama-2 7B — single-GPU fine-tuning on clinical text</h3><div class="ct-meta"><span class="kbd">BSc Final Year</span> · <span>QLoRA · PEFT · Llama-2 7B · Trade for Sight</span></div></div><span class="case-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></span></div>
+          <div class="case-body"><div class="case-body-inner"><div class="case-content">
+            <div class="case-block"><span class="cb-label">Overview</span><p>Fine-tuned Llama-2 7B on financial and clinical domain text using QLoRA on a single consumer GPU — dramatically reducing memory requirements while retaining reasoning quality for the Trade for Sight RAG assistant.</p></div>
+            <div class="case-block"><span class="cb-label">Architecture &amp; training decisions</span><ul><li>QLoRA (4-bit NF4 quantisation + LoRA adapters) reducing GPU memory from 28 GB to 6 GB — 78% reduction</li><li>PEFT adapter layers targeting attention projection matrices for efficient domain adaptation</li><li>Trained on structured financial narratives generated from SQL market data for grounded, CoT-style outputs</li><li>Integrated with Pinecone + LlamaIndex RAG layer — fine-tuning + retrieval complementing each other</li></ul></div>
+            <div class="case-block"><span class="cb-label">Result</span><div class="case-metrics"><div class="m"><div class="v">−78<span class="suf">%</span></div><div class="l">GPU memory (28 GB → 6 GB)</div></div><div class="m"><div class="v">70<span class="suf">%</span></div><div class="l">trader adoption post-deployment</div></div></div></div>
+          </div></div></div>
+        </div>
 
         <div class="tile case reveal">
           <div class="case-head"><span class="case-logo">W</span><div class="case-title"><h3>WHO JEE — Frontier LLM benchmarking (MSc Thesis, Distinction)</h3><div class="ct-meta"><span class="kbd">PLOS Journal pending</span> · <span>QWK · BERTScore · UKHSA</span></div></div><span class="case-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></span></div>
@@ -511,7 +522,7 @@
           <div class="case-body"><div class="case-body-inner"><div class="case-content">
             <div class="case-block"><span class="cb-label">Overview</span><p>Fraud detection on 300,000+ transactions with ~2% fraud rate, benchmarking ensemble aggregation strategies against advanced standalone models under severe class imbalance.</p></div>
             <div class="case-block"><span class="cb-label">What I built</span><ul><li>SMOTE-Tomek for imbalance + 5 aggregation strategies (entropy, weighted, threshold-aware, max-prob, trimmed mean)</li><li>Benchmarked XGBoost, Linear SVM, LDA, RIPPER &amp; Autoencoder+MLP on ROC-AUC / PR-AUC / F1</li><li>Trimmed-mean identified as best balanced ensemble; XGBoost as best standalone</li></ul></div>
-            <div class="case-block full"><span class="cb-label">Results</span><div class="case-metrics"><div class="m"><div class="v">91<span class="suf">%</span></div><div class="l">recall</div></div><div class="m"><div class="v">800</div><div class="l">false positives (from 10k)</div></div><div class="m"><div class="v">0.97</div><div class="l">XGBoost ROC-AUC</div></div></div></div>
+            <div class="case-block full"><span class="cb-label">Results</span><div class="case-metrics"><div class="m"><div class="v">91<span class="suf">%</span></div><div class="l">recall</div></div><div class="m"><div class="v">0.97</div><div class="l">XGBoost ROC-AUC</div></div><div class="m"><div class="v">0.82</div><div class="l">PR-AUC (imbalanced)</div></div><div class="m"><div class="v">800</div><div class="l">false positives reduced (from 10k)</div></div></div></div>
           </div></div></div>
         </div>
 
@@ -529,7 +540,7 @@
           <div class="case-body"><div class="case-body-inner"><div class="case-content">
             <div class="case-block"><span class="cb-label">Overview</span><p>Token-level BIO tagging pipeline to detect abbreviations and long-form expansions in scientific literature, with a Flask chatbot interface for real-time expansion.</p></div>
             <div class="case-block"><span class="cb-label">What I built</span><ul><li>BIO token classification benchmarking BioBERT vs DistilBERT on PLOD-CW-25 dataset</li><li>Experimented with Cross-Entropy, Weighted Cross-Entropy, and Focal Loss (Focal improved minority recall)</li><li>Augmented training with filtered PLODv2 subsets; deployed best model to Hugging Face</li><li>Flask chatbot interface with custom token-level logging for model monitoring</li></ul></div>
-            <div class="case-block"><span class="cb-label">Result</span><div class="case-metrics"><div class="m"><div class="v">0.85</div><div class="l">BioBERT F1 score</div></div></div></div>
+            <div class="case-block"><span class="cb-label">Result</span><div class="case-metrics"><div class="m"><div class="v">0.846</div><div class="l">BioBERT F1 score</div></div></div></div>
           </div></div></div>
         </div>
 
@@ -546,7 +557,7 @@
           <div class="case-head"><span class="case-logo">E</span><div class="case-title"><h3>Visual Search System — CLIP + ViT multi-modal retrieval</h3><div class="ct-meta"><span class="kbd">Oct – Nov 2023</span> · <span>CLIP · ViT · Pinecone · Streamlit</span></div></div><span class="case-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></span></div>
           <div class="case-body"><div class="case-body-inner"><div class="case-content">
             <div class="case-block"><span class="cb-label">Overview</span><p>Multi-modal product search allowing users to search by image upload or natural language description — no precise keywords needed.</p></div>
-            <div class="case-block"><span class="cb-label">What I built</span><ul><li>CLIP + Vision Transformer generating unified image-text embeddings</li><li>Pinecone vector store with cosine-similarity retrieval</li><li>Dual search modes in one pipeline, deployed via a real-time Streamlit interface</li></ul></div>
+            <div class="case-block"><span class="cb-label">Architecture &amp; training decisions</span><ul><li>CLIP + Vision Transformer generating 512-d shared image-text embedding space — same cosine similarity across both modalities</li><li>Pinecone vector store with cosine-similarity retrieval serving both search modes from a single index</li><li>Dual search modes (image upload + natural language) in one unified pipeline, deployed via real-time Streamlit interface</li></ul></div>
             <div class="case-block"><span class="cb-label">Stack</span><div class="chips"><span class="chip">CLIP</span><span class="chip">ViT</span><span class="chip">Pinecone</span><span class="chip">Streamlit</span><span class="chip">PyTorch</span></div></div>
           </div></div></div>
         </div>
@@ -562,17 +573,17 @@
           <div class="tl-body">
             <div class="role">AI Engineer — Modeling &amp; Eval</div>
             <div class="org">Sparkmed &amp; Markaroo · London (Remote) &nbsp;<span class="when">May 2026 — Present</span></div>
-            <div class="desc">Built a candidate-readiness prediction model and frontier-LLM evaluation harnesses (QWK, BERTScore) benchmarking grading quality against human gold labels for both live products.</div>
-            <div class="chips tags"><span class="chip">QWK</span><span class="chip">BERTScore</span><span class="chip">MLflow</span></div>
+            <div class="desc">Built a candidate-readiness prediction model tracking blueprint coverage across MRCP, MRCPCH, and FRCS specialties, plus QWK + BERTScore evaluation harnesses benchmarking LLM grading quality against human gold labels for both live products.</div>
+            <div class="chips tags"><span class="chip">QWK</span><span class="chip">BERTScore</span><span class="chip">MLflow</span><span class="chip">Readiness model</span></div>
           </div>
         </div>
         <div class="tl-item">
           <div class="tl-marker"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></div>
           <div class="tl-body">
-            <div class="role">Data Scientist Intern</div>
+            <div class="role">Data Scientist Intern — ML &amp; Recommender Systems</div>
             <div class="org">CreatorOS · London (Remote) &nbsp;<span class="when">Sep — Dec 2025</span></div>
-            <div class="desc">Shipped a two-stage brand-to-creator recommender (RandomForest + XGBoost) on GCP Vertex AI at sub-250ms: +12% Precision@10, +10% NDCG@10, −63% manual ops overhead.</div>
-            <div class="chips tags"><span class="chip">XGBoost</span><span class="chip">Vertex AI</span><span class="chip">FastAPI</span></div>
+            <div class="desc">Shipped a two-stage brand-to-creator recommender (pruned RandomForest → XGBoost ranking) on GCP Vertex AI at sub-250ms: +12% Precision@10, +10% NDCG@10, −63% manual ops overhead.</div>
+            <div class="chips tags"><span class="chip">XGBoost</span><span class="chip">RandomForest</span><span class="chip">Vertex AI</span><span class="chip">FastAPI</span><span class="chip">Docker</span></div>
           </div>
         </div>
         <div class="tl-item">
@@ -580,8 +591,8 @@
           <div class="tl-body">
             <div class="role">Research Engineer <span class="faint mono" style="font-size:11px">(promoted from intern)</span></div>
             <div class="org">Retrocausal · Redmond, USA (Remote) &nbsp;<span class="when">Feb 2024 — Jan 2025</span></div>
-            <div class="desc">Quantised a YOLOv5 pose model to OpenVINO INT8 — 2× throughput, −36% cost — and ran a Timesformer+GPT-2 vs ViT+GPT-2 captioning study, cutting assembly errors 25%.</div>
-            <div class="chips tags"><span class="chip">YOLOv5</span><span class="chip">OpenVINO</span><span class="chip">INT8</span></div>
+            <div class="desc">Quantised a YOLOv5 pose model to OpenVINO INT8 (2× throughput, −36% cost); ran a Timesformer+GPT-2 vs ViT+GPT-2 video captioning study to surface assembly errors — reducing defects 25% and rework costs 30%.</div>
+            <div class="chips tags"><span class="chip">YOLOv5</span><span class="chip">OpenVINO</span><span class="chip">INT8</span><span class="chip">Timesformer</span><span class="chip">ViT+GPT-2</span></div>
           </div>
         </div>
         <div class="tl-item">

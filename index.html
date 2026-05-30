@@ -102,7 +102,7 @@
             Data Engineer · Pipelines &amp; Infrastructure
           </span>
           <h1 class="role-h1">The data layer<br /><span class="accent">AI runs on</span></h1>
-          <p class="role-lead">I build the ingestion, structuring and storage that production AI depends on — <b>fault-tolerant real-time streaming</b>, OCR → indicator-level JSON, and low-latency serving stores. From <b>100+ page PDFs to clean structured data</b> and IoT pipelines that don't drop events.</p>
+          <p class="role-lead">I build the ingestion, structuring and storage that production AI depends on: <b>fault-tolerant real-time streaming</b>, OCR to indicator-level JSON, and low-latency serving stores. From <b>100+ page PDFs to clean structured data</b> and IoT pipelines that never drop events.</p>
           <div class="role-actions">
             <a href="#data-work" class="btn primary">See data systems <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
             <a href="https://github.com/Lohit20" target="_blank" rel="noopener" class="btn">GitHub</a>
@@ -138,7 +138,7 @@
     </section>
 
     <section>
-      <div class="sec-head reveal"><span class="sec-eyebrow">How I build</span><h2 class="sec-title">A resilient <em>data pipeline</em></h2><p class="sec-sub">Raw, messy sources in — clean, queryable, AI-ready data out.</p></div>
+      <div class="sec-head reveal"><span class="sec-eyebrow">How I build</span><h2 class="sec-title">A resilient <em>data pipeline</em></h2><p class="sec-sub">Raw, messy sources in. Clean, queryable, AI-ready data out.</p></div>
       <div class="bento"><div class="tile pipe-tile reveal">
         <div class="arch" style="border:none;background:transparent;padding:0">
           <div class="arch-row">
@@ -172,34 +172,34 @@
       <div class="bento">
 
         <div class="tile case reveal">
-          <div class="case-head"><span class="case-logo">M</span><div class="case-title"><h3>Markaroo — Self-healing OCR-to-JSON pipeline</h3><div class="ct-meta"><span class="kbd live"><span class="dot"></span>Live</span> · <span>Mistral OCR · LLM · JSON schema</span></div></div><span class="case-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></span></div>
+          <div class="case-head"><span class="case-logo">M</span><div class="case-title"><h3>Markaroo: Self-Healing OCR to JSON Pipeline</h3><div class="ct-meta"><span class="kbd live"><span class="dot"></span>Live</span> · <span>Mistral OCR · LLM · JSON schema</span></div></div><span class="case-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></span></div>
           <div class="case-body"><div class="case-body-inner"><div class="case-content">
-            <div class="case-block"><span class="cb-label">Overview</span><p>Eight years of heterogeneous AQA mark scheme PDFs — different layouts, diagrams, rubric formats — unified into a single consistent JSON schema powering an AI marking engine.</p></div>
+            <div class="case-block"><span class="cb-label">Overview</span><p>Eight years of heterogeneous AQA mark scheme PDFs (different layouts, diagrams, rubric formats) unified into a single consistent JSON schema powering an AI marking engine.</p></div>
             <div class="case-block"><span class="cb-label">What I built</span><ul><li>Two-stage pipeline: Mistral OCR for layout-aware extraction → LLM-driven structured JSON</li><li>Validation errors re-injected as corrective feedback into the next prompt (self-healing)</li><li>Cloudinary-hosted diagram assets extracted directly from source PDFs</li><li>First-pass extraction success on 7 of 8 mark schemes (2017–2024)</li></ul></div>
             <div class="case-block"><span class="cb-label">Stack</span><div class="chips"><span class="chip">Mistral OCR</span><span class="chip">Kimi K2.6</span><span class="chip">JSON schema</span><span class="chip">Flask</span><span class="chip">Cloudinary</span></div></div>
           </div></div></div>
         </div>
 
         <div class="tile case reveal">
-          <div class="case-head"><span class="case-logo">N</span><div class="case-title"><h3>Niagara Bottling — IoT fault-tolerant streaming pipeline</h3><div class="ct-meta"><span class="kbd">Mar – May 2025</span> · <span>Databricks · Spark SQL</span></div></div><span class="case-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></span></div>
+          <div class="case-head"><span class="case-logo">N</span><div class="case-title"><h3>Niagara Bottling: IoT Fault-Tolerant Streaming Pipeline</h3><div class="ct-meta"><span class="kbd">Mar to May 2025</span> · <span>Databricks · Spark SQL</span></div></div><span class="case-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></span></div>
           <div class="case-body"><div class="case-body-inner"><div class="case-content">
-            <div class="case-block"><span class="cb-label">Overview</span><p>Change of Value (COV) processing for an IoT manufacturing system — real-time streaming into the bronze layer on Databricks, designed to survive every failure mode the factory floor could produce.</p></div>
+            <div class="case-block"><span class="cb-label">Overview</span><p>Change of Value (COV) processing for an IoT manufacturing system with real-time streaming into the bronze layer on Databricks, designed to survive every failure mode the factory floor could produce.</p></div>
             <div class="case-block"><span class="cb-label">What I built</span><ul><li>Real-time Spark SQL streaming pipelines into the bronze layer on Databricks Workflows</li><li>Fault-tolerant logic for power/ISP outages cutting streams mid-flow</li><li>Handling for out-of-sequence data arrival and partial sensor windows</li></ul></div>
             <div class="case-block"><span class="cb-label">Stack</span><div class="chips"><span class="chip">Databricks</span><span class="chip">Spark SQL</span><span class="chip">Apache Kafka</span><span class="chip">Python</span></div></div>
           </div></div></div>
         </div>
 
         <div class="tile case reveal">
-          <div class="case-head"><span class="case-logo">T</span><div class="case-title"><h3>Travel Itinerary — Spark ETL + FAISS semantic retrieval</h3><div class="ct-meta"><span class="kbd">Mar – May 2025</span> · <span>Databricks · Spark ETL · FAISS · LangChain</span></div></div><span class="case-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></span></div>
+          <div class="case-head"><span class="case-logo">T</span><div class="case-title"><h3>Travel Itinerary: Spark ETL and FAISS Semantic Retrieval</h3><div class="ct-meta"><span class="kbd">Mar to May 2025</span> · <span>Databricks · Spark ETL · FAISS · LangChain</span></div></div><span class="case-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></span></div>
           <div class="case-body"><div class="case-body-inner"><div class="case-content">
             <div class="case-block"><span class="cb-label">Overview</span><p>A second concurrent client engagement: unifying raw travel data from multiple inconsistent sources into clean, semantically indexed storage to reduce LLM hallucination in a three-agent itinerary system.</p></div>
-            <div class="case-block"><span class="cb-label">What I built</span><ul><li>Spark ETL pipeline in Databricks normalising heterogeneous travel source schemas into structured JSON</li><li>FAISS vector index enabling semantic retrieval to ground agent responses in real inventory data</li><li>Three-agent LangChain system (planner / retriever / executor) on DBRX — prompt-engineered at every handoff to eliminate hallucination</li></ul></div>
+            <div class="case-block"><span class="cb-label">What I built</span><ul><li>Spark ETL pipeline in Databricks normalising heterogeneous travel source schemas into structured JSON</li><li>FAISS vector index enabling semantic retrieval to ground agent responses in real inventory data</li><li>Three-agent LangChain system (planner / retriever / executor) on DBRX, prompt-engineered at every handoff to eliminate hallucination</li></ul></div>
             <div class="case-block"><span class="cb-label">Stack</span><div class="chips"><span class="chip">Databricks</span><span class="chip">Spark ETL</span><span class="chip">FAISS</span><span class="chip">LangChain</span><span class="chip">DBRX</span><span class="chip">Python</span></div></div>
           </div></div></div>
         </div>
 
         <div class="tile case reveal">
-          <div class="case-head"><span class="case-logo">TW</span><div class="case-title"><h3>Twitter Word Clustering — Kafka ETL + ML pipeline</h3><div class="ct-meta"><span class="kbd">Jun 2023</span> · <span>Apache Kafka · ETL · Scikit-learn</span></div></div><span class="case-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></span></div>
+          <div class="case-head"><span class="case-logo">TW</span><div class="case-title"><h3>Twitter Word Clustering: Kafka ETL and ML Pipeline</h3><div class="ct-meta"><span class="kbd">Jun 2023</span> · <span>Apache Kafka · ETL · Scikit-learn</span></div></div><span class="case-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></span></div>
           <div class="case-body"><div class="case-body-inner"><div class="case-content">
             <div class="case-block"><span class="cb-label">Overview</span><p>A real-time data engineering pipeline using Apache Kafka to ingest, filter and preprocess a continuous Twitter stream, then cluster it into coherent topic groups.</p></div>
             <div class="case-block"><span class="cb-label">What I built</span><ul><li>High-throughput Kafka ingestion handling schema variability reliably</li><li>K-Means clustering over TF-IDF embeddings to group semantically similar tweets</li><li>Made the raw stream actionable for downstream sentiment &amp; trend monitoring</li></ul></div>
@@ -208,7 +208,7 @@
         </div>
 
         <div class="tile case reveal">
-          <div class="case-head"><span class="case-logo">S</span><div class="case-title"><h3>Stock Price Prediction — scraping → LSTM → Tableau</h3><div class="ct-meta"><span class="kbd">Dec 2022</span> · <span>Selenium · LSTM · Tableau</span></div></div><span class="case-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></span></div>
+          <div class="case-head"><span class="case-logo">S</span><div class="case-title"><h3>Stock Price Prediction: Scraping, LSTM, and Tableau</h3><div class="ct-meta"><span class="kbd">Dec 2022</span> · <span>Selenium · LSTM · Tableau</span></div></div><span class="case-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></span></div>
           <div class="case-body"><div class="case-body-inner"><div class="case-content">
             <div class="case-block"><span class="cb-label">Overview</span><p>End-to-end pipeline from automated NASDAQ data ingestion through LSTM forecasting to a stakeholder-facing Tableau dashboard.</p></div>
             <div class="case-block"><span class="cb-label">What I built</span><ul><li>Selenium scraper automating ingestion across multiple tickers &amp; trading sessions</li><li>Multi-layer LSTM capturing long-range temporal dependencies (R² 0.97, MSE 0.068)</li><li>Interactive Tableau dashboard with trends &amp; 30-day forward projections</li></ul></div>
@@ -225,8 +225,8 @@
         <div class="tl-item">
           <div class="tl-marker"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></div>
           <div class="tl-body">
-            <div class="role">AI Engineer — Data Layer</div>
-            <div class="org">Sparkmed &amp; Markaroo · London (Remote) &nbsp;<span class="when">May 2026 — Present</span></div>
+            <div class="role">AI Engineer, Data and Infrastructure</div>
+            <div class="org">Sparkmed &amp; Markaroo · London (Remote) &nbsp;<span class="when">May 2026 to Present</span></div>
             <div class="desc">Own the full data layer for two live SaaS products: self-healing MistralOCR → JSON extraction, schema validation loops, Postgres/Mongo/Redis serving LLM inference in real time, and the Docker Compose + Jenkins CI/CD infrastructure keeping it up.</div>
             <div class="chips tags"><span class="chip">Mistral OCR</span><span class="chip">PostgreSQL</span><span class="chip">Redis</span><span class="chip">MongoDB</span><span class="chip">Docker Compose</span><span class="chip">Jenkins</span></div>
           </div>
@@ -235,7 +235,7 @@
           <div class="tl-marker"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></div>
           <div class="tl-body">
             <div class="role">Data Scientist Intern</div>
-            <div class="org">CreatorOS · London (Remote) &nbsp;<span class="when">Sep — Dec 2025</span></div>
+            <div class="org">CreatorOS · London (Remote) &nbsp;<span class="when">Sep to Dec 2025</span></div>
             <div class="desc">Applied MistralOCR to automate structured data extraction from unstructured client briefs into PostgreSQL, eliminating manual copy-paste and cutting data entry effort by 70%.</div>
             <div class="chips tags"><span class="chip">Mistral OCR</span><span class="chip">PostgreSQL</span><span class="chip">FastAPI</span></div>
           </div>
@@ -244,7 +244,7 @@
           <div class="tl-marker"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></div>
           <div class="tl-body">
             <div class="role">Data Engineer (Client Contract)</div>
-            <div class="org">Niagara Bottling · Remote &nbsp;<span class="when">Mar — May 2025</span></div>
+            <div class="org">Niagara Bottling · Remote &nbsp;<span class="when">Mar to May 2025</span></div>
             <div class="desc">Built fault-tolerant real-time streaming pipelines (Databricks, Spark SQL) for IoT manufacturing telemetry, and a FAISS-indexed travel itinerary ETL for a second client engagement.</div>
             <div class="chips tags"><span class="chip">Spark SQL</span><span class="chip">Databricks</span><span class="chip">FAISS</span></div>
           </div>
@@ -253,7 +253,7 @@
           <div class="tl-marker"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></div>
           <div class="tl-body">
             <div class="role">ML &amp; Product Dev Engineer Intern</div>
-            <div class="org">Transaction Processing System · Karachi &nbsp;<span class="when">Jul — Aug 2023</span></div>
+            <div class="org">Transaction Processing System · Karachi &nbsp;<span class="when">Jul to Aug 2023</span></div>
             <div class="desc">Built Oracle SQL extraction workflows for 300,000+ ATM records, cutting data prep time 20%, then containerised and deployed the model to the bank's internal server with prediction logging.</div>
             <div class="chips tags"><span class="chip">Oracle SQL</span><span class="chip">Python</span><span class="chip">Docker</span></div>
           </div>
@@ -311,7 +311,7 @@
     </section>
 
     <section>
-      <div class="sec-head reveal"><span class="sec-eyebrow">How I build</span><h2 class="sec-title">A reliable <em>agent loop</em></h2><p class="sec-sub">Grounded, tool-using, and validated — with a feedback loop that retries until checks pass.</p></div>
+      <div class="sec-head reveal"><span class="sec-eyebrow">How I build</span><h2 class="sec-title">A reliable <em>agent loop</em></h2><p class="sec-sub">Grounded, tool-using, and validated; with a feedback loop that retries until checks pass.</p></div>
       <div class="bento"><div class="tile flow-tile reveal">
         <div class="agent-flow">
           <div class="flow-node"><span class="fn-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span><span class="fn-t">HTTP Request</span><span class="fn-s">JWT auth</span></div>
@@ -324,19 +324,19 @@
           <div class="flow-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
           <div class="flow-node"><span class="fn-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></span><span class="fn-t">Eval &amp; Audit</span><span class="fn-s">QWK · BERTScore · log</span></div>
         </div>
-        <div class="flow-loop">↻ validation errors re-injected as <span class="accent">corrective feedback</span> — self-healing until schema &amp; quality checks pass</div>
+        <div class="flow-loop">↻ validation errors re-injected as <span class="accent">corrective feedback</span>, self-healing until schema and quality checks pass</div>
       </div></div>
     </section>
 
     <section>
       <div class="sec-head reveal"><span class="sec-eyebrow">Capabilities</span><h2 class="sec-title">Agentic <em>building blocks</em></h2></div>
       <div class="bento agentic-grid">
-        <div class="tile cap-card reveal"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="6" cy="6" r="3"/><circle cx="18" cy="6" r="3"/><circle cx="12" cy="18" r="3"/><path d="M6 9v3a3 3 0 0 0 3 3M18 9v3a3 3 0 0 1-3 3"/></svg></span><h4>Multi-Agent Systems</h4><p>Three-agent LangChain itinerary system with strict role separation — planner, retriever, executor — prompt-engineered at every handoff, grounded via FAISS on a DBRX model.</p></div>
-        <div class="tile cap-card reveal"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h4l3 8 4-16 3 8h4"/></svg></span><h4>LLM Orchestration</h4><p>Celery/Redis async queues decoupling multi-second LLM calls from HTTP, preventing UI blocking with full retry and graceful fallback — zero downtime on Sparkmed grading.</p></div>
-        <div class="tile cap-card reveal"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M9 13l2 2 4-4"/></svg></span><h4>Structured Output &amp; Self-healing</h4><p>Schema-constrained generation with Gemini, Kimi K2.6, and GLM-4.5V — validation errors re-injected as corrective prompts until output passes every field check.</p></div>
-        <div class="tile cap-card reveal"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a10 10 0 1 0 10 10H12z"/><path d="M12 2v10l7-7"/></svg></span><h4>RAG &amp; Grounding</h4><p>LlamaIndex + Pinecone / FAISS retrieval with Chain-of-Thought prompting, grounding every response in real source data — 70% trader adoption on Trade for Sight, 685-product catalogue on Velour.</p></div>
-        <div class="tile cap-card reveal"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></span><h4>Evaluation Pipelines</h4><p>QWK, BERTScore &amp; rubric-based LLM-as-judge harnesses benchmarked against human gold labels at UKHSA — defining quality gates before any model goes live.</p></div>
-        <div class="tile cap-card reveal"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg></span><h4>Production Reliability</h4><p>Docker Compose, Nginx reverse proxy, Jenkins CI/CD, JWT auth — the infrastructure that keeps two live AI products serving paying users without downtime.</p></div>
+        <div class="tile cap-card reveal"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="6" cy="6" r="3"/><circle cx="18" cy="6" r="3"/><circle cx="12" cy="18" r="3"/><path d="M6 9v3a3 3 0 0 0 3 3M18 9v3a3 3 0 0 1-3 3"/></svg></span><h4>Multi-Agent Systems</h4><p>Three-agent LangChain itinerary system with strict role separation (planner, retriever, executor), prompt-engineered at every handoff, grounded via FAISS on a DBRX model.</p></div>
+        <div class="tile cap-card reveal"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h4l3 8 4-16 3 8h4"/></svg></span><h4>LLM Orchestration</h4><p>Celery/Redis async queues decoupling multi-second LLM calls from HTTP, preventing UI blocking with full retry and graceful fallback, achieving zero downtime on Sparkmed grading.</p></div>
+        <div class="tile cap-card reveal"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M9 13l2 2 4-4"/></svg></span><h4>Structured Output &amp; Self-healing</h4><p>Schema-constrained generation with Gemini, Kimi K2.6, and GLM-4.5V. Validation errors are re-injected as corrective prompts until the output passes every field check.</p></div>
+        <div class="tile cap-card reveal"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a10 10 0 1 0 10 10H12z"/><path d="M12 2v10l7-7"/></svg></span><h4>RAG &amp; Grounding</h4><p>LlamaIndex + Pinecone / FAISS retrieval with Chain-of-Thought prompting, grounding every response in real source data. Achieved 70% trader adoption on Trade for Sight, 685-product catalogue on Velour.</p></div>
+        <div class="tile cap-card reveal"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></span><h4>Evaluation Pipelines</h4><p>QWK, BERTScore &amp; rubric-based LLM-as-judge harnesses benchmarked against human gold labels at UKHSA, defining quality gates before any model goes live.</p></div>
+        <div class="tile cap-card reveal"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg></span><h4>Production Reliability</h4><p>Docker Compose, Nginx reverse proxy, Jenkins CI/CD, and JWT auth: the infrastructure keeping two live AI products serving paying users without downtime.</p></div>
       </div>
     </section>
 
@@ -354,25 +354,25 @@
       <div class="bento">
 
         <div class="tile case reveal">
-          <div class="case-head"><span class="case-logo">S</span><div class="case-title"><h3>Sparkmed — Gemini grading + Sparkbot assistant</h3><div class="ct-meta"><span class="kbd live"><span class="dot"></span>Live · paying users</span> · <span>Gemini · Celery · Redis</span></div></div><span class="case-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></span></div>
+          <div class="case-head"><span class="case-logo">S</span><div class="case-title"><h3>Sparkmed: Gemini Grading and Sparkbot Assistant</h3><div class="ct-meta"><span class="kbd live"><span class="dot"></span>Live · paying users</span> · <span>Gemini · Celery · Redis</span></div></div><span class="case-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></span></div>
           <div class="case-body"><div class="case-body-inner"><div class="case-content">
-            <div class="case-block"><span class="cb-label">Overview</span><p>AI-first medical exam platform grading free-text answers across <b>4 formats</b> — Viva, SBA, OSCE, and SJT — with examiner-style clinical feedback live with MRCP, MRCPCH, and FRCS candidates.</p></div>
-            <div class="case-block"><span class="cb-label">What I built</span><ul><li>Gemini grading engine with structured output schemas, rubric-grounded CoT prompting, and rules-based intervention for edge-case handling</li><li>Celery/Redis async queue decoupling multi-second LLM calls from the HTTP request cycle — zero UI blocking</li><li>Candidate readiness model tracking blueprint coverage and adapting sessions to study state (flow / challenge / recovery)</li><li>Sparkbot: Gemini clinical Q&amp;A assistant with persistent session context, per-user rate limiting, and audit logging</li><li>pytesseract OCR + LLM pipeline converting uploaded textbooks into exam-ready questions</li><li>Docker Compose + Nginx + Jenkins CI/CD — full production infrastructure</li></ul></div>
+            <div class="case-block"><span class="cb-label">Overview</span><p>AI-first medical exam platform grading free-text answers across <b>4 formats</b> (Viva, SBA, OSCE, and SJT) with examiner-style clinical feedback live with MRCP, MRCPCH, and FRCS candidates.</p></div>
+            <div class="case-block"><span class="cb-label">What I built</span><ul><li>Gemini grading engine with structured output schemas, rubric-grounded CoT prompting, and rules-based intervention for edge-case handling</li><li>Celery/Redis async queue decoupling multi-second LLM calls from the HTTP request cycle , with zero UI blocking</li><li>Candidate readiness model tracking blueprint coverage and adapting sessions to study state (flow / challenge / recovery)</li><li>Sparkbot: Gemini clinical Q&amp;A assistant with persistent session context, per-user rate limiting, and audit logging</li><li>pytesseract OCR + LLM pipeline converting uploaded textbooks into exam-ready questions</li><li>Docker Compose, Nginx, and Jenkins CI/CD for full production infrastructure</li></ul></div>
             <div class="case-block"><span class="cb-label">Impact</span><div class="case-metrics"><div class="m"><div class="v">480<span class="suf">+</span></div><div class="l">questions tracked per candidate</div></div><div class="m"><div class="v">4</div><div class="l">exam formats graded in production</div></div><div class="m"><div class="v">0</div><div class="l">downtime on grading (async queue)</div></div></div></div>
           </div></div></div>
         </div>
 
         <div class="tile case reveal">
-          <div class="case-head"><span class="case-logo">M</span><div class="case-title"><h3>Markaroo — Kimi K2.6 rubric-aware marking engine</h3><div class="ct-meta"><span class="kbd live"><span class="dot"></span>Live</span> · <span>Kimi K2.6 · AQA mark schemes</span></div></div><span class="case-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></span></div>
+          <div class="case-head"><span class="case-logo">M</span><div class="case-title"><h3>Markaroo: Kimi K2.6 Rubric-Aware Marking Engine</h3><div class="ct-meta"><span class="kbd live"><span class="dot"></span>Live</span> · <span>Kimi K2.6 · AQA mark schemes</span></div></div><span class="case-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></span></div>
           <div class="case-body"><div class="case-body-inner"><div class="case-content">
-            <div class="case-block"><span class="cb-label">Overview</span><p>Automated A-Level Economics marking against official AQA mark schemes — with separate prompting strategies for point-based and level-based rubrics, replicating the way human examiners actually mark.</p></div>
+            <div class="case-block"><span class="cb-label">Overview</span><p>Automated A-Level Economics marking against official AQA mark schemes, with separate prompting strategies for point-based and level-based rubrics, replicating the way human examiners actually mark.</p></div>
             <div class="case-block"><span class="cb-label">What I built</span><ul><li>Kimi K2.6 marking engine with distinct logic for point-based (condition/accept/reject) vs level-based (band descriptors) rubrics</li><li>Self-healing OCR→JSON pipeline with validation errors re-injected as corrective feedback</li><li>Flask API with JWT auth, per-user rate limiting, and graceful LLM fallback</li></ul></div>
             <div class="case-block"><span class="cb-label">Impact</span><div class="case-metrics"><div class="m"><div class="v">7/8</div><div class="l">first-pass extraction success</div></div><div class="m"><div class="v">8yrs</div><div class="l">AQA mark schemes normalised</div></div></div></div>
           </div></div></div>
         </div>
 
         <div class="tile case reveal">
-          <div class="case-head"><span class="case-logo">T</span><div class="case-title"><h3>Trade for Sight — Llama-2 RAG financial assistant</h3><div class="ct-meta"><span class="kbd">MoU · BSc Final Year</span> · <span>LangChain · Pinecone · CoT</span></div></div><span class="case-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></span></div>
+          <div class="case-head"><span class="case-logo">T</span><div class="case-title"><h3>Trade for Sight: Llama-2 RAG Financial Assistant</h3><div class="ct-meta"><span class="kbd">MoU · BSc Final Year</span> · <span>LangChain · Pinecone · CoT</span></div></div><span class="case-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></span></div>
           <div class="case-body"><div class="case-body-inner"><div class="case-content">
             <div class="case-block"><span class="cb-label">Overview</span><p>A RAG assistant turning SQL market data into grounded, step-by-step natural language reasoning to help traders interpret complex graph-based market data faster.</p></div>
             <div class="case-block"><span class="cb-label">What I built</span><ul><li>ETL pipeline transforming SQL numerical data into structured natural language representations</li><li>Llama-2 with Chain-of-Thought prompting for multi-variable graph reasoning</li><li>Pinecone + LlamaIndex retrieval grounding outputs in real source data</li></ul></div>
@@ -381,9 +381,9 @@
         </div>
 
         <div class="tile case reveal">
-          <div class="case-head"><span class="case-logo">V</span><div class="case-title"><h3>Velour — Vera structured-output shopping agent</h3><div class="ct-meta"><span class="kbd">May 2025</span> · <span>GLM-4.5V · catalogue grounding</span></div></div><span class="case-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></span></div>
+          <div class="case-head"><span class="case-logo">V</span><div class="case-title"><h3>Velour: Vera Structured Output Shopping Agent</h3><div class="ct-meta"><span class="kbd">May 2025</span> · <span>GLM-4.5V · catalogue grounding</span></div></div><span class="case-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></span></div>
           <div class="case-body"><div class="case-body-inner"><div class="case-content">
-            <div class="case-block"><span class="cb-label">Overview</span><p><b>Vera</b> — a floating in-app chat assistant — injects the full 685-product catalogue and the user's order history into context on every request to ground every recommendation in real inventory.</p></div>
+            <div class="case-block"><span class="cb-label">Overview</span><p><b>Vera</b>, a floating in-app chat assistant, injects the full 685-product catalogue and the user's order history into context on every request to ground every recommendation in real inventory.</p></div>
             <div class="case-block"><span class="cb-label">What I built</span><ul><li>GLM-4.5V with structured-output schema for consistent product recommendation format</li><li>Catalogue + order-history context injection preventing hallucinated SKUs</li><li>Multi-signal product search: keyword scoring, category aliases, natural-language price parsing, semantic fallback via all-MiniLM-L6-v2</li></ul></div>
             <div class="case-block"><span class="cb-label">Impact</span><div class="case-metrics"><div class="m"><div class="v">685</div><div class="l">products grounded in context</div></div><div class="m"><div class="v">0</div><div class="l">hallucinated SKUs by design</div></div></div></div>
           </div></div></div>
@@ -399,7 +399,7 @@
           <div class="tl-marker"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></div>
           <div class="tl-body">
             <div class="role">AI Engineer</div>
-            <div class="org">Sparkmed &amp; Markaroo · London (Remote) &nbsp;<span class="when">May 2026 — Present</span></div>
+            <div class="org">Sparkmed &amp; Markaroo · London (Remote) &nbsp;<span class="when">May 2026 to Present</span></div>
             <div class="desc">LLM orchestration end-to-end: rubric-aware grading agents across 4 exam formats, async inference queue, structured-output validation loops, self-healing OCR pipeline, and the eval harnesses that keep two live products honest with paying users.</div>
             <div class="chips tags"><span class="chip">Gemini</span><span class="chip">Kimi K2.6</span><span class="chip">Celery/Redis</span><span class="chip">Structured outputs</span><span class="chip">Docker Compose</span></div>
           </div>
@@ -407,17 +407,17 @@
         <div class="tl-item">
           <div class="tl-marker"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></div>
           <div class="tl-body">
-            <div class="role">MSc Researcher — LLM Evaluation</div>
-            <div class="org">UKHSA / University of Surrey · Guildford, UK &nbsp;<span class="when">Jun — Sep 2025</span></div>
-            <div class="desc">Benchmarked Gemini 2.5 Flash, Qwen-3, and Magistral-Medium against human annotations of WHO public health reports using QWK + BERTScore — presented as PoC at UKHSA, extending to PLOS Journal.</div>
+            <div class="role">MSc Researcher, LLM Evaluation</div>
+            <div class="org">UKHSA / University of Surrey · Guildford, UK &nbsp;<span class="when">Jun to Sep 2025</span></div>
+            <div class="desc">Benchmarked Gemini 2.5 Flash, Qwen-3, and Magistral-Medium against human annotations of WHO public health reports using QWK and BERTScore, presented as a Proof of Concept at UKHSA and extending to PLOS Journal.</div>
             <div class="chips tags"><span class="chip">LLM-as-judge</span><span class="chip">QWK</span><span class="chip">BERTScore</span><span class="chip">Gemini 2.5 Flash</span></div>
           </div>
         </div>
         <div class="tl-item">
           <div class="tl-marker"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></div>
           <div class="tl-body">
-            <div class="role">Data Engineer — Agentic Systems</div>
-            <div class="org">Client Contract · Remote &nbsp;<span class="when">Mar — May 2025</span></div>
+            <div class="role">Data Engineer, Agentic Systems</div>
+            <div class="org">Client Contract · Remote &nbsp;<span class="when">Mar to May 2025</span></div>
             <div class="desc">Built a three-agent LangChain itinerary system with role separation (planner / retriever / executor) grounded via FAISS retrieval on a DBRX model.</div>
             <div class="chips tags"><span class="chip">LangChain</span><span class="chip">FAISS</span><span class="chip">DBRX</span></div>
           </div>
@@ -426,8 +426,8 @@
           <div class="tl-marker"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></div>
           <div class="tl-body">
             <div class="role">Research Engineer <span class="faint mono" style="font-size:11px">(promoted from intern)</span></div>
-            <div class="org">Retrocausal · Redmond, USA (Remote) &nbsp;<span class="when">Feb 2024 — Jan 2025</span></div>
-            <div class="desc">Ran a video-captioning study using Timesformer+GPT-2 and ViT+GPT-2 to surface assembly errors via vision-language grounding — reducing errors 25%.</div>
+            <div class="org">Retrocausal · Redmond, USA (Remote) &nbsp;<span class="when">Feb 2024 to Jan 2025</span></div>
+            <div class="desc">Ran a video-captioning study using Timesformer+GPT-2 and ViT+GPT-2 to surface assembly errors via vision-language grounding, reducing errors by 25%.</div>
             <div class="chips tags"><span class="chip">VLM</span><span class="chip">Prompt engineering</span><span class="chip">Evaluation</span></div>
           </div>
         </div>
@@ -448,7 +448,7 @@
             ML Systems · Train · Evaluate · Optimise · Ship
           </span>
           <h1 class="role-h1">Models trained,<br /><span class="accent">evaluated &amp; shipped</span></h1>
-          <p class="role-lead">QLoRA fine-tuning on a single GPU, INT8 quantisation for <b>2× throughput</b>, &lt;250ms serving on Vertex AI, and eval harnesses (QWK · BERTScore · F1) that gate every model before it reaches users — recommenders, vision, NLP, and frontier-LLM benchmarking, all the way to production.</p>
+          <p class="role-lead">QLoRA fine-tuning on a single GPU, INT8 quantisation for <b>2× throughput</b>, under 250ms serving on Vertex AI, and eval harnesses (QWK, BERTScore, F1) that gate every model before it reaches users. Recommenders, vision, NLP, and frontier-LLM benchmarking, all the way to production.</p>
           <div class="role-actions">
             <a href="#ml-work" class="btn primary">See ML systems <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
             <a href="https://github.com/Lohit20" target="_blank" rel="noopener" class="btn">GitHub</a>
@@ -520,25 +520,25 @@
       <div class="bento">
 
         <div class="tile case reveal">
-          <div class="case-head"><span class="case-logo">Q</span><div class="case-title"><h3>QLoRA Llama-2 7B — single-GPU fine-tuning on clinical text</h3><div class="ct-meta"><span class="kbd">BSc Final Year</span> · <span>QLoRA · PEFT · Llama-2 7B · Trade for Sight</span></div></div><span class="case-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></span></div>
+          <div class="case-head"><span class="case-logo">Q</span><div class="case-title"><h3>QLoRA Llama-2 7B: Single GPU Fine-Tuning on Clinical Text</h3><div class="ct-meta"><span class="kbd">BSc Final Year</span> · <span>QLoRA · PEFT · Llama-2 7B · Trade for Sight</span></div></div><span class="case-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></span></div>
           <div class="case-body"><div class="case-body-inner"><div class="case-content">
-            <div class="case-block"><span class="cb-label">Overview</span><p>Fine-tuned Llama-2 7B on financial and clinical domain text using QLoRA on a single consumer GPU — dramatically reducing memory requirements while retaining reasoning quality for the Trade for Sight RAG assistant.</p></div>
-            <div class="case-block"><span class="cb-label">Architecture &amp; training decisions</span><ul><li>QLoRA (4-bit NF4 quantisation + LoRA adapters) reducing GPU memory from 28 GB to 6 GB — 78% reduction</li><li>PEFT adapter layers targeting attention projection matrices for efficient domain adaptation</li><li>Trained on structured financial narratives generated from SQL market data for grounded, CoT-style outputs</li><li>Integrated with Pinecone + LlamaIndex RAG layer — fine-tuning + retrieval complementing each other</li></ul></div>
+            <div class="case-block"><span class="cb-label">Overview</span><p>Fine-tuned Llama-2 7B on financial and clinical domain text using QLoRA on a single consumer GPU, dramatically reducing memory requirements while retaining reasoning quality for the Trade for Sight RAG assistant.</p></div>
+            <div class="case-block"><span class="cb-label">Architecture &amp; training decisions</span><ul><li>QLoRA (4-bit NF4 quantisation and LoRA adapters) reducing GPU memory from 28 GB to 6 GB, an 78% reduction</li><li>PEFT adapter layers targeting attention projection matrices for efficient domain adaptation</li><li>Trained on structured financial narratives generated from SQL market data for grounded, CoT-style outputs</li><li>Integrated with Pinecone and LlamaIndex RAG layer, with fine-tuning and retrieval complementing each other</li></ul></div>
             <div class="case-block"><span class="cb-label">Result</span><div class="case-metrics"><div class="m"><div class="v">−78<span class="suf">%</span></div><div class="l">GPU memory (28 GB → 6 GB)</div></div><div class="m"><div class="v">70<span class="suf">%</span></div><div class="l">trader adoption post-deployment</div></div></div></div>
           </div></div></div>
         </div>
 
         <div class="tile case reveal">
-          <div class="case-head"><span class="case-logo">W</span><div class="case-title"><h3>WHO JEE — Frontier LLM benchmarking (MSc Thesis, Distinction)</h3><div class="ct-meta"><span class="kbd">PLOS Journal pending</span> · <span>QWK · BERTScore · UKHSA</span></div></div><span class="case-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></span></div>
+          <div class="case-head"><span class="case-logo">W</span><div class="case-title"><h3>WHO JEE: Frontier LLM Benchmarking (MSc Thesis, Distinction)</h3><div class="ct-meta"><span class="kbd">PLOS Journal pending</span> · <span>QWK · BERTScore · UKHSA</span></div></div><span class="case-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></span></div>
           <div class="case-body"><div class="case-body-inner"><div class="case-content">
-            <div class="case-block"><span class="cb-label">Overview</span><p>Benchmarked Gemini 2.5 Flash, Qwen-3, and Magistral-Medium against human annotation of WHO Joint External Evaluation reports — 100+ page complex public-health documents.</p></div>
+            <div class="case-block"><span class="cb-label">Overview</span><p>Benchmarked Gemini 2.5 Flash, Qwen-3, and Magistral-Medium against human annotation of WHO Joint External Evaluation reports, covering 100+ page complex public-health documents.</p></div>
             <div class="case-block"><span class="cb-label">What I built</span><ul><li>MistralOCR pipeline parsing 100+ page PDFs into indicator-level structured JSON</li><li>Rubric-based LLM evaluation across Evidence Quality and Actionability dimensions</li><li>Quadratic Weighted Kappa + BERTScore harness vs human gold labels</li><li>Presented as PoC at UKHSA, extending for PLOS Journal publication</li></ul></div>
             <div class="case-block full"><span class="cb-label">Models benchmarked</span><div class="chips"><span class="chip">Gemini 2.5 Flash</span><span class="chip">Qwen-3</span><span class="chip">Magistral-Medium</span><span class="chip">QWK</span><span class="chip">BERTScore</span></div></div>
           </div></div></div>
         </div>
 
         <div class="tile case reveal">
-          <div class="case-head"><span class="case-logo">F</span><div class="case-title"><h3>Fraud Detection Benchmarking — ensembles vs advanced models</h3><div class="ct-meta"><span class="kbd">Dec 2025</span> · <span>Scikit-learn · XGBoost · SMOTE-Tomek</span></div></div><span class="case-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></span></div>
+          <div class="case-head"><span class="case-logo">F</span><div class="case-title"><h3>Fraud Detection Benchmarking: Ensembles vs Advanced Models</h3><div class="ct-meta"><span class="kbd">Dec 2025</span> · <span>Scikit-learn · XGBoost · SMOTE-Tomek</span></div></div><span class="case-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></span></div>
           <div class="case-body"><div class="case-body-inner"><div class="case-content">
             <div class="case-block"><span class="cb-label">Overview</span><p>Fraud detection on 300,000+ transactions with ~2% fraud rate, benchmarking ensemble aggregation strategies against advanced standalone models under severe class imbalance.</p></div>
             <div class="case-block"><span class="cb-label">What I built</span><ul><li>SMOTE-Tomek for imbalance + 5 aggregation strategies (entropy, weighted, threshold-aware, max-prob, trimmed mean)</li><li>Benchmarked XGBoost, Linear SVM, LDA, RIPPER &amp; Autoencoder+MLP on ROC-AUC / PR-AUC / F1</li><li>Trimmed-mean identified as best balanced ensemble; XGBoost as best standalone</li></ul></div>
@@ -547,7 +547,7 @@
         </div>
 
         <div class="tile case reveal">
-          <div class="case-head"><span class="case-logo">L</span><div class="case-title"><h3>LoRA Hyperparameter Optimisation — metaheuristics</h3><div class="ct-meta"><span class="kbd">Nov 2025</span> · <span>PyTorch · DistilBERT · BSO</span></div></div><span class="case-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></span></div>
+          <div class="case-head"><span class="case-logo">L</span><div class="case-title"><h3>LoRA Hyperparameter Optimisation with Metaheuristics</h3><div class="ct-meta"><span class="kbd">Nov 2025</span> · <span>PyTorch · DistilBERT · BSO</span></div></div><span class="case-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></span></div>
           <div class="case-body"><div class="case-body-inner"><div class="case-content">
             <div class="case-block"><span class="cb-label">Overview</span><p>A hyperparameter optimisation framework for LoRA-based fine-tuning of DistilBERT on multi-class emotion classification under strict GPU constraints.</p></div>
             <div class="case-block"><span class="cb-label">What I built</span><ul><li>Implemented &amp; compared 5 strategies: Random Search, Aquila Optimizer, DPSO+GA, BSO, MOEA/D-DE</li><li>Consistent experimental setup across all methods for fair comparison</li><li>BSO outperformed population-based methods while converging faster</li></ul></div>
@@ -556,7 +556,7 @@
         </div>
 
         <div class="tile case reveal">
-          <div class="case-head"><span class="case-logo">B</span><div class="case-title"><h3>Biomedical Abbreviation Detection — BioBERT NER</h3><div class="ct-meta"><span class="kbd">Apr 2025</span> · <span>BioBERT · DistilBERT · Focal Loss</span></div></div><span class="case-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></span></div>
+          <div class="case-head"><span class="case-logo">B</span><div class="case-title"><h3>Biomedical Abbreviation Detection with BioBERT NER</h3><div class="ct-meta"><span class="kbd">Apr 2025</span> · <span>BioBERT · DistilBERT · Focal Loss</span></div></div><span class="case-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></span></div>
           <div class="case-body"><div class="case-body-inner"><div class="case-content">
             <div class="case-block"><span class="cb-label">Overview</span><p>Token-level BIO tagging pipeline to detect abbreviations and long-form expansions in scientific literature, with a Flask chatbot interface for real-time expansion.</p></div>
             <div class="case-block"><span class="cb-label">What I built</span><ul><li>BIO token classification benchmarking BioBERT vs DistilBERT on PLOD-CW-25 dataset</li><li>Experimented with Cross-Entropy, Weighted Cross-Entropy, and Focal Loss (Focal improved minority recall)</li><li>Augmented training with filtered PLODv2 subsets; deployed best model to Hugging Face</li><li>Flask chatbot interface with custom token-level logging for model monitoring</li></ul></div>
@@ -565,7 +565,7 @@
         </div>
 
         <div class="tile case reveal">
-          <div class="case-head"><span class="case-logo">C</span><div class="case-title"><h3>CreatorOS — Two-stage brand-to-creator recommender</h3><div class="ct-meta"><span class="kbd">Sep – Dec 2025</span> · <span>XGBoost · Vertex AI · FastAPI</span></div></div><span class="case-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></span></div>
+          <div class="case-head"><span class="case-logo">C</span><div class="case-title"><h3>CreatorOS: Two-Stage Brand to Creator Recommender</h3><div class="ct-meta"><span class="kbd">Sep to Dec 2025</span> · <span>XGBoost · Vertex AI · FastAPI</span></div></div><span class="case-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></span></div>
           <div class="case-body"><div class="case-body-inner"><div class="case-content">
             <div class="case-block"><span class="cb-label">Overview</span><p>Two-stage recommender solving CreatorOS's core product problem of unreliable brand-to-creator matching, deployed to GCP Vertex AI at sub-250ms latency.</p></div>
             <div class="case-block"><span class="cb-label">What I built</span><ul><li>Pruned RandomForest classifier for creator segmentation (stage 1)</li><li>XGBoost regression model for campaign-level ranking (stage 2)</li><li>Feature engineering from engagement, reach, activity patterns and campaign fit signals</li><li>FastAPI + Docker deployment on GCP Vertex AI at &lt;250ms latency</li></ul></div>
@@ -574,10 +574,10 @@
         </div>
 
         <div class="tile case reveal">
-          <div class="case-head"><span class="case-logo">E</span><div class="case-title"><h3>Visual Search System — CLIP + ViT multi-modal retrieval</h3><div class="ct-meta"><span class="kbd">Oct – Nov 2023</span> · <span>CLIP · ViT · Pinecone · Streamlit</span></div></div><span class="case-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></span></div>
+          <div class="case-head"><span class="case-logo">E</span><div class="case-title"><h3>Visual Search System: CLIP and ViT Multi-Modal Retrieval</h3><div class="ct-meta"><span class="kbd">Oct to Nov 2023</span> · <span>CLIP · ViT · Pinecone · Streamlit</span></div></div><span class="case-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></span></div>
           <div class="case-body"><div class="case-body-inner"><div class="case-content">
-            <div class="case-block"><span class="cb-label">Overview</span><p>Multi-modal product search allowing users to search by image upload or natural language description — no precise keywords needed.</p></div>
-            <div class="case-block"><span class="cb-label">Architecture &amp; training decisions</span><ul><li>CLIP + Vision Transformer generating 512-d shared image-text embedding space — same cosine similarity across both modalities</li><li>Pinecone vector store with cosine-similarity retrieval serving both search modes from a single index</li><li>Dual search modes (image upload + natural language) in one unified pipeline, deployed via real-time Streamlit interface</li></ul></div>
+            <div class="case-block"><span class="cb-label">Overview</span><p>Multi-modal product search allowing users to search by image upload or natural language description, with no precise keywords needed.</p></div>
+            <div class="case-block"><span class="cb-label">Architecture &amp; training decisions</span><ul><li>CLIP + Vision Transformer generating 512-d shared image-text embedding space, with the same cosine similarity across both modalities</li><li>Pinecone vector store with cosine-similarity retrieval serving both search modes from a single index</li><li>Dual search modes (image upload + natural language) in one unified pipeline, deployed via real-time Streamlit interface</li></ul></div>
             <div class="case-block"><span class="cb-label">Stack</span><div class="chips"><span class="chip">CLIP</span><span class="chip">ViT</span><span class="chip">Pinecone</span><span class="chip">Streamlit</span><span class="chip">PyTorch</span></div></div>
           </div></div></div>
         </div>
@@ -591,8 +591,8 @@
         <div class="tl-item">
           <div class="tl-marker"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></div>
           <div class="tl-body">
-            <div class="role">AI Engineer — Modeling &amp; Eval</div>
-            <div class="org">Sparkmed &amp; Markaroo · London (Remote) &nbsp;<span class="when">May 2026 — Present</span></div>
+            <div class="role">AI Engineer, Modeling and Evaluation</div>
+            <div class="org">Sparkmed &amp; Markaroo · London (Remote) &nbsp;<span class="when">May 2026 to Present</span></div>
             <div class="desc">Built a candidate-readiness prediction model tracking blueprint coverage across MRCP, MRCPCH, and FRCS specialties, plus QWK + BERTScore evaluation harnesses benchmarking LLM grading quality against human gold labels for both live products.</div>
             <div class="chips tags"><span class="chip">QWK</span><span class="chip">BERTScore</span><span class="chip">MLflow</span><span class="chip">Readiness model</span></div>
           </div>
@@ -600,8 +600,8 @@
         <div class="tl-item">
           <div class="tl-marker"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></div>
           <div class="tl-body">
-            <div class="role">Data Scientist Intern — ML &amp; Recommender Systems</div>
-            <div class="org">CreatorOS · London (Remote) &nbsp;<span class="when">Sep — Dec 2025</span></div>
+            <div class="role">Data Scientist Intern, ML and Recommender Systems</div>
+            <div class="org">CreatorOS · London (Remote) &nbsp;<span class="when">Sep to Dec 2025</span></div>
             <div class="desc">Shipped a two-stage brand-to-creator recommender (pruned RandomForest → XGBoost ranking) on GCP Vertex AI at sub-250ms: +12% Precision@10, +10% NDCG@10, −63% manual ops overhead.</div>
             <div class="chips tags"><span class="chip">XGBoost</span><span class="chip">RandomForest</span><span class="chip">Vertex AI</span><span class="chip">FastAPI</span><span class="chip">Docker</span></div>
           </div>
@@ -610,8 +610,8 @@
           <div class="tl-marker"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></div>
           <div class="tl-body">
             <div class="role">Research Engineer <span class="faint mono" style="font-size:11px">(promoted from intern)</span></div>
-            <div class="org">Retrocausal · Redmond, USA (Remote) &nbsp;<span class="when">Feb 2024 — Jan 2025</span></div>
-            <div class="desc">Quantised a YOLOv5 pose model to OpenVINO INT8 (2× throughput, −36% cost); ran a Timesformer+GPT-2 vs ViT+GPT-2 video captioning study to surface assembly errors — reducing defects 25% and rework costs 30%.</div>
+            <div class="org">Retrocausal · Redmond, USA (Remote) &nbsp;<span class="when">Feb 2024 to Jan 2025</span></div>
+            <div class="desc">Quantised a YOLOv5 pose model to OpenVINO INT8 (2× throughput, −36% cost); ran a Timesformer+GPT-2 vs ViT+GPT-2 video captioning study to surface assembly errors, reducing defects by 25% and rework costs by 30%.</div>
             <div class="chips tags"><span class="chip">YOLOv5</span><span class="chip">OpenVINO</span><span class="chip">INT8</span><span class="chip">Timesformer</span><span class="chip">ViT+GPT-2</span></div>
           </div>
         </div>
@@ -619,8 +619,8 @@
           <div class="tl-marker"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></div>
           <div class="tl-body">
             <div class="role">ML &amp; Product Dev Engineer Intern</div>
-            <div class="org">Transaction Processing System · Karachi &nbsp;<span class="when">Jul — Aug 2023</span></div>
-            <div class="desc">XGBoost ATM withdrawal model on 300K+ records — RMSE −8% over baseline, piloted across 200+ users showing 5–6% potential reduction in cash stockouts, with scheduled retraining for drift.</div>
+            <div class="org">Transaction Processing System · Karachi &nbsp;<span class="when">Jul to Aug 2023</span></div>
+            <div class="desc">XGBoost ATM withdrawal model on 300K+ records, with RMSE −8% over baseline, piloted across 200+ users showing 5 to 6% potential reduction in cash stockouts, with scheduled retraining for drift.</div>
             <div class="chips tags"><span class="chip">XGBoost</span><span class="chip">Docker</span><span class="chip">Oracle SQL</span></div>
           </div>
         </div>
@@ -642,17 +642,17 @@
         </div>
         <div class="edu-list">
           <div class="edu-item">
-            <div class="et"><span class="deg">MSc Data Science<span class="badge-distinction">Distinction</span></span><span class="yr">Feb 2025 — Feb 2026</span></div>
+            <div class="et"><span class="deg">MSc Data Science<span class="badge-distinction">Distinction</span></span><span class="yr">Feb 2025 to Feb 2026</span></div>
             <div class="sch">University of Surrey · Guildford, UK</div>
             <div class="mods">Machine Learning &amp; Data Mining · Data Science Principles &amp; Practices · Natural Language Processing · Cloud Computing</div>
           </div>
           <div class="edu-item">
-            <div class="et"><span class="deg">BSc Artificial Intelligence</span><span class="yr">Sep 2020 — Jun 2024</span></div>
+            <div class="et"><span class="deg">BSc Artificial Intelligence</span><span class="yr">Sep 2020 to Jun 2024</span></div>
             <div class="sch">NUCES FAST University · Karachi, Pakistan · CGPA 3.33 · Three-Time Dean's List</div>
             <div class="mods">Data Structures · Algorithms · Generative AI · Computer Vision · ML · NLP · Databases · OOP</div>
           </div>
           <div class="edu-item">
-            <div class="et"><span class="deg">A-Levels</span><span class="yr">Aug 2018 — Jun 2020</span></div>
+            <div class="et"><span class="deg">A-Levels</span><span class="yr">Aug 2018 to Jun 2020</span></div>
             <div class="sch">Cedar College · Karachi, Pakistan</div>
             <div class="mods">Computer Science · Mathematics · Physics · Chemistry</div>
           </div>
@@ -660,10 +660,10 @@
         <div class="honours">
           <div class="hh">Honours &amp; Awards</div>
           <div class="chips">
-            <span class="chip">MSc Dissertation — Distinction (2025)</span>
-            <span class="chip">3× Dean's List — NUCES FAST</span>
-            <span class="chip">PROCOM Data Science — 7th / 30+ teams</span>
-            <span class="chip">IEEE AI TechEx — Finalist</span>
+            <span class="chip">MSc Dissertation, Distinction (2025)</span>
+            <span class="chip">3x Dean's List at NUCES FAST</span>
+            <span class="chip">PROCOM Data Science, 7th of 30+ teams</span>
+            <span class="chip">IEEE AI TechEx Finalist</span>
           </div>
         </div>
       </div>
@@ -690,12 +690,12 @@
       <div class="tile hire-lead reveal">
         <span class="sec-eyebrow" style="align-self:flex-start">Why hire me</span>
         <h2>One engineer, <em>full ownership</em>.</h2>
-        <p>Data, agents, or models — I take systems from problem to production, with evaluation and deploy pipelines behind them.</p>
+        <p>Data, agents, or models: I take systems from problem to production, with evaluation and deploy pipelines behind them.</p>
       </div>
       <div class="hire-cards">
         <div class="tile hire-card reveal"><span class="hi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3h18v18H3z"/><path d="M3 9h18M9 21V9"/></svg></span><h4>Production experience</h4><p>Two live AI SaaS products with paying users, shipped and maintained end-to-end.</p></div>
-        <div class="tile hire-card reveal"><span class="hi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg></span><h4>Deployment depth</h4><p>Async inference, Celery/Redis, Docker Compose, Jenkins CI/CD — the unglamorous parts that keep systems up.</p></div>
-        <div class="tile hire-card reveal"><span class="hi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></span><h4>Eval-first mindset</h4><p>Metrics and failure modes defined before prompts or models — QWK, BERTScore, and rubric-based harnesses.</p></div>
+        <div class="tile hire-card reveal"><span class="hi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg></span><h4>Deployment depth</h4><p>Async inference, Celery/Redis, Docker Compose, and Jenkins CI/CD: the unglamorous parts that keep systems up.</p></div>
+        <div class="tile hire-card reveal"><span class="hi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></span><h4>Eval-first mindset</h4><p>Metrics and failure modes defined before prompts or models: QWK, BERTScore, and rubric-based harnesses.</p></div>
         <div class="tile hire-card reveal"><span class="hi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></span><h4>End-to-end ownership</h4><p>Problem → data → model → eval → deploy → monitor. The whole loop, not just one layer.</p></div>
       </div>
     </div>

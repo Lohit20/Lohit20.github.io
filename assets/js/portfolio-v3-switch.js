@@ -65,6 +65,13 @@
     card.classList.toggle("open", !isOpen);
   });
 
+  /* ---- expandable timeline items ---- */
+  document.addEventListener("click", (e) => {
+    const toggle = e.target.closest(".tl-toggle");
+    if (!toggle) return;
+    toggle.closest(".tl-item").classList.toggle("open");
+  });
+
   /* ---- initial view from URL hash ---- */
   const initial = (location.hash || "").replace("#", "");
   activate(ROLES.includes(initial) ? initial : "data", false);

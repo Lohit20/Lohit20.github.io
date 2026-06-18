@@ -514,8 +514,25 @@ html[data-glass="off"] .tile:hover    { background: var(--panel); box-shadow: va
 .tl-body .org .when { color: var(--ink-faint); }
 .tl-body .desc      { color: var(--ink-soft); font-size: 14.5px; margin-top: 10px; max-width: 76ch; text-wrap: pretty; }
 .tl-body .tags      { margin-top: 12px; }
-.tl-body .tl-list   { list-style: none; display: flex; flex-direction: column; gap: 7px; margin-top: 10px; }
-.tl-body .tl-list li { font-size: 13.5px; color: var(--ink-soft); padding-left: 18px; position: relative; text-wrap: pretty; }
+
+/* Expandable timeline item */
+.tl-body-head           { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; }
+.tl-body-head > div     { flex: 1; min-width: 0; }
+.tl-toggle {
+  width: 34px; height: 34px; border-radius: 50%; flex-shrink: 0;
+  border: 1px solid var(--glass-border); background: var(--glass);
+  display: grid; place-items: center; color: var(--ink-soft);
+  cursor: pointer; transition: .3s; margin-top: 4px;
+}
+.tl-toggle svg                { width: 16px; height: 16px; transition: transform .35s; }
+.tl-item.open .tl-toggle     { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); }
+.tl-item.open .tl-toggle svg { transform: rotate(45deg); }
+.tl-expand-body              { display: grid; grid-template-rows: 0fr; transition: grid-template-rows .45s cubic-bezier(.3,.7,.3,1); }
+.tl-item.open .tl-expand-body { grid-template-rows: 1fr; }
+.tl-expand-inner             { overflow: hidden; }
+
+.tl-body .tl-list     { list-style: none; display: flex; flex-direction: column; gap: 7px; margin-top: 14px; padding-top: 14px; border-top: 1px solid var(--line-soft); }
+.tl-body .tl-list li  { font-size: 13.5px; color: var(--ink-soft); padding-left: 18px; position: relative; text-wrap: pretty; }
 .tl-body .tl-list li::before { content: "→"; position: absolute; left: 0; color: var(--accent); }
 
 /* ===== CREDENTIALS ===== */

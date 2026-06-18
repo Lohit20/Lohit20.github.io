@@ -514,6 +514,9 @@ html[data-glass="off"] .tile:hover    { background: var(--panel); box-shadow: va
 .tl-body .org .when { color: var(--ink-faint); }
 .tl-body .desc      { color: var(--ink-soft); font-size: 14.5px; margin-top: 10px; max-width: 76ch; text-wrap: pretty; }
 .tl-body .tags      { margin-top: 12px; }
+.tl-body .tl-list   { list-style: none; display: flex; flex-direction: column; gap: 7px; margin-top: 10px; }
+.tl-body .tl-list li { font-size: 13.5px; color: var(--ink-soft); padding-left: 18px; position: relative; text-wrap: pretty; }
+.tl-body .tl-list li::before { content: "→"; position: absolute; left: 0; color: var(--accent); }
 
 /* ===== CREDENTIALS ===== */
 

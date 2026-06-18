@@ -599,8 +599,18 @@
           <div class="tl-body">
             <div class="role">Data Scientist Intern, ML and Recommender Systems</div>
             <div class="org">CreatorOS · London (Remote) &nbsp;<span class="when">Sep to Dec 2025</span></div>
-            <div class="desc">Shipped a two-stage brand-to-creator recommender (pruned RandomForest → XGBoost ranking) on GCP Vertex AI at sub-250ms: +12% Precision@10, +10% NDCG@10, −63% manual ops overhead.</div>
-            <div class="chips tags"><span class="chip">XGBoost</span><span class="chip">RandomForest</span><span class="chip">Vertex AI</span><span class="chip">FastAPI</span><span class="chip">Docker</span></div>
+            <div class="desc">Built an end-to-end MLOps pipeline for a brand-to-creator recommendation system, ingesting creator profiles, campaign data, audience demographics, engagement metrics, and historical collaborations to generate real-time recommendations for brands.</div>
+            <ul class="tl-list">
+              <li>Designed and automated the full ML lifecycle using Vertex AI Pipelines — data extraction, validation, feature engineering, training, evaluation, deployment, monitoring, and retraining — removing manual intervention across the release workflow.</li>
+              <li>Integrated multi-source data from BigQuery with automated quality checks via Great Expectations to catch missing IDs, duplicates, invalid metrics, and schema changes before training.</li>
+              <li>Built scalable feature engineering with Pandas and PySpark — engagement rate, creator activity score, audience-brand alignment, category similarity, campaign success rate — stored in Vertex AI Feature Store to eliminate training-serving skew.</li>
+              <li>Developed a two-stage recommendation architecture: Random Forest for candidate generation, XGBoost for final ranking, improving relevance over single-step scoring while keeping inference lightweight.</li>
+              <li>Tracked all experiments, parameters, and artifacts in MLflow for controlled model comparisons and environment promotions.</li>
+              <li>Containerised the FastAPI inference service with Docker, pushed to Artifact Registry, and deployed to Vertex AI Endpoints for real-time serving at under 250ms.</li>
+              <li>Set up drift and performance monitoring with Evidently AI and Cloud Monitoring — data drift, feature drift, prediction drift, and API latency — for full production visibility.</li>
+              <li>Automated retraining so new models are only promoted and redeployed when they outperform the current production model.</li>
+            </ul>
+            <div class="chips tags"><span class="chip">GCP</span><span class="chip">Vertex AI Pipelines</span><span class="chip">BigQuery</span><span class="chip">MLflow</span><span class="chip">XGBoost</span><span class="chip">Random Forest</span><span class="chip">FastAPI</span><span class="chip">Docker</span><span class="chip">PySpark</span><span class="chip">Evidently AI</span><span class="chip">Great Expectations</span></div>
           </div>
         </div>
         <div class="tl-item">

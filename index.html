@@ -422,10 +422,24 @@
         <div class="tl-item">
           <div class="tl-marker"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></div>
           <div class="tl-body">
-            <div class="role">Research Engineer <span class="faint mono" style="font-size:11px">(promoted from intern)</span></div>
-            <div class="org">Retrocausal · Redmond, USA (Remote) &nbsp;<span class="when">Feb 2024 to Jan 2025</span></div>
-            <div class="desc">Ran a video-captioning study using Timesformer+GPT-2 and ViT+GPT-2 to surface assembly errors via vision-language grounding, reducing errors by 25%.</div>
-            <div class="chips tags"><span class="chip">VLM</span><span class="chip">Prompt engineering</span><span class="chip">Evaluation</span></div>
+            <div class="tl-body-head">
+              <div>
+                <div class="role">Research Engineer <span class="faint mono" style="font-size:11px">(promoted from intern)</span></div>
+                <div class="org">Retrocausal · Redmond, USA (Remote) &nbsp;<span class="when">Feb 2024 to Jan 2025</span></div>
+                <div class="desc">Built ergonomics automation tools, optimised a production YOLOv5 model for edge deployment via OpenVINO INT8 quantisation, and ran a comparative video captioning study using Timesformer and ViT architectures to surface assembly errors.</div>
+                <div class="chips tags"><span class="chip">YOLOv5</span><span class="chip">OpenVINO</span><span class="chip">FastAPI</span><span class="chip">Docker</span><span class="chip">AWS Lambda</span><span class="chip">Timesformer</span><span class="chip">ViT+GPT-2</span></div>
+              </div>
+              <button class="tl-toggle" aria-label="Toggle details"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+            </div>
+            <div class="tl-expand-body">
+              <div class="tl-expand-inner">
+                <ul class="tl-list">
+                  <li><strong>Ergonomics Report Generator:</strong> Designed and built an automated Excel reporting tool computing ergonomic risk scores including REBA, RULA, NIOSH, SNOOK, and Hand Strain from sensor data, fully integrated with the company's Django backend via POST APIs, eliminating manual spreadsheet preparation. Data stored in Amazon S3 and models deployed on AWS Lambda for serverless execution. Refactored the tool into a standalone FastAPI microservice containerised with Docker for independent deployment, horizontal scaling, and simplified CI/CD integration. Reduced report generation time by 44%, directly improving client-facing turnaround.</li>
+                  <li><strong>Model Optimisation (OpenVINO):</strong> Converted the production YOLOv5 pose-estimation model from PyTorch to OpenVINO IR format and applied INT8 post-training quantisation for CPU-based edge deployment without requiring GPU hardware. Also deployed on AWS Lambda for serverless inference. Achieved 2x faster inference throughput and reduced compute costs by 36% with negligible drop in keypoint detection accuracy.</li>
+                  <li><strong>Industrial Video Captioning System:</strong> Conducted a structured comparative study fine-tuning two video-language architectures on internal assembly line footage: Timesformer+GPT-2 with temporal attention encoding and ViT+GPT-2 with frame-level encoding, analysing trade-offs between temporal modelling depth and inference efficiency to guide production model selection. The deployed captioning system reduced assembly errors by 25% and cut rework costs by 30%.</li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
       </div></div></div>
@@ -625,10 +639,24 @@
         <div class="tl-item">
           <div class="tl-marker"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></div>
           <div class="tl-body">
-            <div class="role">Research Engineer <span class="faint mono" style="font-size:11px">(promoted from intern)</span></div>
-            <div class="org">Retrocausal · Redmond, USA (Remote) &nbsp;<span class="when">Feb 2024 to Jan 2025</span></div>
-            <div class="desc">Quantised a YOLOv5 pose model to OpenVINO INT8 (2× throughput, −36% cost); ran a Timesformer+GPT-2 vs ViT+GPT-2 video captioning study to surface assembly errors, reducing defects by 25% and rework costs by 30%.</div>
-            <div class="chips tags"><span class="chip">YOLOv5</span><span class="chip">OpenVINO</span><span class="chip">INT8</span><span class="chip">Timesformer</span><span class="chip">ViT+GPT-2</span></div>
+            <div class="tl-body-head">
+              <div>
+                <div class="role">Research Engineer <span class="faint mono" style="font-size:11px">(promoted from intern)</span></div>
+                <div class="org">Retrocausal · Redmond, USA (Remote) &nbsp;<span class="when">Feb 2024 to Jan 2025</span></div>
+                <div class="desc">Quantised a YOLOv5 pose model to OpenVINO INT8 (2x throughput, 36% cost reduction); built an ergonomics risk scoring pipeline on AWS Lambda; and ran a Timesformer vs ViT video captioning study reducing assembly errors by 25%.</div>
+                <div class="chips tags"><span class="chip">YOLOv5</span><span class="chip">OpenVINO</span><span class="chip">INT8</span><span class="chip">FastAPI</span><span class="chip">Docker</span><span class="chip">AWS Lambda</span><span class="chip">Timesformer</span><span class="chip">ViT+GPT-2</span></div>
+              </div>
+              <button class="tl-toggle" aria-label="Toggle details"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+            </div>
+            <div class="tl-expand-body">
+              <div class="tl-expand-inner">
+                <ul class="tl-list">
+                  <li><strong>Ergonomics Report Generator:</strong> Designed and built an automated Excel reporting tool computing ergonomic risk scores including REBA, RULA, NIOSH, SNOOK, and Hand Strain from sensor data, fully integrated with the company's Django backend via POST APIs, eliminating manual spreadsheet preparation. Data stored in Amazon S3 and models deployed on AWS Lambda for serverless execution. Refactored the tool into a standalone FastAPI microservice containerised with Docker for independent deployment, horizontal scaling, and simplified CI/CD integration. Reduced report generation time by 44%, directly improving client-facing turnaround.</li>
+                  <li><strong>Model Optimisation (OpenVINO):</strong> Converted the production YOLOv5 pose-estimation model from PyTorch to OpenVINO IR format and applied INT8 post-training quantisation for CPU-based edge deployment without requiring GPU hardware. Also deployed on AWS Lambda for serverless inference. Achieved 2x faster inference throughput and reduced compute costs by 36% with negligible drop in keypoint detection accuracy.</li>
+                  <li><strong>Industrial Video Captioning System:</strong> Conducted a structured comparative study fine-tuning two video-language architectures on internal assembly line footage: Timesformer+GPT-2 with temporal attention encoding and ViT+GPT-2 with frame-level encoding, analysing trade-offs between temporal modelling depth and inference efficiency to guide production model selection. The deployed captioning system reduced assembly errors by 25% and cut rework costs by 30%.</li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
         <div class="tl-item">

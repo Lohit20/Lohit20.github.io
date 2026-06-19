@@ -426,7 +426,7 @@
               <div>
                 <div class="role">Research Engineer <span class="faint mono" style="font-size:11px">(promoted from intern)</span></div>
                 <div class="org">Retrocausal · Redmond, USA (Remote) &nbsp;<span class="when">Feb 2024 to Jan 2025</span></div>
-                <div class="desc">Built ergonomics automation tools, optimised a production YOLOv5 model for edge deployment via OpenVINO INT8 quantisation, and ran a comparative video captioning study using Timesformer and ViT architectures to surface assembly errors.</div>
+                <div class="desc">Worked on end-to-end AI and automation solutions for ergonomic risk assessment, pose-estimation optimisation, and industrial video captioning. Built automated reporting pipelines, deployed models using AWS Lambda, stored data in Amazon S3, optimised YOLOv5 inference with OpenVINO, and evaluated video-language models for assembly-line understanding. The work improved reporting speed, reduced compute costs, and helped lower assembly errors and rework costs.</div>
                 <div class="chips tags"><span class="chip">YOLOv5</span><span class="chip">OpenVINO</span><span class="chip">FastAPI</span><span class="chip">Docker</span><span class="chip">AWS Lambda</span><span class="chip">Timesformer</span><span class="chip">ViT+GPT-2</span></div>
               </div>
               <button class="tl-toggle" aria-label="Toggle details"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
@@ -615,7 +615,7 @@
               <div>
                 <div class="role">Data Scientist Intern</div>
                 <div class="org">CreatorOS · London (Remote) &nbsp;<span class="when">Sep to Dec 2025</span></div>
-                <div class="desc">Built an end-to-end MLOps pipeline for a brand-to-creator recommendation system, ingesting creator profiles, campaign data, audience demographics, engagement metrics, and historical collaborations to generate real-time recommendations for brands.</div>
+                <div class="desc">Designed and deployed a production-ready recommendation system on Google Cloud using Vertex AI, BigQuery, MLflow, Docker, and FastAPI. The system automated the full ML lifecycle from data extraction to model retraining, improved recommendation relevance through a two-stage ranking architecture, and enabled real-time serving with full monitoring and production visibility.</div>
                 <div class="chips tags"><span class="chip">GCP</span><span class="chip">Vertex AI Pipelines</span><span class="chip">BigQuery</span><span class="chip">MLflow</span><span class="chip">XGBoost</span><span class="chip">Random Forest</span><span class="chip">FastAPI</span><span class="chip">Docker</span><span class="chip">PySpark</span><span class="chip">Evidently AI</span><span class="chip">Great Expectations</span></div>
               </div>
               <button class="tl-toggle" aria-label="Toggle details"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
@@ -623,14 +623,13 @@
             <div class="tl-expand-body">
               <div class="tl-expand-inner">
                 <ul class="tl-list">
-                  <li>Designed and automated the full ML lifecycle using Vertex AI Pipelines covering data extraction, validation, feature engineering, training, evaluation, deployment, monitoring, and retraining, removing manual intervention across the release workflow.</li>
-                  <li>Integrated multi-source data from BigQuery with automated quality checks via Great Expectations to catch missing IDs, duplicates, invalid metrics, and schema changes before training.</li>
-                  <li>Built scalable feature engineering with Pandas and PySpark (engagement rate, creator activity score, audience-brand alignment, category similarity, campaign success rate) stored in Vertex AI Feature Store to eliminate training-serving skew.</li>
-                  <li>Developed a two-stage recommendation architecture: Random Forest for candidate generation, XGBoost for final ranking, improving relevance over single-step scoring while keeping inference lightweight.</li>
-                  <li>Tracked all experiments, parameters, and artifacts in MLflow for controlled model comparisons and environment promotions.</li>
-                  <li>Containerised the FastAPI inference service with Docker, pushed to Artifact Registry, and deployed to Vertex AI Endpoints for real-time serving at under 250ms.</li>
-                  <li>Set up drift and performance monitoring with Evidently AI and Cloud Monitoring covering data drift, feature drift, prediction drift, and API latency for full production visibility.</li>
-                  <li>Automated retraining so new models are only promoted and redeployed when they outperform the current production model.</li>
+                  <li><strong>ML Lifecycle Automation:</strong> Designed and automated the full ML lifecycle using Vertex AI Pipelines, covering data extraction, validation, feature engineering, training, evaluation, deployment, monitoring, and retraining, removing manual intervention across the release workflow.</li>
+                  <li><strong>Data Integration &amp; Validation:</strong> Integrated multi-source data from BigQuery with automated quality checks via Great Expectations to catch missing IDs, duplicates, invalid metrics, and schema changes before training.</li>
+                  <li><strong>Feature Engineering &amp; Feature Store:</strong> Built scalable feature engineering with Pandas and PySpark, including engagement rate, creator activity score, audience-brand alignment, category similarity, and campaign success rate. Stored engineered features in Vertex AI Feature Store to eliminate training-serving skew.</li>
+                  <li><strong>Recommendation Model Architecture:</strong> Developed a two-stage recommendation architecture using Random Forest for candidate generation and XGBoost for final ranking, improving relevance over single-step scoring while keeping inference lightweight.</li>
+                  <li><strong>Experiment Tracking &amp; Model Governance:</strong> Tracked all experiments, parameters, and artifacts in MLflow for controlled model comparisons and environment promotions.</li>
+                  <li><strong>Model Deployment &amp; Real-Time Serving:</strong> Containerised the FastAPI inference service with Docker, pushed it to Artifact Registry, and deployed it to Vertex AI Endpoints for real-time serving at under 250ms.</li>
+                  <li><strong>Monitoring &amp; Automated Retraining:</strong> Set up drift and performance monitoring with Evidently AI and Cloud Monitoring, covering data drift, feature drift, prediction drift, and API latency for full production visibility. Automated retraining so new models were only promoted and redeployed when they outperformed the current production model.</li>
                 </ul>
               </div>
             </div>
@@ -643,7 +642,7 @@
               <div>
                 <div class="role">Research Engineer <span class="faint mono" style="font-size:11px">(promoted from intern)</span></div>
                 <div class="org">Retrocausal · Redmond, USA (Remote) &nbsp;<span class="when">Feb 2024 to Jan 2025</span></div>
-                <div class="desc">Quantised a YOLOv5 pose model to OpenVINO INT8 (2x throughput, 36% cost reduction); built an ergonomics risk scoring pipeline on AWS Lambda; and ran a Timesformer vs ViT video captioning study reducing assembly errors by 25%.</div>
+                <div class="desc">Worked on end-to-end AI and automation solutions for ergonomic risk assessment, pose-estimation optimisation, and industrial video captioning. Built automated reporting pipelines, deployed models using AWS Lambda, stored data in Amazon S3, optimised YOLOv5 inference with OpenVINO, and evaluated video-language models for assembly-line understanding. The work improved reporting speed, reduced compute costs, and helped lower assembly errors and rework costs.</div>
                 <div class="chips tags"><span class="chip">YOLOv5</span><span class="chip">OpenVINO</span><span class="chip">INT8</span><span class="chip">FastAPI</span><span class="chip">Docker</span><span class="chip">AWS Lambda</span><span class="chip">Timesformer</span><span class="chip">ViT+GPT-2</span></div>
               </div>
               <button class="tl-toggle" aria-label="Toggle details"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>

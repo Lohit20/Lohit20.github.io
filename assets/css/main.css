@@ -582,6 +582,21 @@ html[data-glass="off"] .tile:hover    { background: var(--panel); box-shadow: va
 .cert-link:hover          { color: var(--accent); }
 .cert-link svg            { width: 13px; height: 13px; }
 
+/* ===== RECOMMENDATIONS ===== */
+#recommendations          { padding: 80px 0; }
+.rec-grid                 { display: grid; grid-template-columns: 1fr 1fr; gap: var(--gap); margin-top: 32px; }
+.rec-card                 { display: flex; flex-direction: column; justify-content: space-between; gap: 20px; padding: 24px; }
+.rec-quote                { font-size: 14px; line-height: 1.7; color: var(--ink-soft); font-style: italic; flex: 1; }
+.rec-footer               { display: flex; align-items: center; gap: 14px; padding-bottom: 16px; border-bottom: 1px solid var(--line-soft); }
+.rec-avatar               { width: 44px; height: 44px; border-radius: 50%; background: var(--accent); color: var(--accent-ink); font-family: var(--mono); font-weight: 700; font-size: 14px; display: grid; place-items: center; flex-shrink: 0; }
+.rec-meta                 { flex: 1; min-width: 0; }
+.rec-name                 { font-weight: 700; font-size: 13.5px; color: var(--ink); }
+.rec-title                { font-size: 11.5px; color: var(--ink-faint); margin-top: 2px; line-height: 1.4; }
+.rec-rel                  { font-family: var(--mono); font-size: 10.5px; color: var(--accent); margin-top: 4px; }
+.rec-li-link              { color: var(--ink-faint); flex-shrink: 0; display: grid; place-items: center; transition: color .2s; }
+.rec-li-link:hover        { color: #0077b5; }
+.rec-cta                  { display: flex; justify-content: center; margin-top: 32px; }
+
 /* ===== WHY HIRE ME ===== */
 
 .hire-grid  { display: grid; grid-template-columns: repeat(12, 1fr); gap: var(--gap); }
@@ -690,6 +705,7 @@ html[data-glass="off"] .tile:hover    { background: var(--panel); box-shadow: va
   .sec-title    { font-size: clamp(24px, 7vw, 34px); }
   .sec-sub      { font-size: 14px; }
   .bento        { gap: 8px; }
+  .rec-grid     { grid-template-columns: 1fr; }
   .tile         { padding: 16px; }
 
   .topbar-inner          { padding: 11px 16px; }

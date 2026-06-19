@@ -388,18 +388,19 @@ html[data-glass="off"] .tile:hover    { background: var(--panel); box-shadow: va
   border: 1px solid var(--line); border-radius: 14px;
   background: color-mix(in srgb, var(--bg) 60%, transparent);
 }
-.arch-row  { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 0; }
+.arch-row  { display: flex; align-items: stretch; justify-content: center; flex-wrap: nowrap; gap: 0; width: 100%; }
 .arch-box  {
-  font-family: var(--mono); font-size: 11.5px; color: var(--ink);
-  padding: 10px 14px; border-radius: 10px;
+  font-family: var(--mono); font-size: 11px; color: var(--ink);
+  padding: 10px 10px; border-radius: 10px;
   border: 1px solid var(--glass-border); background: var(--glass);
   -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px);
-  text-align: center; white-space: nowrap;
+  text-align: center; white-space: normal; flex: 1; min-width: 0;
+  display: flex; flex-direction: column; justify-content: center;
 }
 .arch-box.hl   { border-color: var(--accent); color: var(--accent); }
 .arch-box .sub { display: block; font-size: 9.5px; color: var(--ink-faint); margin-top: 2px; }
-.arch-conn     { color: var(--accent); padding: 0 9px; display: grid; place-items: center; }
-.arch-conn svg { width: 18px; height: 18px; }
+.arch-conn     { color: var(--accent); padding: 0 5px; display: grid; place-items: center; flex-shrink: 0; }
+.arch-conn svg { width: 16px; height: 16px; }
 
 /* ===== AGENT FLOW DIAGRAM ===== */
 
@@ -572,9 +573,12 @@ html[data-glass="off"] .tile:hover    { background: var(--panel); box-shadow: va
 .cert-item:hover          { border-color: var(--accent); transform: translateX(3px); }
 .cert-item .cv-ic         { width: 30px; height: 30px; border-radius: 8px; flex-shrink: 0; display: grid; place-items: center; color: var(--accent); background: var(--accent-soft); }
 .cert-item .cv-ic svg     { width: 15px; height: 15px; }
-.cert-item .cn            { font-family: var(--body); font-weight: 600; font-size: 13.5px; line-height: 1.25; }
+.cert-item .cn            { font-family: var(--body); font-weight: 600; font-size: 13.5px; line-height: 1.25; display: flex; align-items: center; gap: 6px; }
 .cert-item .cm            { font-family: var(--mono); font-size: 10.5px; color: var(--ink-faint); margin-top: 2px; }
 .cert-item .cm .org       { color: var(--accent); }
+.cert-link                { display: inline-flex; align-items: center; color: var(--ink-faint); flex-shrink: 0; transition: color .2s; }
+.cert-link:hover          { color: var(--accent); }
+.cert-link svg            { width: 13px; height: 13px; }
 
 /* ===== WHY HIRE ME ===== */
 
@@ -703,7 +707,7 @@ html[data-glass="off"] .tile:hover    { background: var(--panel); box-shadow: va
   .dash-card             { grid-column: span 1 !important; min-height: 110px; }
   .dash-card .dc-num     { font-size: clamp(22px, 7vw, 30px); }
 
-  .pipe-tile    { padding: 20px 14px; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  .pipe-tile    { padding: 20px 14px; }
   .arch-row     { flex-wrap: wrap; justify-content: center; gap: 6px; }
   .arch-box     { font-size: 10px; padding: 8px 10px; white-space: normal; min-width: 0; flex-shrink: 1; }
   .arch-box .sub { font-size: 8.5px; }

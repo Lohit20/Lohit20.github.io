@@ -587,6 +587,8 @@ html[data-glass="off"] .tile:hover    { background: var(--panel); box-shadow: va
 .rec-grid                 { display: grid; grid-template-columns: 1fr 1fr; gap: var(--gap); margin-top: 32px; }
 .rec-card                 { display: flex; flex-direction: column; justify-content: space-between; gap: 20px; padding: 24px; }
 .rec-quote                { font-size: 14px; line-height: 1.7; color: var(--ink-soft); font-style: italic; flex: 1; }
+.rec-quote p              { margin-top: 10px; }
+.rec-quote p:first-child  { margin-top: 0; }
 .rec-footer               { display: flex; align-items: center; gap: 14px; padding-bottom: 16px; border-bottom: 1px solid var(--line-soft); }
 .rec-avatar               { width: 44px; height: 44px; border-radius: 50%; background: var(--accent); color: var(--accent-ink); font-family: var(--mono); font-weight: 700; font-size: 14px; display: grid; place-items: center; flex-shrink: 0; }
 .rec-meta                 { flex: 1; min-width: 0; }
